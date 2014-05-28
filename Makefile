@@ -3,8 +3,8 @@
 #* http://stackoverflow.com/questions/4058840/makefile-that-distincts-between-windows-and-unix-like-systems
 
 .PHONY: all clean
-CLASSES = 00 01 02 03 04 05 06 07
-MAIN = 4C3-course
+CLASSES = 1A 1B
+MAIN = CourseraMOOC
 
 ifdef SystemRoot
 	RM = -del /Q/F
@@ -14,7 +14,7 @@ else
 	SUBDIR = classes/
 endif
 
-.DEFAULT_GOAL := 07
+.DEFAULT_GOAL := 1A
 
 all: clean
 	$(foreach FILE, $(CLASSES), $(MAKE) $(FILE);)
@@ -22,8 +22,8 @@ all: clean
 $(CLASSES): %:
     # Runs PDF latex on the main file, sending in jobname that is used in 
     # $(MAIN).tex to \input{} the correct class file
-	pdflatex --shell-escape --jobname=$(SUBDIR)2014-4C3-class-$* $(MAIN).tex;
-	open $(SUBDIR)2014-4C3-class-$*.pdf
+	pdflatex --shell-escape --jobname=$(SUBDIR)CourseraMOOC-class-$* $(MAIN).tex;
+	open $(SUBDIR)CourseraMOOC-class-$*.pdf
 	#open $(SUBDIR)2014-TrojanUV-$*.pdf
 
 clean:  
