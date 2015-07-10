@@ -1,0 +1,740 @@
+\begin{frame}\frametitle{Case study: manufacturing of a mass produced product}
+	\begin{columns}[b]
+		\column{0.6\textwidth}
+				\centerline{\includegraphics[width=\textwidth]{../6A/Supporting materials/flickr-jurvetson-6858583426_39dbf3910f_o-production-line-tesla.jpg}}
+				\see{\href{https://secure.flickr.com/photos/jurvetson/6858583426/}{Flickr: jurvetson}}
+		\column{0.40\textwidth}
+			Tesla Motors assembly line
+	\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{Case study: manufacturing of a mass produced product}
+	\begin{columns}[b]
+		\column{0.6\textwidth}
+ 				\centerline{\includegraphics[width=\textwidth]{../6A/Supporting materials/flickr-archangel-6966237299_c8995710b1_o-petroleum.jpg}}
+
+ 				\see{\href{https://secure.flickr.com/photos/archangel12/6966237299/}{Flickr: archangel12}}
+		\column{0.40\textwidth}
+
+	\end{columns}
+\end{frame}
+	
+\begin{frame}\frametitle{Case study: manufacturing of a mass produced product}
+	\begin{columns}[b]
+		\column{0.6\textwidth}
+				\centerline{\includegraphics[width=\textwidth]{../6A/Supporting materials/flickr-bensutherland-5587949321_971f94e306_o-production.jpg}}
+				\see{\href{https://secure.flickr.com/photos/bensutherland/5587949321/}{Flickr: bensutherland}}
+		\column{0.40\textwidth}
+
+	\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{Case study: manufacturing of a mass produced product}
+	\begin{columns}[c]
+		\column{0.4\textwidth}
+				\centerline{\includegraphics[height=.7\textheight]{../6A/Supporting materials/flickr-bitchbuzz-6510472979_bf2db00108_o-beer-bottles.jpg}}
+				\see{Flickr: 6510472979}
+		\column{0.60\textwidth}
+			Two factors are available to vary:
+			\begin{itemize}
+				
+
+				\item	\textbf{T}hroughput: number of parts per hour
+				\item	\textbf{P}rice: selling price per part produced
+			\end{itemize}
+			
+			\vspace{1cm}
+			\pause
+			The outcome variable $y$ = profit [\$ per hour]
+			
+			\begin{itemize}
+				\item	profit = (all income) $-$ (all expenses) \pause
+				\item	both factors affect the profit \pause
+				\item	profit is easily calculated \pause
+			\end{itemize}
+	\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-01A.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-01B.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-02.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-03.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-04.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-04-A.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-04-B.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-05.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-06.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-07.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-08.png}}
+\end{frame}
+
+\begin{frame}\frametitle{List of all experiments}
+	\begin{tabulary}{\linewidth}{c|cc|cc|c|c|cc}
+		\textbf{\relax Experiment} & \textbf{\relax P } & \textbf{\relax T} & \textbf{\relax $x_\text{P}$} & \textbf{\relax $x_\text{T}$} & \textbf{\relax Prediction = $\hat{y}$} & \textbf{\relax Actual = $y$} & \textbf{\relax Model } \\ \hline
+		Current point & \$0.75 & 325 & 0 & 0 & \onslide+<3->{\$ 390}& \$ 407 & ~1   
+		\onslide+<2->{ \\
+		
+			1 & ~~0.50 & 320 & $-1$ & $-1$ & \onslide+<3->{~~197} & ~~193  & 1\\
+			2 & ~~1.00 & 320 & $+1$ & $-1$ & \onslide+<3->{~~472} & ~~468  & 1\\
+			3 & ~~0.50 & 330 & $-1$ & $+1$ & \onslide+<3->{~~314} & ~~310  & 1\\
+			4 & ~~1.00 & 330 & $+1$ & $+1$ & \onslide+<3->{~~575} & ~~571  &~1}
+		\onslide+<4->{ \\
+			5 & ~~1.36 & 330 & 2.44 & 1.0  & 764 & \onslide+<4->{\$ 669} &~~1
+		}
+		\onslide+<5->{ \\\hline
+			5 & 1.36 & 330 & 2.44 & 1.0  & 764 & \onslide+<4->{\$ 669} &~1
+		}
+	\end{tabulary}
+\end{frame}
+	
+\begin{frame}\frametitle{\includegraphics[width=0.3\textwidth]{\imagedir/doe/examples/advice-logo.png}\,\, for selecting factorial ranges on a response surface}
+	\begin{columns}[t]
+		\column{0.6\textwidth}
+			\begin{enumerate}
+				\item	You want to notice a difference between the low and high levels
+					\begin{itemize}
+						\item	Too close: and you just pick up noise
+						\item	Too far: and you are misled by nonlinearities
+					\end{itemize}
+				\onslide+<2->{
+					\item	Don't go to the extremes (a very common mistake)
+				}
+				\onslide+<3->{
+					\item	No idea? Start with $\approx 25\%$ of the extreme range
+				}
+		
+			\end{enumerate}
+		
+		\column{0.50\textwidth}
+			
+	\end{columns}
+	
+	
+	
+\end{frame}
+
+\begin{frame}\frametitle{The calculations from real-world units to coded units}
+	
+	\[ \color{myOrange}\text{coded value} = \dfrac{(\text{real value}) - (\text{center point})}{\tfrac{1}{2}\left(\text{range}\right)} \]
+	\onslide+<2->{
+	\begin{columns}[t]
+		\column{0.5\textwidth}
+		\onslide+<3->{
+			\centerline{\textbf{Price}}
+			\begin{flalign*} 
+				\text{center}_\text{P} &= \$0.75\\
+				\text{range}_\text{P} &= \$0.25 \\
+				x_\text{P} &= \dfrac{\text{P} - \text{center}_\text{P}} {\tfrac{1}{2} \text{range}_\text{P}} &\\
+			\end{flalign*}
+				
+			\vspace{.11cm}
+			\emph{Example}: coded value for $\text{P} = \$1.00$?
+			\[x_\text{P} = \dfrac{1.00 - 0.75} {\tfrac{1}{2} (0.50)} =  \dfrac{0.25} {0.25} = +1\]
+		}
+		
+		\column{0.50\textwidth}
+			\centerline{\textbf{Throughput}}
+			\begin{flalign*} 
+				\text{center}_\text{T} &= 325\\
+				\text{range}_\text{T} &= 10 \\
+				x_\text{T} &= \dfrac{\text{T} - \text{center}_\text{T}} {\tfrac{1}{2} \text{range}_\text{T}} &\\
+			\end{flalign*}
+			
+			\vspace{.11cm}
+			\emph{Example}: coded value for $\text{T} = 320$?
+			\[x_\text{T} = \dfrac{320 - 325} {\tfrac{1}{2} (10)} =  \dfrac{-5} {5} = -1\]
+				
+	\end{columns}
+	}
+\end{frame}
+
+\begin{frame}\frametitle{Using the prediction model}
+	\[y = 390 + 134 x_\text{P} + 55 x_\text{T} - 3.5x_\text{P}x_\text{T} \]
+	
+	\vspace{1cm}
+	Check the model's ``goodness of fit'' at the center point:
+	\begin{itemize}
+		\item	At the center: $x_\text{P}=0$ and $x_\text{T}=0$ \pause
+		\item	Predicted $ \hat{y} = 390 + 0 + 0 + 0 = \$390$
+		\item	Actual $y = \$407$ \pause
+		\item	That's a difference of $\$17$
+	\end{itemize}
+	
+	 \pause
+	\vspace{1cm}
+	Recall the concept of noise from the prior videos?\\
+	Perform replicate experiments to estimate noise.
+\end{frame}
+
+\begin{frame}\frametitle{The steepest {\color{myOrange}path of ascent} using the local model of the system}
+
+	\begin{exampleblock}{}
+		\begin{align*} 
+			y &=& b_0 &&+&& b_\text{P} x_\text{P} &&+&& b_\text{T} x_\text{T} &&+&& b_\text{PT}\,\,x_\text{P}x_\text{T} \\
+			y &=& 390 &&+&& 134 x_\text{P}        &&+&& 55 x_\text{T}         &&+&& (-3.5)\,x_\text{P}x_\text{T} 
+		\end{align*}		
+	\end{exampleblock}
+	
+	\begin{columns}[c]
+		\column{0.6\textwidth}
+			\begin{itemize}
+				\item	$b_\text{P} =134$ interpretation:
+				\begin{itemize}
+					\item	each $\Delta x_\text{P} = 1$ increase in $x_\text{P}$ (coded value) improves $y$ by $\$134$
+				\end{itemize}
+			\end{itemize}
+			\pause
+			\begin{itemize}
+				\item	$b_\text{T} = 55$ interpretation:
+				\begin{itemize}
+					\item	each $\Delta x_\text{T} = 1$ increase in $x_\text{T}$ (coded value)  improves $y$ by $\$55$
+				\end{itemize}
+			\end{itemize}
+		\column{0.450\textwidth}
+			\centerline{\includegraphics[width=\textwidth]{../6A/Supporting materials/first-factorial-analysis-delta-P.png}}
+	\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{The steepest {\color{myOrange}path of ascent} using the local model of the system}
+
+	\begin{exampleblock}{}
+		\begin{align*} 
+			y &=& b_0 &&+&& b_\text{P} x_\text{P} &&+&& b_\text{T} x_\text{T} &&+&& b_\text{PT}\,\,x_\text{P}x_\text{T} \\
+			y &=& 390 &&+&& 134 x_\text{P}        &&+&& 55 x_\text{T}         &&+&& (-3.5)\,x_\text{P}x_\text{T} 
+		\end{align*}		
+	\end{exampleblock}
+	
+	\begin{columns}[c]
+		\column{0.6\textwidth}
+			\begin{itemize}
+				\item	$b_\text{P} =134$ interpretation:
+				\begin{itemize}
+					\item	each $\Delta x_\text{P} = 1$ increase in $x_\text{P}$ (coded value) improves $y$ by $\$134$
+				\end{itemize}
+			\end{itemize}
+			\pause
+			\begin{itemize}
+				\item	$b_\text{T} = 55$ interpretation:
+				\begin{itemize}
+					\item	each $\Delta x_\text{T} = 1$ increase in $x_\text{T}$ (coded value)  improves $y$ by $\$55$
+				\end{itemize}
+			\end{itemize}
+		\column{0.450\textwidth}
+			\centerline{\includegraphics[width=\textwidth]{../6A/Supporting materials/first-factorial-analysis-delta-T.png}}
+	\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{A convenient link between coded unit \textbf{\emph{changes}} and real-world \textbf{\emph{changes}}}
+
+	\begin{exampleblock}{}
+
+		\begin{align*} 
+			\color{myOrange}\text{coded value} &= \dfrac{(\text{real value}) - (\text{center point})}{\tfrac{1}{2}\text{range}} \\
+			\color{myOrange}\Delta (\text{coded value}) &= \color{myOrange}	\dfrac{\Delta (\text{real-world value})}{\tfrac{1}{2}\text{range}}
+		\end{align*}		
+	\end{exampleblock}
+	\pause
+	\begin{columns}[t]
+		\column{0.5\textwidth}
+			\centerline{\textbf{Example for throughput}}
+			\begin{flalign*} 
+				\Delta x_\text{T} = \dfrac{\Delta \text{T}}{\tfrac{1}{2}\text{range}_\text{T}}
+			\end{flalign*}
+			
+			\vspace{.11cm}
+			What does the coded value of $\Delta x_\text{T} =1$ represent in the real-world?
+		
+		\column{0.50\textwidth}
+			\begin{flalign*} 
+				\Delta x_\text{T} &= \dfrac{\Delta \text{T}}{\tfrac{1}{2}\text{range}_\text{T}} \\
+				+1 &= \dfrac{\Delta \text{T}}{\tfrac{1}{2}\left(10\right)} \\
+				\Delta \text{T} &= 5\,\text{parts per hour} \\
+			\end{flalign*}
+	\end{columns}
+	\centerline{So $\Delta x_\text{T} = +1$ is equivalent to $\Delta \text{T} = +5$} 
+\end{frame}
+
+\begin{frame}\frametitle{A convenient link between coded unit \textbf{\emph{changes}} and real-world \textbf{\emph{changes}}}
+
+	\begin{exampleblock}{}
+
+		\begin{align*} 
+			\color{myOrange}\text{coded value} &= \dfrac{(\text{real value}) - (\text{center point})}{\tfrac{1}{2}\text{range}} \\
+			\color{myOrange}\Delta (\text{coded value}) &= \color{myOrange}	\dfrac{\Delta (\text{real-world value})}{\tfrac{1}{2}\text{range}}
+		\end{align*}		
+	\end{exampleblock}
+	
+	\begin{columns}[t]
+		\column{0.5\textwidth}
+			\centerline{\textbf{Example for price}}
+			\begin{flalign*} 
+				\Delta x_\text{P} = \dfrac{\Delta \text{P}}{\tfrac{1}{2}\text{range}_\text{P}}
+			\end{flalign*}
+			
+			\vspace{.11cm}
+			What does the coded value of $\Delta x_\text{P} =1$ represent in the real-world?
+		
+		\column{0.50\textwidth}
+			\begin{flalign*} 
+				\Delta x_\text{P} &= \dfrac{\Delta \text{P}}{\tfrac{1}{2}\text{range}_\text{P}} \\
+				+1 &= \dfrac{\Delta \text{P}}{\tfrac{1}{2}\left(0.50\right)} \\
+				\Delta \text{P} &= \$0.25  \\
+			\end{flalign*}
+	\end{columns}
+	\centerline{So $\Delta x_\text{P} = +1$ is equivalent to $\Delta \text{P} = +\$0.25 $} 
+\end{frame}
+
+\begin{frame}\frametitle{The steepest {\color{myOrange}path of ascent} using the local model of the system}
+
+	\begin{exampleblock}{}
+		\begin{align*} 
+			y &=& b_0 &&+&& b_\text{P} x_\text{P} &&+&& b_\text{T} x_\text{T} &&+&& b_\text{PT}\,\,x_\text{P}x_\text{T} \\
+			y &=& 390 &&+&& 134 x_\text{P}        &&+&& 55 x_\text{T}         &&+&& (-3.5)\,x_\text{P}x_\text{T} 
+		\end{align*}		
+	\end{exampleblock}
+	
+	\begin{columns}[c]
+		\column{0.6\textwidth}
+			\centerline{\includegraphics[width=.9\textwidth]{../6A/Supporting materials/first-factorial-analysis-climbing-up.png}}
+		
+			
+		\column{0.50\textwidth}
+			\vspace{.1cm}\onslide+<2->{\color{myGreen}Take a step of $b_\text{T}=55$ in throughput\\}
+			
+			\onslide+<3->{
+				\color{myGreen}for every $b_\text{P}=134$ steps in price
+			}
+			
+			\vspace{.3cm}
+			\onslide+<4->{
+				\color{myOrange}But, our actual step is $\Delta x_\text{T}$, so ratio it:
+			}
+			
+			\vspace{.3cm}
+			\onslide+<5->{
+				\color{myGreen}Take a step of $\dfrac{b_\text{T}}{\Delta x_\text{T}}$ in throughput\\  
+			}
+			\onslide+<6->{
+				\color{myGreen}for every $\dfrac{b_\text{P}}{\Delta x_\text{P}}$ steps in price
+			}
+			\vspace{0.3cm}
+		
+	   	 
+			\onslide+<7->{
+				\fbox{\parbox[b][3em][t]{0.85\textwidth}{
+					\color{blue}
+					\vspace{0.1cm}
+					$\dfrac{b_\text{T}}{\Delta x_\text{T}} = \dfrac{b_\text{P}}{\Delta x_\text{P}} \quad \Longrightarrow \quad
+					\dfrac{\Delta x_\text{P}}{\Delta x_\text{T}} = \dfrac{b_\text{P}}{b_\text{T}}
+					$
+					\vspace{0.1cm}
+				} }
+			}
+		   	 
+	\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{Systematic approach to take a step towards the optimum}
+	\begin{columns}[T]
+		\column{0.2\textwidth}
+		
+			\vspace{0.1cm}
+			{\tiny 
+				\begin{enumerate}
+					\item	Pick change in coded units in one factor.
+				\end{enumerate}
+			 \par}
+			\onslide+<2->{
+				{\tiny 
+					\begin{enumerate}\setcounter{enumi}{1}
+						\item	Find the ratios for the other factor(s).
+					\end{enumerate}
+				
+				\par}
+			}
+			
+			\vspace{0.9cm}
+			\onslide+<3->{
+				{\tiny 
+					\begin{enumerate}\setcounter{enumi}{2}
+						\item	Calculate step size in coded units.
+					\end{enumerate}
+				
+				\par}
+			}
+			
+			\vspace{0.4cm}
+			\onslide+<4->{
+				{\tiny 
+					\begin{enumerate}\setcounter{enumi}{3}
+						\item	Convert these to real-world \emph{changes}.
+					\end{enumerate}
+				
+				\par}
+			}
+			
+			\vspace{1cm}
+			\onslide+<5->{
+				{\tiny 
+					\begin{enumerate}\setcounter{enumi}{4}
+						\item	Finally, take a step from the baseline! Get the real-world location
+						of the next experiment.
+					\end{enumerate}
+				
+				\par}
+			}
+				
+		\column{0.01\textwidth}
+			\rule[3mm]{0.01cm}{85mm}%
+			
+			
+		\column{0.4\textwidth}
+			\centerline{\textbf{Price}}
+			
+			\onslide+<2->{
+				\vspace{0.cm}
+				\begin{align*}
+					\Delta x_\text{P} &= \dfrac{b_\text{P}}{b_\text{T}}\cdot \Delta x_\text{T}\\ 
+					\Delta x_\text{P} &= \dfrac{134}{55}\cdot 1\\
+					\onslide+<3->{\Delta x_\text{P} &= 2.44}
+				\end{align*}
+			}
+			%$ \text{(real-world change)}= (\text{coded change})\cdot \tfrac{1}{2}\text{range}$
+			
+			\vspace{-0.45cm}
+			\onslide+<4->{
+				\vspace{-0.6cm}
+				\begin{align*} 
+					\Delta \text{P} &= \Delta x_\text{P} \cdot   \tfrac{1}{2}(0.50) \\
+					\Delta \text{P} &= \$0.61
+				\end{align*}
+			}
+			
+			\vspace{-0.9cm}
+			\onslide+<5->{
+				\begin{align*} 
+					\text{P}^{(5)} &= \text{P}^{(0)} + \Delta \text{P} \\
+					\text{P}^{(5)} &= \$0.75 + 0.61 \\
+					\text{P}^{(5)} &= \$1.36
+				\end{align*}
+			}
+			
+			\color{myOrange} 
+			
+		
+		\column{0.01\textwidth}
+			\rule[3mm]{0.01cm}{85mm}%
+			
+		\column{0.4\textwidth}
+			\centerline{\textbf{Throughput}}
+			
+			$\Delta x_\text{T} = 1$ (this was chosen)
+			
+					
+			\vspace{2.15cm}
+			\onslide+<3->{
+				$\Delta x_\text{T} = 1$
+			}
+			
+			\vspace{-0.25cm}
+			\onslide+<4->{
+				\begin{align*} 
+					\Delta \text{T} &= \Delta x_\text{T} \cdot   \tfrac{1}{2}(10) \\
+					\Delta \text{T} &= 5~\text{parts per hour}
+				\end{align*}
+			}
+			
+			\vspace{-0.8cm}
+			\onslide+<5->{
+				\begin{align*} 
+					\text{T}^{(5)} &= \text{T}^{(0)} + \Delta \text{T} \\
+					\text{T}^{(5)} &= 325 + 5 \\
+					\text{T}^{(5)} &= 330 ~\text{parts per hour}
+				\end{align*}
+			}
+	\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{Systematic approach to take a step towards the optimum}
+	\begin{columns}[T]
+		\column{0.2\textwidth}
+
+			\vspace{1cm}
+			\onslide+<1->{
+				{\tiny 
+					\begin{enumerate}\setcounter{enumi}{4}
+						\item	Get the real-world location
+						of the next experiment.
+					\end{enumerate}
+				
+				\par}
+			}
+			
+			\onslide+<2->{
+				{\tiny 
+					\begin{enumerate}\setcounter{enumi}{5}
+						\item	Convert these back to coded-units.
+					\end{enumerate}
+				
+				\par}
+			}
+			
+				
+		\column{0.01\textwidth}
+			\rule[3mm]{0.01cm}{25mm}%
+			
+			
+		\column{0.4\textwidth}
+			\centerline{\textbf{Price}}
+			
+	
+			\onslide+<1->{
+				\begin{align*} 
+					\text{P}^{(5)} &= \$1.36
+				\end{align*}
+			}
+			
+			\vspace{-1.1cm}
+			\onslide+<2->{
+				\begin{align*} 
+					x_\text{P}^{(5)} &= 2.44
+				\end{align*}
+			}
+			
+			
+			
+		
+		\column{0.01\textwidth}
+			\rule[3mm]{0.01cm}{30mm}%
+			
+		\column{0.4\textwidth}
+			\centerline{\textbf{Throughput}}
+			
+			\onslide+<1->{
+				\begin{align*} 
+					\text{T}^{(5)} &= 330 ~\text{parts per hour}
+				\end{align*}
+			}
+			
+			\vspace{-1.1cm}
+			\onslide+<2->{	
+				\begin{align*} 
+					x_\text{T}^{(5)} &= 1.0
+				\end{align*}
+			}
+	\end{columns}
+
+	\vspace{-1.1cm}
+	\begin{columns}[T]
+		\column{0.2\textwidth}
+
+			\vspace{1cm}
+			\onslide+<3->{
+				{\tiny 
+					\begin{enumerate}\setcounter{enumi}{6}
+						\item	Predict the next experiment's outcome.
+					\end{enumerate}
+				
+				\par}
+			}
+			
+			\vspace{2cm}
+			\onslide+<4->{
+				{\tiny 
+					\begin{enumerate}\setcounter{enumi}{7}
+						\item	Now run the next experiment, and record the values
+					\end{enumerate}
+				
+				\par}
+			}
+			
+		\column{0.01\textwidth}
+			\rule[3mm]{0.01cm}{85mm}%
+			
+		\column{0.851\textwidth}
+			
+			\vspace{1cm}
+			
+			
+			
+			\onslide+<3->{	
+				\hrule
+				
+				\begin{align*}
+					\hat{y} &= 390 + 134 x_\text{P} + 55 x_\text{T} - 3.5x_\text{P}x_\text{T} \\
+					\hat{y}^{(5)} &= 390 + 134 (2.44) + 55 (1.0) - 3.5(2.44)(1.0)\\
+					\hat{y}^{(5)} &= 390 + 327 + 55 - 8.50\\
+					\hat{y}^{(5)} &= 764~\text{profit per hour}
+				\end{align*}
+			}
+			
+			\vspace{-1.15cm}
+			\onslide+<4->{	
+				\begin{align*}
+					y^{(5)} &= \$669~\text{profit per hour}
+				\end{align*}
+			}
+	\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{A convenient link between coded unit \textbf{\emph{changes}} and real-world \textbf{\emph{changes}}}
+
+	\begin{exampleblock}{}
+
+		\begin{align*} 
+			\color{myOrange}\text{coded value} &= \dfrac{(\text{real value}) - (\text{center point})}{\tfrac{1}{2}\text{range}} \\
+			\color{myOrange}\Delta (\text{coded change}) &= \color{myOrange}	\dfrac{\Delta (\text{real-world change})}{\tfrac{1}{2}\text{range}}
+		\end{align*}		
+	\end{exampleblock}
+	\pause
+	\begin{columns}[t]
+		\column{0.5\textwidth}
+			\centerline{\textbf{Example for throughput}}
+			\begin{flalign*} 
+				\Delta x_\text{T} = \dfrac{\Delta \text{T}}{\tfrac{1}{2}\text{range}_\text{T}}
+			\end{flalign*}
+			
+			\vspace{.11cm}
+			What does the coded value of $\Delta x_\text{T} =1$ represent in the real-world?
+		
+		\column{0.50\textwidth}
+			\begin{flalign*} 
+				\Delta x_\text{T} &= \dfrac{\Delta \text{T}}{\tfrac{1}{2}\text{range}_\text{T}} \\
+				+1 &= \dfrac{\Delta \text{T}}{\tfrac{1}{2}\left(10\right)} \\
+				\Delta \text{T} &= 5\,\text{parts per hour} \\
+			\end{flalign*}
+	\end{columns}
+	\centerline{So $\Delta x_\text{T} = +1$ is equivalent to $\Delta \text{T} = +5$} 
+\end{frame}
+
+\begin{frame}\frametitle{Judging the predictive ability from the model}
+	An approximate way to judge the model's prediction ability:
+	\begin{itemize}
+		\item	$\hat{y} = \$764$
+		\item	$y = \$669$
+		\item	The prediction error is $\$95$.
+		\item	Note that the two main effects are: $b_\text{P} =134$ and  $b_\text{T} = 55$ 
+		\item	So this error is comparable to these; 
+			\begin{itemize}
+				\item	it's smaller than the effect of a $\Delta x_\text{P}=1$
+				\item	it's larger than the effect of a $\Delta x_\text{T}=1$
+				\item	so that error is  substantial
+			
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-08.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-09.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-10.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-11.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-12.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-13.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-14.png}}
+\end{frame}
+
+\begin{frame}\frametitle{List of all experiments}
+	\begin{tabulary}{\linewidth}{c|cc|cc|c|c|cc}
+		\textbf{\relax Experiment} & \textbf{\relax P } & \textbf{\relax T} & \textbf{\relax $x_\text{P}$} & \textbf{\relax $x_\text{T}$} & \textbf{\relax Prediction = $\hat{y}$} & \textbf{\relax Actual = $y$} & \textbf{\relax Model } \\ \hline
+	%	Current point & \$0.75 & 325 & 0 & 0 & \onslide+<1->{\$ 390}& \$ 407 & ~1   
+	%	\onslide+<1->{ \\
+	%	
+	%		1 & ~~0.50 & 320 & $-1$ & $-1$ & \onslide+<1->{~~197} & ~~193  & 1\\
+	%		2 & ~~1.00 & 320 & $+1$ & $-1$ & \onslide+<1->{~~472} & ~~468  & 1\\
+	%		3 & ~~0.50 & 330 & $-1$ & $+1$ & \onslide+<1->{~~314} & ~~310  & 1\\
+	%		4 & ~~1.00 & 330 & $+1$ & $+1$ & \onslide+<1->{~~575} & ~~571  &~1}
+	%	\onslide+<1->{ \\
+	%		5 & ~~1.36 & 330 & 2.44 & 1.0  & \onslide+<1->{~~764} & \onslide+<1->{\$ 669} &~~1
+	%	}
+		\onslide+<2->{~4 & ~~1.00 & 330 & $-1$ & $-1$ &  & \onslide+<3->{\$ 571 } &~2 \\
+			~5 & ~~1.36 & 330 & $+1$ & $-1$ &  & \onslide+<3->{~~669 } &~2 \\
+		}
+		\onslide+<2->{6 & ~~1.00 & 338 & $-1$ & $+1$ &  & \onslide+<3->{~~620 } &~2 \\
+			~7 & ~~1.36 & 338 & $+1$ & $+1$ &  & \onslide+<3->{~~710 } &~2 \\ 
+			~8 & ~~1.18 & 334 & $0$  & $0$  &  & \onslide+<3->{~~657 } &~~2
+		}
+	\end{tabulary}
+\end{frame}
+
+\begin{frame}\frametitle{Try taking the next step up the mountain on your own}
+	
+	\begin{columns}[T]
+		\column{0.6\textwidth}
+		
+			\begin{itemize}
+				\item	Visualize the results first
+				\item	Build a model using computer software
+				\item	Sketch a contour plot by hand, or \\with software
+			\end{itemize}
+		\column{0.4\textwidth}
+			\centerline{\includegraphics[width=1.5\textwidth, trim=100 70 400 200,clip,]{../6A/Supporting materials/RSM-15.png}}
+	\end{columns}
+	
+	\pause
+	\vspace{-2.5cm}
+	{\color{myOrange}Now use the 8 step approach we showed earlier:}
+	\vspace{0.2cm}
+	\begin{enumerate}
+
+			\item	Pick change in coded units in one factor. 
+				\begin{itemize}
+					\item	Use $\Delta x_\text{P}= 1.5$
+				\end{itemize}
+			\onslide+<2->{
+				\item	Find the ratios for the other factor(s).
+			}
+			\onslide+<3->{
+				\item	Calculate step size in coded units.
+				\item	Convert these to real-world \emph{changes}.
+			}
+			\onslide+<4->{
+				\item	Get the real-world location	of the next experiment.
+				\item	Convert these back to coded-units.
+				\item	Predict the next experiment's outcome.
+			}
+			\onslide+<5->{
+				\item	Run the next experiment, and record the outcome value.  \href{http://tiny.cc/run-expt}{http://tiny.cc/run-expt}
+			}
+	\end{enumerate}
+	
+\end{frame}
+
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-15.png}}
+\end{frame}
+
+

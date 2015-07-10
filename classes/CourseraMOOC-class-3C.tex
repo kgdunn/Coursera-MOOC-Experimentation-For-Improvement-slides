@@ -1,0 +1,142 @@
+\begin{frame}\frametitle{Solar panel case study}
+	
+	\begin{columns}[T]
+		\column{0.45\textwidth}
+			\includegraphics[width=0.7\textwidth]{\imagedir/statistics/flickr-Box-Hunter-Hunter-cover-3056749047_1c1f633fcb_o.jpg}
+			
+			{\scriptsize (p. 230 in Box, Hunter and Hunter, 2$^\text{nd}$ ed)}
+			
+		\column{0.48\textwidth}
+			\includegraphics[width=\textwidth]{\imagedir/doe/examples/solar-panel-mendelu-cz-website.png}
+			
+			
+			\see{\href{http://tiny.cc/solar-panel-study}{http://tiny.cc/solar-panel-study}}
+	\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{\includegraphics[width=0.3\textwidth]{\imagedir/doe/examples/advice-logo.png} when experimenting with computer simulations}
+	\begin{columns}[T]
+		\column{0.48\textwidth}
+		
+			\textbf{The same as regular experiments}:
+			
+			\vspace{12pt}
+			\begin{itemize}
+				\item	you must follow a systematic method
+				\item	don't ``play around'' with the software: trial-and-error
+			\end{itemize}
+			
+			\begin{center}\rule[8mm]{4cm}{0.01cm}\end{center}
+		\column{0.01\textwidth}
+			\rule[3mm]{0.01cm}{25mm}%
+			
+		\column{0.48\textwidth}
+			\textbf{Different to regular experiments:}
+			\vspace{12pt}
+			\begin{enumerate}
+				\item	We can often run computer simulations in parallel
+				\item	Computer experiments (mostly$^\ast$) are deterministic
+					\begin{itemize}
+						\item	i.e. if you repeat the experiments, you get the identical results
+						\item	this indicates there are no disturbances that affect the outcome
+						\item	this implies you do not need to randomize the order
+						\item	or even repeat experiments!
+						
+					\end{itemize}
+			\end{enumerate}
+			{\scriptsize $^\ast$ {\emph{except those that use random number generators}}}
+	\end{columns}
+	
+	\vspace{-90pt}
+
+	 \fbox{\parbox[b][8em][t]{0.45\textwidth}{
+	 	{\footnotesize
+		 	Many experiments are run this \\way these days:
+			\begin{itemize}
+				\item	bridge/building design
+				\item	chemical factory design
+				\item	traffic light timing and queuing
+	 			\item	stock market buy/sell strategy\\ evaluations \tiny{(see \href{http://tiny.cc/trading-expt}{ http://tiny.cc/trading-expt})}
+	 		\end{itemize}
+		}
+	 } }
+\end{frame}
+
+\begin{frame}\frametitle{Solar panel case study}
+	
+	\begin{columns}[T]
+		\column{0.45\textwidth}
+			
+			\includegraphics[width=\textwidth]{\imagedir/doe/examples/solar-panel-mendelu-cz-website.png}
+			
+			
+			\href{http://tiny.cc/solar-panel-study}{http://tiny.cc/solar-panel-study}
+		\column{0.45\textwidth}
+			The factors are:
+			\begin{itemize}
+				\item	\textbf{A} = total daily \href{https://en.wikipedia.org/wiki/Insolation}{insolation} (sunlight received)
+				\item	\textbf{B} = storage tank capacity
+				\item	\textbf{C} = water flow rate
+				\item	\textbf{D} = \href{https://en.wikipedia.org/wiki/Intermittent\_energy\_source }{solar intermittency}
+			\end{itemize}
+			\pause
+			\vspace{12pt}
+			The outcome variables were:
+			\begin{itemize}
+				\item	$y_1$ = collection efficiency
+				\item	$y_2$ = energy delivery efficiency
+			\end{itemize}
+			\pause
+			\vspace{12pt}
+			Total experiments required = \pause $2^4 = 16$ 
+			
+	\end{columns}
+\end{frame}
+
+{\usebackgroundtemplate{\vbox to \paperheight{\vfil\hbox to \paperwidth{\hfil  
+    \includegraphics[width=0.95\paperwidth,trim=0 1.69cm 0 1.69cm, clip]
+	{../3C/Slides/01Screen Shot 2014-07-21 at 22.26.44 .png}  \hfil}\vfil}}
+\begin{frame}\frametitle{}
+\end{frame}}
+
+{\usebackgroundtemplate{\vbox to \paperheight{\vfil\hbox to \paperwidth{\hfil  
+    \includegraphics[width=0.95\paperwidth,trim=0 1.69cm 0 1.69cm, clip]
+	{../3C/Slides/02Screen Shot 2014-07-21 at 22.27.01 .png}  \hfil}\vfil}}
+\begin{frame}\frametitle{}
+\end{frame}}
+
+{\usebackgroundtemplate{\vbox to \paperheight{\vfil\hbox to \paperwidth{\hfil  
+    \includegraphics[width=0.95\paperwidth,trim=0 1.69cm 0 1.69cm, clip]
+	{../3C/Slides/03Screen Shot 2014-07-21 at 22.27.05 .png}  \hfil}\vfil}}
+\begin{frame}\frametitle{}
+\end{frame}}
+
+{\usebackgroundtemplate{\vbox to \paperheight{\vfil\hbox to \paperwidth{\hfil  
+    \includegraphics[width=0.95\paperwidth,trim=0 1.69cm 0 1.69cm, clip]
+	{../3C/Slides/04Screen Shot 2014-07-21 at 22.27.36 .png}  \hfil}\vfil}}
+\begin{frame}\frametitle{}
+\end{frame}}
+
+\begin{frame}\frametitle{Advanced thinking: optimizing multiple objectives}
+	\begin{center}
+		{\color{myOrange}Consider the case where the aim is to maximize \textbf{both} $y_1$ and $y_2$.}
+	\end{center}
+	\vspace{-10pt}
+	\begin{columns}[T]
+		\column{0.02\textwidth}
+		\column{0.35\textwidth}
+			$y_1$ = ``collection efficiency'' 
+			
+			\includegraphics[width=1.1\textwidth]{\imagedir/doe/examples/y1-solar-panels.png}
+		\column{0.05\textwidth}
+		\column{0.45\textwidth}
+			$y_2$ = ``energy delivery efficiency''
+			\includegraphics[width=1.1\textwidth]{\imagedir/doe/examples/y2-solar-panels.png}
+		\column{0.27\textwidth}	
+			\vspace{12pt}
+			\fbox{\parbox[b][8.5em][t]{.85\textwidth}{
+				Specify at what levels (high or low) should we set the factors\\ \textbf{A}, \textbf{B}, \textbf{C}, and \textbf{D} to achieve a maximum in both $y_1$ \emph{and} in $y_2$.
+			}}
+	\end{columns}
+\end{frame}
+

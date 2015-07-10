@@ -1,0 +1,832 @@
+\begin{comment}
+		
+	\begin{frame}\frametitle{\includegraphics[width=0.3\textwidth]{\imagedir/doe/examples/advice-logo.png}\,\, plan your experiments carefully ahead of time}
+	\end{frame}
+	
+	\begin{columns}[T]
+		\column{0.45\textwidth}
+			\includegraphics[width=0.7\textwidth]{\imagedir/statistics/flicfcb_o.jpg}
+		
+			{\scriptsize (p. 230 in Box, Hunter and Hunter, 2$^\text{nd}$ ed)}
+		
+		\column{0.48\textwidth}
+			\includegraphics[width=\textwidth]{\imagedir/doe/examples/solar-panel-mendelu-cz-website.png}
+		
+		
+			\see{\href{http://tiny.cc/solar-panel-study}{http://tiny.cc/solar-panel-study}}
+	\end{columns}
+	
+	\begin{center}\rule[8mm]{4cm}{0.01cm}\end{center}
+	\rule[3mm]{0.01cm}{25mm}%
+
+\begin{frame}\frametitle{The variables affecting our experimental system}
+	We may classify them in several ways:
+	
+	\begin{itemize}
+		\item	those we know about, and those that are unknown
+			\pause
+		\item	variables we can control, and uncontrolled variables: \emph{we'll consider these today}
+			\pause
+		\item	some we can measure, and others we cannot measure: \emph{we'll consider these today}
+		
+	\end{itemize}	
+\end{frame}
+
+\begin{frame}\frametitle{Controllable and measurable variables and the need for randomization}
+	Use a familiar example: {\color{myOrange} ginger biscuits}
+	\vspace{0.25cm}
+	\begin{columns}[T]
+		\column{0.4\textwidth}
+			We have 3 factors:
+			\begin{enumerate}
+				\item	\textbf{A}: baking temperature
+				\item	\textbf{B}: amount of baking soda
+				\item	\textbf{C}: baking time
+			\end{enumerate}
+			
+			
+			\vspace{1cm}
+			
+			\includegraphics[width=0.8\textwidth]{../4C/Supporting materials/4C-2-ginger-biscuits-3242839562_10c30d1aa3_o.jpg}
+		
+		
+			\see{\href{https://secure.flickr.com/photos/babbagecabbage/3242839562}{Flickr: babbagecabbage}}
+			
+		
+		\column{0.58\textwidth}
+		
+			\onslide+<2->{
+			
+				Order of experiments$^\ast$:
+			
+				\begin{tabulary}{\linewidth}{ccccc}\hline 
+					\textbf{\relax Experiment } & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C } & \textbf{\relax Time finished} \\
+					\hline 
+					\textbf{5} & \(-\) & \(-\) & \(+\) & 08:32\\
+					\textbf{1} & \(-\) & \(-\) & \(-\) & 09:46\\
+					\textbf{8} & \(+\) & \(+\) & \(+\) & 10:50\\
+					\textbf{3} & \(-\) & \(+\) & \(-\) & 12:05\\
+					\textbf{6} & \(+\) & \(-\) & \(+\) & 13:16\\
+					\textbf{2} & \(+\) & \(-\) & \(-\) & 14:30\\
+					\textbf{4} & \(+\) & \(+\) & \(-\) & 15:57\\
+					\textbf{7} & \(-\) & \(+\) & \(+\) & 17:09\\
+					
+					 \hline
+				\end{tabulary}
+				
+				\vspace{0.2cm}
+				{\scriptsize $^\ast$ note the randomized order}
+			}
+	\end{columns}	
+\end{frame}
+
+\begin{frame}\frametitle{Disturbances are uncontrolled and unmeasured variables}
+	
+	\begin{columns}[T]
+		\column{0.45\textwidth}
+			Any potential impact on our system which
+			\begin{itemize}
+				\item	is not controlled, and
+		
+				\item	is not measured
+			\end{itemize}
+			
+			\vspace{1cm}
+			In the ginger biscuit example, it might include:
+			\begin{itemize}
+				\item	ambient humidity
+				\item	ambient temperature
+				\item	impurities in the ingredients
+				\item	other examples ...
+			\end{itemize}
+		
+		\column{0.48\textwidth}
+			\includegraphics[width=\textwidth]{../4C/Supporting materials/4C-1-tiredness.jpg}
+	\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{``Control'' and ``Measure'': let's clarify what we mean by those terms}
+	
+	{\color{myOrange}Given enough resources (usually money), we can control and measure most things.}
+	
+	\begin{columns}[T]
+		\column{0.49\textwidth}
+			\begin{center}\textbf{Control}\end{center}
+				
+			We can not actively control these:
+			\begin{itemize}
+				\item	ambient humidity \onslide+<2->{(unless indoors)}
+				\item	ambient temperature \onslide+<2->{(unless indoors)}
+			\end{itemize}
+			
+			\vspace{1cm}
+			Practically, it might be expensive to control certain variables. For example: 
+			
+			impurities in the ingredients. I could buy enough
+			ingredients, mix them all up, and split them into 8 pieces, so all
+			8 experiments have the same ``impurity''.
+		
+		\column{0.48\textwidth}
+			\onslide+<3->{
+				\begin{center}\textbf{Measure}\end{center}
+			
+				Some variables are too expensive or unreliable to measure.
+			
+				\onslide+<4->{
+					\begin{center}
+						\includegraphics[width=.6\textwidth]{../4C/Supporting materials/5937291945_4e961c8baa_o-flickr-humidity-modified.png}
+						\see{\href{https://secure.flickr.com/photos/sidelong/5937291945}{Flickr: sidelong}}
+					\end{center}
+				}
+			}
+			
+	\end{columns}
+	
+\end{frame}
+
+\begin{frame}\frametitle{Uncontrolled and unmeasurable variables can negate all your hard work}
+	
+
+	\begin{columns}[T]
+		\column{0.6\textwidth}
+			%Order of experiments$^\ast$:
+			
+			\vspace{1cm}
+			\begin{tabulary}{\linewidth}{ccccc}\hline 
+				\textbf{\relax Experiment } & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C } & \textbf{\relax Time finished} \\
+				\hline 
+				\textbf{1} & \(-\) & \(-\) & \(-\) & 08:32\\
+				\textbf{2} & \(+\) & \(-\) & \(-\) & 09:46\\
+				\textbf{3} & \(-\) & \(+\) & \(-\) & 10:50\\
+				\textbf{4} & \(+\) & \(+\) & \(-\) & 12:05\\
+				\textbf{5} & \(-\) & \(-\) & \(+\) & 13:16\\
+				\textbf{6} & \(+\) & \(-\) & \(+\) & 14:30\\
+				\textbf{7} & \(-\) & \(+\) & \(+\) & 15:57\\
+				\textbf{8} & \(+\) & \(+\) & \(+\) & 17:09\\
+				 \hline
+			\end{tabulary}
+			
+			\vspace{0.2cm}
+			{\scriptsize $^\ast$ note the experiments are in \emph{standard order this time}}
+
+		\column{0.38\textwidth}
+	\end{columns}	
+\end{frame}
+
+\begin{frame}\frametitle{Take a moment to think about this ...}
+	\begin{exampleblock}{}
+		\emph{Pause the video}: what problems do you think might be caused by this confounding?
+		
+		\vspace{1cm}
+		\begin{itemize}
+			\item	Recall what the term ``confounding'' means (from the previous video)
+			\item	Guess what will happen when you analyze the outcome variable, $y$
+			\item	Now resume the video ...
+			
+		\end{itemize}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}\frametitle{\includegraphics[width=0.3\textwidth]{\imagedir/doe/examples/advice-logo.png} when experimenting with computer simulations}
+	\begin{columns}[T]
+		\column{0.48\textwidth}
+		
+			\textbf{The same as regular experiments}:
+			
+			\vspace{12pt}
+			\begin{itemize}
+				\item	you must follow a systematic method
+				\item	don't ``play around'' with the software: trial-and-error
+			\end{itemize}
+			
+			\begin{center}\rule[8mm]{4cm}{0.01cm}\end{center}
+		\column{0.01\textwidth}
+			\rule[3mm]{0.01cm}{25mm}%
+			
+		\column{0.48\textwidth}
+			\textbf{Different to regular experiments:}
+			\vspace{12pt}
+			\begin{enumerate}
+				\item	We can often run computer simulations in parallel
+				\item	Computer experiments (mostly$^\ast$) are deterministic
+					\begin{itemize}
+						\item	i.e. if you repeat the experiments, you get the identical results
+						\item	this indicates there are no disturbances that affect the outcome
+						\item	this implies you do not need to randomize the order
+						\item	or even repeat experiments!
+						
+					\end{itemize}
+			\end{enumerate}
+			{\scriptsize $^\ast$ {\emph{except those that use random number generators}}}
+	\end{columns}
+	
+	\vspace{-90pt}
+
+	 \fbox{\parbox[b][8em][t]{0.45\textwidth}{
+	 	{\footnotesize
+		 	Many experiments are run this \\way these days:
+			\begin{itemize}
+				\item	bridge/building design
+				\item	chemical factory design
+				\item	traffic light timing and queuing
+	 			\item	stock market buy/sell strategy\\ evaluations \tiny{(see \href{http://tiny.cc/trading-expt}{ http://tiny.cc/trading-expt})}
+	 		\end{itemize}
+		}
+	 } }
+\end{frame}
+
+\begin{frame}\frametitle{Experiments that could be problematic without randomization}
+	\begin{columns}[T]
+		\column{0.33\textwidth}
+			\includegraphics[width=\textwidth]{../4C/Supporting materials/4C-5-Italian.png}
+		
+		\column{0.33\textwidth}
+			\includegraphics[width=\textwidth]{../4C/Supporting materials/4C-4-memorize.png}
+		
+		\column{0.33\textwidth}
+			\includegraphics[width=\textwidth]{../4C/Supporting materials/4C-3-gym.png}
+			
+	\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{Other systems experience deterioration over time: we must randomize to counteract this}
+	\begin{columns}[T]
+		\column{0.35\textwidth}
+			Gas mileage in a vehicle: 
+			
+			\includegraphics[width=\textwidth]{../4C/Supporting materials/4C-6-gas-mileage.png}
+			
+			\vspace{2.5cm}
+			{\scriptsize (Question: how would you describe the variable: ``\textbf{R} = \emph{rain on the road}\,''?)}
+		
+		\column{0.33\textwidth}
+			
+			\onslide+<2->{
+				Ginger biscuit baking experiment: 
+			
+				\includegraphics[width=\textwidth]{../4C/Supporting materials/4C-1-tiredness.jpg}
+			}
+		
+		\column{0.33\textwidth}
+		
+			\onslide+<3->{
+				\includegraphics[width=.8\textwidth]{../4C/Supporting materials/7629039140_c2e2cde0c8_o-flickr-rusting.jpg}
+				
+				\vspace{-0.52cm}
+				{\tiny \href{https://secure.flickr.com/photos/mikecogh/7629039140}{Flickr: mikecogh}}
+				
+				
+				{\scriptsize 
+					This is a slow moving disturbance: we must account for it though if we run experiments that span several months, or years.
+				}
+			}
+			
+	\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{\includegraphics[width=0.3\textwidth]{\imagedir/doe/examples/advice-logo.png}\,\, Always randomize!}
+	
+	\begin{exampleblock}{Why do we randomize?}
+		So when we analyze the effect of the factors -- we can be almost certain they are not confound by unmeasured, and uncontrolled disturbances.
+	\end{exampleblock}
+	
+\end{frame}
+
+\begin{frame}\frametitle{\includegraphics[width=0.25\textwidth]{\imagedir/doe/examples/advice-logo.png}\,\,disturbances which can be measured, should be recorded}
+	
+	\begin{tabulary}{\linewidth}{c|ccc|cc|c}\hline 
+		& \multicolumn{3}{c|}{\textbf{\relax Factors}} & \multicolumn{2}{c|}{\textbf{\relax Measured disturbances}}  & \textbf{\relax Outcome variable}                      \\
+		& \multicolumn{3}{c|}{$\overbrace{ \hspace{2.2cm}}{}$}  & \multicolumn{2}{c|}{$\overbrace{ \hspace{4cm}}{}$} & $\overbrace{\hspace{3cm}}{}$ \\
+		\textbf{\relax Experiment$^\ast$} & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C } & \textbf{\relax T}emperature & \textbf{\relax H}umidity & \textbf{\relax $y$ = breakability}\\
+		\hline 
+		\textbf{1} & \(-\) & \(-\) & \(-\) & 23 & 32 \\
+		\textbf{2} & \(+\) & \(-\) & \(-\) & 21 & 56 \\
+		\textbf{3} & \(-\) & \(+\) & \(-\) & 24 & 24 \\
+		\textbf{4} & \(+\) & \(+\) & \(-\) & 22 & 24 \\
+		\textbf{5} & \(-\) & \(-\) & \(+\) & 23 & 30 \\
+		\textbf{6} & \(+\) & \(-\) & \(+\) & 22 & 54 \\
+		\textbf{7} & \(-\) & \(+\) & \(+\) & 23 & 36 \\
+		\textbf{8} & \(+\) & \(+\) & \(+\) & 24 & 24 \\
+		\textbf{9} &  &  &  &  & \\
+		$\vdots$   &  &  &  &  & \\ \hline
+	\end{tabulary}
+	
+	\vspace{0.05cm}
+	{\scriptsize $^\ast$ Experiments were run in random order; but are reported in standard order}
+	
+	\onslide+<2->{
+		\vspace{0.25cm}
+		{\small ``{\color{purple} measured disturbances}'' = ``variables which are measured, but not controlled'' = ``{\color{purple}  covariates}''}
+	}	
+\end{frame}
+
+\begin{frame}\frametitle{Using the covariate information}
+	
+	
+	\begin{tabulary}{\linewidth}{c|ccc|cc|c}\hline 
+		& \multicolumn{3}{c|}{\textbf{\relax Factors}} & \multicolumn{2}{c|}{\textbf{\relax Measured disturbances}}  & \textbf{\relax Outcome variable}                      \\
+		& \multicolumn{3}{c|}{$\overbrace{ \hspace{2.2cm}}{}$}  & \multicolumn{2}{c|}{$\overbrace{ \hspace{4cm}}{}$} & $\overbrace{\hspace{3cm}}{}$ \\
+		\textbf{\relax Experiment$^\ast$} & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C } & \textbf{\relax T}emperature & \textbf{\relax H}umidity & \textbf{\relax $y$ = breakability}\\
+		\hline 
+		\textbf{1} & \(-\) & \(-\) & \(-\) & 23 & 32 & 4 \\
+		\textbf{2} & \(+\) & \(-\) & \(-\) & 21 & 56 & 5 \\
+		\textbf{3} & \(-\) & \(+\) & \(-\) & 24 & 24 & 5 \\
+		\textbf{4} & \(+\) & \(+\) & \(-\) & 22 & 24 & 6 \\
+		\textbf{5} & \(-\) & \(-\) & \(+\) & 23 & 77 & 3 \\
+		\textbf{6} & \(+\) & \(-\) & \(+\) & 22 & 54 & 8 \\
+		\textbf{7} & \(-\) & \(+\) & \(+\) & 23 & 36 & 6 \\
+		\textbf{8} & \(+\) & \(+\) & \(+\) & 24 & 24 & 9 \\
+		\textbf{9} & $0$   & $0$   & $0$   & 23 & 39 & 5 \\
+		$\vdots$   &  &  &  &  & \\ \hline
+	\end{tabulary}
+	
+	\onslide+<2->{
+		\vspace{0.25cm}
+		$\hat{y} = b_0 + b_\text{A}x_\text{A} + b_\text{B}x_\text{B} + b_\text{C}x_\text{C} +  b_\text{AB}x_\text{A}x_\text{B} + \dots +\underbrace{ \color{myOrange} b_\text{T}\,x_\text{T} \,\, + \,\, b_\text{H}\,x_\text{H}}_{\mathclap{\text{covariate terms are added to the model$^\ast$}}}$
+		
+		
+		
+		%\begin{flushright}
+		{\tiny $^\ast$ but you will require more than 8 experiments to build this model}
+		%\end{flushright}	
+	}
+\end{frame}
+
+\begin{frame}\frametitle{Cellphone app example: ``CalApp''}	
+	\begin{columns}[T]
+		\column{0.25\textwidth}
+			\includegraphics[width=\textwidth]{../4C/Supporting materials/4C-7-cell-phone-2830319467_1faaecc974_o-flickr.jpg}
+			\\
+			\tiny{\href{https://secure.flickr.com/photos/williamhook/2830319467/}{Flickr: williamhook}}
+			
+		\column{0.80\textwidth}
+		
+			The app has various upgradable features, called ``in-app purchases''
+			
+			\begin{itemize}
+				\item	sync-to-other-devices
+				\item	text message reminders
+				\item	integrate with desktop calendar
+			\end{itemize}
+			
+			\vspace{1cm}
+			
+			
+		\onslide+<2->{	
+		   	 \fbox{\parbox[b][5em][t]{0.65\textwidth}{
+			 	Your marketing idea for experimenting: 
+				\begin{itemize}
+					\item	each test group has 2000 people
+					\item	calculate the percentage using the app after 60 days; that's your outcome, $y$
+				\end{itemize}
+		   	 } }
+		}
+		 
+	\end{columns}	
+\end{frame}
+
+\begin{frame}\frametitle{Cellphone app example: ``CalApp''}	
+	
+			{\color{myOrange} The factors you are actively testing} {\small (confirm whether they are controllable)}
+			\vspace{12pt}
+			
+			\begin{tabulary}{\linewidth}{l|ll}\hline
+				& \textbf{\relax Low level $-$} & \textbf{\relax High level $+$}\\ \hline  \\
+				\textbf{A}: ``Promotion'' & 1 free in-app upgrade & 30-day trial of all features\\ \\
+				\textbf{B}: ``Message'' & \parbox[t]{5.cm}{``CalApp has your schedule available at your fingertips, on any device.''} & \parbox[t]{5.5cm}{``CalApp features are configurable; only pay for the features you want.''} \\ \\
+				\textbf{C}: ``Price'' & in-app purchase price is 89c &  in-app purchase price is 99c  \\& \\\hline
+			\end{tabulary}	
+\end{frame}
+
+\begin{frame}\frametitle{Cellphone app example: test your understanding}
+	
+	
+	Are these ``disturbances'' (\emph{not measured, not controlled}), or \\
+	\qquad\quad\,\,\,\,\,\, ``covariates'' \,\,\,\, (\emph{measured, but not controlled}), or \\
+	\qquad\quad\,\,\,\,\,\, ``neither of these'':
+	
+	\vspace{0.5cm}
+	
+	\begin{itemize}
+		\item	\textbf{E}: smartphone user's age
+		\item	\textbf{N}: smartphone user's gender
+		\item	\textbf{S}: smartphone user's connection speed (e.g. cell, or wifi)
+		\item	\textbf{R}: amount of free memory (RAM) on the device
+		\item	\textbf{F}: whether the advert/message is delivered via ad network G, or ad network H
+		\item	\textbf{D}: if the user's phone is Android or Apple		
+	\end{itemize}
+	
+	\vspace{0.5cm}
+	
+	Participate in the forums and share your opinion at \href{http://tiny.cc/cal-app}{http://tiny.cc/cal-app}
+\end{frame}
+
+\end{comment}
+
+\begin{frame}\frametitle{The variables affecting our experimental system}
+	We may classify them in several ways:
+	
+	\begin{itemize}
+		\item	those we know about, and those that are unknown
+			\pause
+		\item	variables we can control, and uncontrolled variables: \emph{we'll consider these today}
+			\pause
+		\item	some we can measure, and others we cannot measure: \emph{we'll consider these today}
+		
+	\end{itemize}	
+\end{frame}
+
+\begin{frame}\frametitle{Controllable and measurable variables and the need for randomization}
+	Use a familiar example: {\color{myOrange} ginger biscuits}
+	\vspace{0.25cm}
+	\begin{columns}[T]
+		\column{0.4\textwidth}
+			We have 3 factors:
+			\begin{enumerate}
+				\item	\textbf{A}: baking temperature
+				\item	\textbf{B}: amount of baking soda
+				\item	\textbf{C}: baking time
+			\end{enumerate}
+			
+			
+			\vspace{1cm}
+			
+			\includegraphics[width=0.8\textwidth]{../4C/Supporting materials/4C-2-ginger-biscuits-3242839562_10c30d1aa3_o.jpg}
+		
+		
+			\see{\href{https://secure.flickr.com/photos/babbagecabbage/3242839562}{Flickr: babbagecabbage}}
+			
+		
+		\column{0.58\textwidth}
+		
+			\onslide+<2->{
+			
+				Order of experiments$^\ast$:
+			
+				\begin{tabulary}{\linewidth}{ccccc}\hline 
+					\textbf{\relax Experiment } & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C } & \textbf{\relax Time finished} \\
+					\hline 
+					\textbf{5} & \(-\) & \(-\) & \(+\) & 08:32\\
+					\textbf{1} & \(-\) & \(-\) & \(-\) & 09:46\\
+					\textbf{8} & \(+\) & \(+\) & \(+\) & 10:50\\
+					\textbf{3} & \(-\) & \(+\) & \(-\) & 12:05\\
+					\textbf{6} & \(+\) & \(-\) & \(+\) & 13:16\\
+					\textbf{2} & \(+\) & \(-\) & \(-\) & 14:30\\
+					\textbf{4} & \(+\) & \(+\) & \(-\) & 15:57\\
+					\textbf{7} & \(-\) & \(+\) & \(+\) & 17:09\\
+					
+					 \hline
+				\end{tabulary}
+				
+				\vspace{0.2cm}
+				{\scriptsize $^\ast$ note the randomized order}
+			}
+			
+			\vspace{0.75cm}
+			{\scriptsize See forum postings at \href{http://tiny.cc/forum-randomization}{http://tiny.cc/forum-randomization}}
+	\end{columns}	
+\end{frame}
+
+\begin{frame}\frametitle{Disturbances are uncontrolled and unmeasured variables}
+	
+	\begin{columns}[T]
+		\column{0.45\textwidth}
+			Any potential impact on our system which
+			\begin{itemize}
+				\item	is not controlled, and
+		
+				\item	is not measured
+			\end{itemize}
+			
+			\vspace{1cm}
+			In the ginger biscuit example, it might include:
+			\begin{itemize}
+				\item	ambient humidity
+				\item	ambient temperature
+				\item	impurities in the ingredients
+				\item	other examples ...
+			\end{itemize}
+		
+		\column{0.48\textwidth}
+			\includegraphics[width=\textwidth]{../4C/Supporting materials/4C-1-tiredness.jpg}
+	\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{``Control'' and ``Measure'': let's clarify what we mean by those terms}
+	
+	{\color{myOrange}Given enough resources (usually money), we can control and measure most things.}
+	
+	\begin{columns}[T]
+		\column{0.49\textwidth}
+			\begin{center}\textbf{Control}\end{center}
+				
+			We can not actively control these:
+			\begin{itemize}
+				\item	ambient humidity \onslide+<2->{(unless indoors)}
+				\item	ambient temperature \onslide+<2->{(unless indoors)}
+			\end{itemize}
+			
+			\vspace{1cm}
+			Practically, it might be expensive to control certain variables. For example: 
+			
+			impurities in the ingredients. I could buy enough
+			ingredients, mix them all up, and split them into 8 pieces, so all
+			8 experiments have the same ``impurity''.
+		
+		\column{0.48\textwidth}
+			\onslide+<3->{
+				\begin{center}\textbf{Measure}\end{center}
+			
+				Some variables are too expensive or unreliable to measure.
+			
+				\onslide+<4->{
+					\begin{center}
+						\includegraphics[width=.6\textwidth]{../4C/Supporting materials/5937291945_4e961c8baa_o-flickr-humidity-modified.png}
+						\see{\href{https://secure.flickr.com/photos/sidelong/5937291945}{Flickr: sidelong}}
+					\end{center}
+				}
+			}
+			
+	\end{columns}
+	
+\end{frame}
+
+\begin{frame}\frametitle{Uncontrolled and unmeasurable variables can negate all your hard work}
+	
+
+	\begin{columns}[T]
+		\column{0.6\textwidth}
+			%Order of experiments$^\ast$:
+			
+			\vspace{1cm}
+			\begin{tabulary}{\linewidth}{ccccc}\hline 
+				\textbf{\relax Experiment } & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C } & \textbf{\relax Time finished} \\
+				\hline 
+				\textbf{1} & \(-\) & \(-\) & \(-\) & 08:32\\
+				\textbf{2} & \(+\) & \(-\) & \(-\) & 09:46\\
+				\textbf{3} & \(-\) & \(+\) & \(-\) & 10:50\\
+				\textbf{4} & \(+\) & \(+\) & \(-\) & 12:05\\
+				\textbf{5} & \(-\) & \(-\) & \(+\) & 13:16\\
+				\textbf{6} & \(+\) & \(-\) & \(+\) & 14:30\\
+				\textbf{7} & \(-\) & \(+\) & \(+\) & 15:57\\
+				\textbf{8} & \(+\) & \(+\) & \(+\) & 17:09\\
+				 \hline
+			\end{tabulary}
+			
+			\vspace{0.2cm}
+			{\scriptsize $^\ast$ note the experiments are in \emph{standard order this time}}
+
+		\column{0.38\textwidth}
+	\end{columns}	
+\end{frame}
+
+\begin{frame}\frametitle{Take a moment to think about this ...}
+	\begin{exampleblock}{}
+		\emph{Pause the video}: what problems do you think might be caused by this confounding?
+		
+		\vspace{1cm}
+		\begin{itemize}
+			\item	Recall what the term ``confounding'' means (from the previous video)
+			\item	Guess what will happen when you analyze the outcome variable, $y$
+			\item	Now resume the video ...
+			
+		\end{itemize}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}\frametitle{\includegraphics[width=0.3\textwidth]{\imagedir/doe/examples/advice-logo.png} when experimenting with computer simulations}
+	\begin{columns}[T]
+		\column{0.48\textwidth}
+		
+			\textbf{The same as regular experiments}:
+			
+			\vspace{12pt}
+			\begin{itemize}
+				\item	you must follow a systematic method
+				\item	don't ``play around'' with the software: trial-and-error
+			\end{itemize}
+			
+			\begin{center}\rule[8mm]{4cm}{0.01cm}\end{center}
+		\column{0.01\textwidth}
+			\rule[3mm]{0.01cm}{25mm}%
+			
+		\column{0.48\textwidth}
+			\textbf{Different to regular experiments:}
+			\vspace{12pt}
+			\begin{enumerate}
+				\item	We can often run computer simulations in parallel
+				\item	Computer experiments (mostly$^\ast$) are deterministic
+					\begin{itemize}
+						\item	i.e. if you repeat the experiments, you get the identical results
+						\item	this indicates there are no disturbances that affect the outcome
+						\item	this implies you do not need to randomize the order
+						\item	or even repeat experiments!
+						
+					\end{itemize}
+			\end{enumerate}
+			{\scriptsize $^\ast$ {\emph{except those that use random number generators}}}
+	\end{columns}
+	
+	\vspace{-90pt}
+
+	 \fbox{\parbox[b][8em][t]{0.45\textwidth}{
+	 	{\footnotesize
+		 	Many experiments are run this \\way these days:
+			\begin{itemize}
+				\item	bridge/building design
+				\item	chemical factory design
+				\item	traffic light timing and queuing
+	 			\item	stock market buy/sell strategy\\ evaluations \tiny{(see \href{http://tiny.cc/trading-expt}{ http://tiny.cc/trading-expt})}
+	 		\end{itemize}
+		}
+	 } }
+\end{frame}
+
+\begin{frame}\frametitle{Experiments that could be problematic without randomization}
+	\begin{columns}[T]
+		\column{0.33\textwidth}
+			\includegraphics[width=\textwidth]{../4C/Supporting materials/4C-5-Italian.png}
+		
+		\column{0.33\textwidth}
+			\includegraphics[width=\textwidth]{../4C/Supporting materials/4C-4-memorize.png}
+		
+		\column{0.33\textwidth}
+			\includegraphics[width=\textwidth]{../4C/Supporting materials/4C-3-gym.png}
+			
+	\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{Other systems experience deterioration over time: we must randomize to counteract this}
+	\begin{columns}[T]
+		\column{0.35\textwidth}
+			Gas mileage in a vehicle: 
+			
+			\includegraphics[width=\textwidth]{../4C/Supporting materials/4C-6-gas-mileage.png}
+			
+			\vspace{2.5cm}
+			{\scriptsize (Question: how would you describe the variable: ``\textbf{R} = \emph{rain on the road}\,''?)}
+		
+		\column{0.33\textwidth}
+			
+			\onslide+<2->{
+				Ginger biscuit baking experiment: 
+			
+				\includegraphics[width=\textwidth]{../4C/Supporting materials/4C-1-tiredness.jpg}
+			}
+		
+		\column{0.33\textwidth}
+		
+			\onslide+<3->{
+				\includegraphics[width=.8\textwidth]{../4C/Supporting materials/7629039140_c2e2cde0c8_o-flickr-rusting.jpg}
+				
+				\vspace{-0.52cm}
+				{\tiny \href{https://secure.flickr.com/photos/mikecogh/7629039140}{Flickr: mikecogh}}
+				
+				
+				{\scriptsize 
+					This is a slow moving disturbance: we must account for it though if we run experiments that span several months, or years.
+				}
+			}
+			
+	\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{\includegraphics[width=0.3\textwidth]{\imagedir/doe/examples/advice-logo.png}\,\, Always randomize!}
+	
+	\begin{exampleblock}{Why do we randomize?}
+		So when we analyze the effect of the factors -- we can be almost certain they are not confound by unmeasured, and uncontrolled disturbances.
+	\end{exampleblock}
+	
+\end{frame}
+
+\begin{frame}\frametitle{\includegraphics[width=0.25\textwidth]{\imagedir/doe/examples/advice-logo.png}\,\,disturbances which can be measured, should be recorded}
+	
+	\begin{tabulary}{\linewidth}{c|ccc|cc|c}\hline 
+		& \multicolumn{3}{c|}{\textbf{\relax Factors}} & \multicolumn{2}{c|}{\textbf{\relax Measured disturbances}}  & \textbf{\relax Outcome variable}                      \\
+		& \multicolumn{3}{c|}{$\overbrace{ \hspace{2.2cm}}{}$}  & \multicolumn{2}{c|}{$\overbrace{ \hspace{4cm}}{}$} & $\overbrace{\hspace{3cm}}{}$ \\
+		\textbf{\relax Experiment$^\ast$} & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C } & \textbf{\relax T}emperature & \textbf{\relax H}umidity & \textbf{\relax $y$ = breakability}\\
+		\hline 
+		\textbf{1} & \(-\) & \(-\) & \(-\) & 23 & 32 \\
+		\textbf{2} & \(+\) & \(-\) & \(-\) & 21 & 56 \\
+		\textbf{3} & \(-\) & \(+\) & \(-\) & 24 & 24 \\
+		\textbf{4} & \(+\) & \(+\) & \(-\) & 22 & 24 \\
+		\textbf{5} & \(-\) & \(-\) & \(+\) & 23 & 30 \\
+		\textbf{6} & \(+\) & \(-\) & \(+\) & 22 & 54 \\
+		\textbf{7} & \(-\) & \(+\) & \(+\) & 23 & 36 \\
+		\textbf{8} & \(+\) & \(+\) & \(+\) & 24 & 24 \\
+		\textbf{9} &  &  &  &  & \\
+		$\vdots$   &  &  &  &  & \\ \hline
+	\end{tabulary}
+	
+	\vspace{0.05cm}
+	{\scriptsize $^\ast$ Experiments were run in random order; but are reported in standard order}
+	
+	\onslide+<2->{
+		\vspace{0.25cm}
+		{\small ``{\color{purple} measured disturbances}'' = ``variables which are measured, but not controlled'' = ``{\color{purple}  covariates}''}
+	}	
+\end{frame}
+
+\begin{frame}\frametitle{Using the covariate information}
+	
+	
+	\begin{tabulary}{\linewidth}{c|ccc|cc|c}\hline 
+		& \multicolumn{3}{c|}{\textbf{\relax Factors}} & \multicolumn{2}{c|}{\textbf{\relax Measured disturbances}}  & \textbf{\relax Outcome variable}                      \\
+		& \multicolumn{3}{c|}{$\overbrace{ \hspace{2.2cm}}{}$}  & \multicolumn{2}{c|}{$\overbrace{ \hspace{4cm}}{}$} & $\overbrace{\hspace{3cm}}{}$ \\
+		\textbf{\relax Experiment$^\ast$} & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C } & \textbf{\relax T}emperature & \textbf{\relax H}umidity & \textbf{\relax $y$ = breakability}\\
+		\hline 
+		\textbf{1} & \(-\) & \(-\) & \(-\) & 23 & 32 & 4 \\
+		\textbf{2} & \(+\) & \(-\) & \(-\) & 21 & 56 & 5 \\
+		\textbf{3} & \(-\) & \(+\) & \(-\) & 24 & 24 & 5 \\
+		\textbf{4} & \(+\) & \(+\) & \(-\) & 22 & 24 & 6 \\
+		\textbf{5} & \(-\) & \(-\) & \(+\) & 23 & 77 & 3 \\
+		\textbf{6} & \(+\) & \(-\) & \(+\) & 22 & 54 & 8 \\
+		\textbf{7} & \(-\) & \(+\) & \(+\) & 23 & 36 & 6 \\
+		\textbf{8} & \(+\) & \(+\) & \(+\) & 24 & 24 & 9 \\
+		\textbf{9} & $0$   & $0$   & $0$   & 23 & 39 & 5 \\
+		$\vdots$   &  &  &  &  & \\ \hline
+	\end{tabulary}
+	
+	\onslide+<2->{
+		\vspace{0.25cm}
+		$\hat{y} = b_0 + b_\text{A}x_\text{A} + b_\text{B}x_\text{B} + b_\text{C}x_\text{C} +  b_\text{AB}x_\text{A}x_\text{B} + \dots +\underbrace{ \color{myOrange} b_\text{T}\,x_\text{T} \,\, + \,\, b_\text{H}\,x_\text{H}}_{\mathclap{\text{covariate terms are added to the model$^\ast$}}}$
+		
+		
+		
+		%\begin{flushright}
+		{\tiny $^\ast$ but you will require more than 8 experiments to build this model}
+		%\end{flushright}	
+	}
+\end{frame}
+
+\begin{frame}\frametitle{Cellphone app example: ``CalApp''}	
+	\begin{columns}[T]
+		\column{0.25\textwidth}
+			\includegraphics[width=\textwidth]{../4C/Supporting materials/4C-7-cell-phone-2830319467_1faaecc974_o-flickr.jpg}
+			\\
+			\tiny{\href{https://secure.flickr.com/photos/williamhook/2830319467/}{Flickr: williamhook}}
+			
+		\column{0.80\textwidth}
+		
+			The app has various upgradable features, called ``in-app purchases''
+			
+			\begin{itemize}
+				\item	sync-to-other-devices
+				\item	text message reminders
+				\item	integrate with desktop calendar
+			\end{itemize}
+			
+			\vspace{1cm}
+			
+			
+		\onslide+<2->{	
+		   	 \fbox{\parbox[b][5em][t]{0.65\textwidth}{
+			 	Your marketing idea for experimenting: 
+				\begin{itemize}
+					\item	each test group has 2000 people
+					\item	calculate the percentage using the app after 60 days; that's your outcome, $y$
+				\end{itemize}
+		   	 } }
+		}
+		
+		\vspace{0.5cm}
+		{\scriptsize Read the Harvard Business Review article at \href{http://tiny.cc/hbr-article}{http://tiny.cc/hbr-article}}
+		 
+	\end{columns}	
+\end{frame}
+
+\begin{frame}\frametitle{Cellphone app example: ``CalApp''}	
+	
+			{\color{myOrange} The factors you are actively testing} {\small (confirm whether they are controllable)}
+			\vspace{12pt}
+			
+			\begin{tabulary}{\linewidth}{l|ll}\hline
+				& \textbf{\relax Low level $-$} & \textbf{\relax High level $+$}\\ \hline  \\
+				\textbf{A}: ``Promotion'' & 1 free in-app upgrade & 30-day trial of all features\\ \\
+				\textbf{B}: ``Message'' & \parbox[t]{5.cm}{``CalApp has your schedule available at your fingertips, on any device.''} & \parbox[t]{5.5cm}{``CalApp features are configurable; only pay for the features you want.''} \\ \\
+				\textbf{C}: ``Price'' & in-app purchase price is 89c &  in-app purchase price is 99c  \\& \\\hline
+			\end{tabulary}	
+\end{frame}
+
+\begin{frame}\frametitle{Cellphone app example: test your understanding}
+	
+	
+	Are these ``disturbances'' (\emph{not measured, not controlled}), or \\
+	\qquad\quad\,\,\,\,\,\, ``covariates'' \,\,\,\, (\emph{measured, but not controlled}), or \\
+	\qquad\quad\,\,\,\,\,\, ``neither of these'':
+	
+	\vspace{0.5cm}
+	
+	\begin{itemize}
+		\item	\textbf{E}: smartphone user's age
+		\item	\textbf{N}: smartphone user's gender
+		\item	\textbf{S}: smartphone user's connection speed (e.g. cell, or wifi)
+		\item	\textbf{R}: amount of free memory (RAM) on the device
+		\item	\textbf{F}: whether the advert/message is delivered via ad network G, or ad network H
+		\item	\textbf{D}: if the user's phone is Android or Apple		
+	\end{itemize}
+	
+	\vspace{0.5cm}
+	
+	Participate in the forums and share your opinion at \href{http://tiny.cc/cal-app}{http://tiny.cc/cal-app}
+\end{frame}

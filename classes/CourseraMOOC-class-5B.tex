@@ -1,0 +1,293 @@
+
+%$\hat{y} = b_0 + b_\text{A}x_\text{A} + {\color{blue}b_\text{AA}x^2_\text{AA}}$
+%$\hat{y} = 91.8 + 14.9 x_\text{A}  -2 x^2_\text{AA}$
+%$\color{red}\hat{y} = 91.8 + 14.9 (+1)  -2 (+1)^2 \approx 105 $
+% \color[rgb]{0.538744,0.117572,0.032380}
+
+\begin{frame}\frametitle{The {\color{red} critical concepts} covered in this video using the {\color{myOrange}popcorn case study}}
+	\begin{enumerate}
+		\item	Real-world units and coded units
+		\item	\textbf{Linear vs nonlinear systems}
+		\item	Prediction models are wrong, but still useful
+		\item	\textbf{Noise and error} and the need for replicated experiments
+		\item	How to systematically reach an optimum
+		\item	Justifying the choice of every experiment
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}\frametitle{The connection between our model's coded units, and real-world units}
+	\begin{columns}[b]
+		
+		
+		\column{0.65\textwidth}
+			\textbf{The general formula for continuous variables}
+			\begin{flalign*}
+				\onslide+<2->{
+					\text{coded value} &= \dfrac{(\text{real value}) - (\text{center value})}{\tfrac{1}{2}\left(\text{range}\right)}\\ \\
+				}
+				\onslide+<3->{
+					\text{center value} &= \dfrac{(\text{low value}) + (\text{high value})}{2}\\ \\
+				}
+				\onslide+<4->{
+					\text{range} &= (\text{high value}) - (\text{low value}) &\\
+				}
+			\end{flalign*}
+			
+		\column{0.02\textwidth}
+			
+			\rule[3mm]{0.01cm}{55mm}%
+			
+		
+		\column{0.40\textwidth}
+			\textbf{Example:} cooking time, factor \textbf{A}
+			\begin{flalign*}
+				\onslide+<5->{	
+					x_\text{A} &= \dfrac{\,\text{A} - 135}{\tfrac{1}{2}\left(30\right)\,} = \dfrac{\,\text{A} - 135}{15}\\ \\
+				}
+				\onslide+<3->{
+					\text{center}_\text{A} &= \dfrac{120 + 150}{2} = 135\\ \\
+				}
+				\onslide+<4->{
+					\text{range}_\text{A} &= 150 - 120 = 30 & \\
+				}
+			\end{flalign*}		
+			
+	\end{columns}
+	\vspace{-.2cm}
+	\centerline{\includegraphics[width=.4\textwidth]{../5B/Supporting materials/popcorn-coded-real.png}}
+\end{frame}
+
+\begin{frame}\frametitle{Let's try it out}
+	
+	\begin{flalign*}
+		\text{coded value} &= \dfrac{(\text{real value}) - (\text{center value})}{\tfrac{1}{2}\left(\text{range}\right)} &
+		\qquad x_\text{A} &= \dfrac{\,\text{A} - 135}{\tfrac{1}{2}\left(30\right)\,} = \dfrac{\,\text{A} - 135}{15}\\ 
+		\\
+		\onslide+<2->{
+			&\text{If cooking time is 135 seconds, what is $x_\text{A}$?} &
+		}
+		\onslide+<3->{
+			x_\text{A} &= \dfrac{135 - 135}{\tfrac{1}{2}\left(30\right)\,} = \dfrac{0}{15} = 0
+		}\\ \\
+		\onslide+<4->{
+			&\text{If cooking time is 150 seconds, what is $x_\text{A}$?} &
+		}
+		\onslide+<5->{
+			x_\text{A} &= \dfrac{150 - 135}{\tfrac{1}{2}\left(30\right)\,} = \dfrac{15}{15} = +1
+		}
+	\end{flalign*}
+			
+	
+\end{frame}
+
+\begin{frame}\frametitle{The connection between real-world units and  coded units (in reverse\emph{!})}
+	\begin{columns}[b]
+				
+		\column{0.65\textwidth}
+			\begin{flalign*}
+				\intertext{\textbf{Going forwards}:}
+				\text{coded value} &= \dfrac{(\text{real value}) - (\text{center value})}{\tfrac{1}{2}\left(\text{range}\right)}\\ \\
+				\intertext{\textbf{Going backwards}:}
+				\text{real value} &= (\text{coded value}) \times \tfrac{1}{2}\left(\text{range}\right) + (\text{center value}) \\ \\ \\
+			\end{flalign*}
+			
+		\column{0.02\textwidth}
+			\rule[3mm]{0.01cm}{55mm}
+		
+		\column{0.40\textwidth}
+			
+			\begin{flalign*}
+				\intertext{\textbf{Example:} cooking time, factor \textbf{A}}
+				x_\text{A} &= \dfrac{\,\text{A} - 135}{\tfrac{1}{2}\left(30\right)\,} = \dfrac{\,\text{A} - 135}{15}\\ \\
+				\intertext{\color{myOrange} What is $x_\text{A} = +2$?:} 
+				\onslide+<2->{
+				\text{real value} &= (+2) \times \tfrac{1}{2}\left(30\right) + (135)\\
+					\onslide+<3->{
+					 			  &= (+2) \times 15 + (135)}\\
+					\onslide+<4->{
+								  &= 30 + 135 = 165\\}
+				}
+			\end{flalign*}		
+			
+	\end{columns}
+	
+	\vspace{2cm}
+	\vfill
+\end{frame}
+
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[width=.98\textwidth]{../5B/Supporting materials/popcorn-experiments-01.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[width=.98\textwidth]{../5B/Supporting materials/popcorn-experiments-02.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[width=.98\textwidth]{../5B/Supporting materials/popcorn-experiments-03.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[width=.98\textwidth]{../5B/Supporting materials/popcorn-experiments-04.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[width=.98\textwidth]{../5B/Supporting materials/popcorn-experiments-05.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[width=.98\textwidth]{../5B/Supporting materials/popcorn-experiments-06.png}}
+\end{frame}
+\begin{frame}\frametitle{The famous quote by George Box}
+	\begin{quote}
+		``... all models are wrong, but some are useful.''
+	\end{quote}
+	
+	\begin{quote}
+		``...the practical question is how wrong do they have to be [before they are] not useful?''
+	\end{quote}
+	
+	\vspace{1cm}
+	G. E. P. Box and  N. R. Draper (1987), ``\emph{Empirical Model Building and Response Surfaces}'', John Wiley \& Sons, New York, NY.
+\end{frame}
+\begin{frame}\frametitle{Answering George Box's question for the popcorn example}
+	
+	What is ``\emph{not useful}\,'' in this case?
+	
+	\vspace{1cm}
+	Remember in 5A we said: ``always have an objective in mind''.
+	
+	\vspace{1cm}
+	\begin{exampleblock}{The answer to the question}
+		Our model is not useful when the predictions are not accurate; we need accurate predictions to optimize.
+	\end{exampleblock}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[width=.98\textwidth]{../5B/Supporting materials/popcorn-experiments-07.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[width=.98\textwidth]{../5B/Supporting materials/popcorn-experiments-08.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[width=.98\textwidth]{../5B/Supporting materials/popcorn-experiments-09.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[width=.98\textwidth]{../5B/Supporting materials/popcorn-experiments-10.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[width=.98\textwidth]{../5B/Supporting materials/popcorn-experiments-11.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[width=.98\textwidth]{../5B/Supporting materials/popcorn-experiments-12.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[width=.98\textwidth]{../5B/Supporting materials/popcorn-experiments-13.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[width=.98\textwidth]{../5B/Supporting materials/popcorn-experiments-14.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[width=.98\textwidth]{../5B/Supporting materials/popcorn-experiments-15.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[width=.98\textwidth]{../5B/Supporting materials/popcorn-experiments-16.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[width=.98\textwidth]{../5B/Supporting materials/popcorn-experiments-17.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[width=.98\textwidth]{../5B/Supporting materials/popcorn-experiments-18.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[width=.98\textwidth]{../5B/Supporting materials/popcorn-experiments-19.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[width=.98\textwidth]{../5B/Supporting materials/popcorn-experiments-20.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[width=.98\textwidth]{../5B/Supporting materials/popcorn-experiments-21.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[width=.98\textwidth]{../5B/Supporting materials/popcorn-experiments-22.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[width=.98\textwidth]{../5B/Supporting materials/popcorn-experiments-23.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[width=.98\textwidth]{../5B/Supporting materials/popcorn-experiments-24.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[width=.98\textwidth]{../5B/Supporting materials/popcorn-experiments-25.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[width=.98\textwidth]{../5B/Supporting materials/popcorn-experiments-26.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[width=.98\textwidth]{../5B/Supporting materials/popcorn-experiments-27.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[width=.98\textwidth]{../5B/Supporting materials/popcorn-experiments-28.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[width=.98\textwidth]{../5B/Supporting materials/popcorn-experiments-29.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[width=.98\textwidth]{../5B/Supporting materials/popcorn-experiments-30.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[width=.98\textwidth]{../5B/Supporting materials/popcorn-experiments-31.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[width=.98\textwidth]{../5B/Supporting materials/popcorn-experiments-32.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[width=.98\textwidth]{../5B/Supporting materials/popcorn-experiments-33.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[width=.98\textwidth]{../5B/Supporting materials/popcorn-experiments-34.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[width=.98\textwidth]{../5B/Supporting materials/popcorn-experiments-35.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[width=.98\textwidth]{../5B/Supporting materials/popcorn-experiments-36.png}}
+\end{frame}
+\begin{frame}\frametitle{Recap of each experiment used so far}
+	\begin{itemize}
+		\item	\textbf{1, 2, 3, 4}
+		
+			\hspace{1ex} the used to rule out factor B (oil type)\\
+			\hspace{1ex} used  to provide an initial model
+			
+		\pause
+		
+		\item	\textbf{5}
+		
+			\hspace{1ex} center point: confirmed our model was linear\\
+			\hspace{1ex} used to check prediction quality
+		
+		\pause
+			
+		\item	\textbf{6}
+		
+			\hspace{1ex} exploratory first step outside the initial factorial\\
+			\hspace{1ex} to test the model's prediction quality\\
+			\hspace{1ex} it suggested we rebuild the model (add quadratic term)
+		
+		\pause
+		
+		\item	\textbf{7}
+		
+			\hspace{1ex} seems like we are near an optimum
+
+	\end{itemize}
+	\onslide+<5->{
+		\hspace{1cm} \includegraphics[width=0.3\textwidth]{\imagedir/doe/examples/advice-logo.png}
+				\,\,{\color{blue}are you able to justify the need for each experiment?}
+	}
+\end{frame}
+\begin{frame}\frametitle{The {\color{red} critical concepts} covered in this video using the {\color{myOrange}popcorn case study}}
+	\begin{enumerate}
+		\item	Real-world units and coded units
+		\item	Linear vs nonlinear systems
+		\item	Prediction models are wrong, but still useful
+		\item	Noise and error and the need for replicated experiments
+		\item	How to systematically reach an optimum
+		\item	Justifying the choice of every experiment
+	\end{enumerate}
+\end{frame}

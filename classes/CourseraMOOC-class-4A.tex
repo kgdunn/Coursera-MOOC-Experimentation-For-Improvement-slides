@@ -1,0 +1,1162 @@
+\begin{comment}
+	\begin{columns}[T]
+		\column{0.45\textwidth}
+			\includegraphics[width=0.7\textwidth]{\imagedir/statistics/flicfcb_o.jpg}
+		
+			{\scriptsize (p. 230 in Box, Hunter and Hunter, 2$^\text{nd}$ ed)}
+		
+		\column{0.48\textwidth}
+			\includegraphics[width=\textwidth]{\imagedir/doe/examples/solar-panel-mendelu-cz-website.png}
+		
+		
+			\see{\href{http://tiny.cc/solar-panel-study}{http://tiny.cc/solar-panel-study}}
+	\end{columns}
+	
+	\begin{center}\rule[8mm]{4cm}{0.01cm}\end{center}
+	\rule[3mm]{0.01cm}{25mm}%
+
+\begin{frame}\frametitle{}
+
+	{\LARGE 
+	
+	\begin{tabular}{cccc}\hline 
+	\textsf{\relax Number of } & \textsf{\relax Total  } & \textsf{\relax Cost of all} & \textsf{\relax Time to } \\
+	\textsf{\relax factors} & \textsf{\relax experiments} & \textsf{\relax experiments} & \textsf{\relax run experiments}\\	\hline \hline
+	\onslide+<1->{
+	& & & \vspace{-.5cm} \\}
+	\onslide+<2->{
+	2 & 4 & \$300 & 1 day\\}
+	\onslide+<3->{
+	3 & 8 & \$600 & 2 days\\}
+	\onslide+<4->{
+	4 & 16 & \$1,200 & 4 days\\}
+	\onslide+<5->{
+	5 & 32 & \$2,400 & 8 days\\}
+	\onslide+<6->{
+	6 & 64 & \$4,800 & 16 days\\}
+	\onslide+<7->{
+	7 & 128 & \$9,600 & 32 days\\}
+	\end{tabular}
+	
+	}
+	\onslide+<8->{
+	assuming 6 hours and \$150 per experiment}
+	
+\end{frame}
+
+\begin{frame}\frametitle{There are $2^k$ model parameters in a full-factorial: not all are meaningful!}
+	\vspace{6pt}
+	For $k=4$ factors:
+	\vspace{-6pt}
+		{\scriptsize
+		\begin{align*}
+			\hat{y} &= {\color{myOrange}b_0}\\
+					&+ {\color{myOrange}b_\text{A}\,}x_\text{A}\\
+					&+ {\color{myOrange}b_\text{B}\,}x_\text{B}\\
+					&+ {\color{myOrange}b_\text{C}\,}x_\text{C}\\
+					&+ {\color{myOrange}b_\text{D}\,}x_\text{D}\\
+					&+ {\color{myOrange}b_\text{AB}\,}x_\text{A}x_\text{B}\\
+					&+ {\color{myOrange}b_\text{AC}\,}x_\text{A}x_\text{C}\\
+					&+ {\color{myOrange}b_\text{BC}\,}x_\text{B}x_\text{C}\\
+					&+ {\color{myOrange}b_\text{AD}\,}x_\text{A}x_\text{D}\\
+					&+ {\color{myOrange}b_\text{BD}\,}x_\text{B}x_\text{D}\\
+					&+ {\color{myOrange}b_\text{CD}\,}x_\text{C}x_\text{D}\\
+					&+ {\color{myOrange}b_\text{ABC}\,}x_\text{A}x_\text{B}x_\text{C}\\
+					&+ {\color{myOrange}b_\text{ABD}\,}x_\text{A}x_\text{B}x_\text{D}\\
+					&+ {\color{myOrange}b_\text{ACD}\,}x_\text{A}x_\text{C}x_\text{D}\\
+					&+ {\color{myOrange}b_\text{BCD}\,}x_\text{B}x_\text{C}x_\text{D}\\
+					&+ {\color{myOrange}b_\text{ABCD}\,}x_\text{A}x_\text{B}x_\text{C}x_\text{D}
+		\end{align*}
+		}
+	
+
+\end{frame}
+
+\begin{frame}\frametitle{Most real systems exhibit minor interactions; main effects usually dominate}
+	\begin{columns}[T]
+		\column{0.45\textwidth}
+			\includegraphics[width=\textwidth]{\imagedir/doe/examples/chemical-conversion-pareto.png}
+			
+			{\tiny p. 200 in Box, Hunter and Hunter, 2$^\text{nd}$ ed}
+			
+		\column{0.45\textwidth}
+			\includegraphics[width=\textwidth]{\imagedir/doe/examples/metal-removal-pareto.png}
+			
+			{\tiny Metal removal from wastewater; McMaster student project}
+			
+	\end{columns}
+	
+\end{frame}
+
+\begin{frame}\frametitle{Core assumption regarding fractional factorials}
+	\begin{columns}
+		\column{0.65\textwidth}
+			{\scriptsize
+			\begin{align*}
+				\hat{y} &= {\color{myOrange}b_0}\\
+						&+ {\color{myOrange}b_\text{A}\,}x_\text{A}\\
+						&+ {\color{myOrange}b_\text{B}\,}x_\text{B}\\
+						&+ {\color{myOrange}b_\text{C}\,}x_\text{C}\\
+						&+ {\color{myOrange}b_\text{D}\,}x_\text{D}\\
+						&+ {\color{myOrange}b_\text{AB}\,}x_\text{A}x_\text{B}\\
+						&+ {\color{myOrange}b_\text{AC}\,}x_\text{A}x_\text{C}\\
+						&+ {\color{myOrange}b_\text{BC}\,}x_\text{B}x_\text{C}\\
+						&+ {\color{myOrange}b_\text{AD}\,}x_\text{A}x_\text{D}\\
+						&+ {\color{myOrange}b_\text{BD}\,}x_\text{B}x_\text{D}\\
+						&+ {\color{myOrange}b_\text{CD}\,}x_\text{C}x_\text{D}\\
+						&+ {\color{myOrange}b_\text{ABC}\,}x_\text{A}x_\text{B}x_\text{C}\\
+						&+ {\color{myOrange}b_\text{ABD}\,}x_\text{A}x_\text{B}x_\text{D}\\
+						&+ {\color{myOrange}b_\text{ACD}\,}x_\text{A}x_\text{C}x_\text{D}\\
+						&+ {\color{myOrange}b_\text{BCD}\,}x_\text{B}x_\text{C}x_\text{D}\\
+						&+ {\color{myOrange}b_\text{ABCD}\,}x_\text{A}x_\text{B}x_\text{C}x_\text{D}
+			\end{align*}
+			}
+			
+		\column{0.45\textwidth}
+			\pause
+			The main effects and some two factor interactions are often the only parameters of interest
+			
+			\vspace{36pt}
+			The higher order interactions can safely be ignored
+			\begin{itemize}
+				\item	Now it is an assumption, but it's reasonable in many cases
+				\item	The cost of obtaining them can be prohibitive
+			\end{itemize}
+			
+	\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{If you'd like to do half the work, which 4 experiments would you pick?}
+	\begin{columns}
+		\column{0.65\textwidth}
+			\begin{center}
+				\includegraphics[width=.9\textwidth]{\imagedir/doe/half-fraction-in-3-factors-MOOC-all-8.png}
+			\end{center}
+			
+		\column{0.45\textwidth}
+			\begin{tabulary}{\linewidth}{|c||c|c|c|}\hline 
+				\textsf{\relax Experiment } & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C } \\
+				\hline 1 & \(-\) & \(-\) & \(-\) \\
+				\hline 2 & \(+\) & \(-\) & \(-\) \\
+				\hline 3 & \(-\) & \(+\) & \(-\) \\
+				\hline 4 & \(+\) & \(+\) & \(-\) \\
+				\hline 5 & \(-\) & \(-\) & \(+\) \\
+				\hline 6 & \(+\) & \(-\) & \(+\) \\
+				\hline 7 & \(-\) & \(+\) & \(+\) \\
+				\hline 8 & \(+\) & \(+\) & \(+\) \\
+				\hline
+			\end{tabulary}
+	\end{columns}	
+\end{frame}
+
+\begin{frame}\frametitle{If you'd like to do half the work, which 4 experiments would you pick?}
+	\begin{columns}
+		\column{0.65\textwidth}
+			\begin{center}
+				\includegraphics[width=.9\textwidth]{\imagedir/doe/half-fraction-in-3-factors-MOOC-front-4.png}
+			\end{center}
+			
+		\column{0.45\textwidth}
+			\begin{tabulary}{\linewidth}{|c||c|c|c|}\hline 
+				\textsf{\relax Experiment } & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C } \\
+				\hline \color{myOrange} \textbf{1} & \(-\) & \(-\) & \(-\) \\
+				\hline \color{myOrange} \textbf{2} & \(+\) & \(-\) & \(-\) \\
+				\hline \color{myOrange} \textbf{3} & \(-\) & \(+\) & \(-\) \\
+				\hline \color{myOrange} \textbf{4} & \(+\) & \(+\) & \(-\) \\
+				\hline 5 & \(-\) & \(-\) & \(+\) \\
+				\hline 6 & \(+\) & \(-\) & \(+\) \\
+				\hline 7 & \(-\) & \(+\) & \(+\) \\
+				\hline 8 & \(+\) & \(+\) & \(+\) \\
+				\hline
+			\end{tabulary}
+	\end{columns}	
+\end{frame}
+
+\begin{frame}\frametitle{If you'd like to do half the work, which 4 experiments would you pick?}
+	\begin{columns}
+		\column{0.65\textwidth}
+			\begin{center}
+				\includegraphics[width=.9\textwidth]{\imagedir/doe/half-fraction-in-3-factors-MOOC-middle-4.png}
+			\end{center}
+			
+		\column{0.45\textwidth}
+			\begin{tabulary}{\linewidth}{|c||c|c|c|}\hline 
+				\textsf{\relax Experiment } & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C } \\
+				\hline 1 & \(-\) & \(-\) & \(-\) \\
+				\hline 2 & \(+\) & \(-\) & \(-\) \\
+				\hline \color{myOrange} \textbf{3} & \(-\) & \(+\) & \(-\) \\
+				\hline \color{myOrange} \textbf{4} & \(+\) & \(+\) & \(-\) \\
+				\hline \color{myOrange} \textbf{5} & \(-\) & \(-\) & \(+\) \\
+				\hline \color{myOrange} \textbf{6} & \(+\) & \(-\) & \(+\) \\
+				\hline 7 & \(-\) & \(+\) & \(+\) \\
+				\hline 8 & \(+\) & \(+\) & \(+\) \\
+				\hline
+			\end{tabulary}
+	\end{columns}	
+\end{frame}
+
+\begin{frame}\frametitle{If you'd like to do half the work, which 4 experiments would you pick?}
+	\begin{columns}
+		\column{0.65\textwidth}
+			\begin{center}
+				\includegraphics[width=.9\textwidth]{\imagedir/doe/half-fraction-in-3-factors-MOOC-optimum-4.png}
+			\end{center}
+			
+		\column{0.45\textwidth}
+			\begin{tabulary}{\linewidth}{|c||c|c|c|}\hline 
+				\textsf{\relax Experiment } & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C } \\
+				\hline 1 & \(-\) & \(-\) & \(-\) \\
+				\hline \color{myOrange} \textbf{2} & \(+\) & \(-\) & \(-\) \\
+				\hline \color{myOrange} \textbf{3} & \(-\) & \(+\) & \(-\) \\
+				\hline 4 & \(+\) & \(+\) & \(-\) \\
+				\hline \color{myOrange} \textbf{5} & \(-\) & \(-\) & \(+\) \\
+				\hline 6 & \(+\) & \(-\) & \(+\) \\
+				\hline 7 & \(-\) & \(+\) & \(+\) \\
+				\hline \color{myOrange} \textbf{8} & \(+\) & \(+\) & \(+\) \\
+				\hline
+			\end{tabulary}
+	\end{columns}	
+\end{frame}
+
+\begin{frame}\frametitle{If you'd like to do half the work, which 4 experiments would you pick?}
+	\begin{columns}
+		\column{0.65\textwidth}
+			\begin{center}
+				\includegraphics[width=.9\textwidth]{\imagedir/doe/half-fraction-in-3-factors-MOOC-optimum-4.png}
+			\end{center}
+			
+		\column{0.45\textwidth}
+			\begin{tabulary}{\linewidth}{|c||c|c|c|}\hline 
+				\textsf{\relax Experiment } & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C } \\
+				\hline \color{blue} \textbf{1} & \(-\) & \(-\) & \(-\) \\
+				\hline 2 & \(+\) & \(-\) & \(-\) \\
+				\hline 3 & \(-\) & \(+\) & \(-\) \\
+				\hline \color{blue} \textbf{4} & \(+\) & \(+\) & \(-\) \\
+				\hline 5 & \(-\) & \(-\) & \(+\) \\
+				\hline \color{blue} \textbf{6} & \(+\) & \(-\) & \(+\) \\
+				\hline \color{blue} \textbf{7} & \(-\) & \(+\) & \(+\) \\
+				\hline 8 & \(+\) & \(+\) & \(+\) \\
+				\hline
+			\end{tabulary}
+	\end{columns}	
+\end{frame}
+
+\begin{frame}\frametitle{If you'd like to do half the work, which 4 experiments would you pick?}
+	\begin{columns}
+		\column{0.65\textwidth}
+			\begin{center}
+				\includegraphics[width=.9\textwidth]{\imagedir/doe/half-fraction-in-3-factors-MOOC-collapse-transition.png}
+			\end{center}
+			
+		\column{0.45\textwidth}
+			\begin{tabulary}{\linewidth}{|c||c|c|c|}\hline 
+				\textsf{\relax Experiment } & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C } \\
+				\hline 1 & \(-\) & \(-\) & \(-\) \\
+				\hline \color{myOrange} \textbf{2} & \(+\) & \(-\) & \(-\) \\
+				\hline \color{myOrange} \textbf{3} & \(-\) & \(+\) & \(-\) \\
+				\hline 4 & \(+\) & \(+\) & \(-\) \\
+				\hline \color{myOrange} \textbf{5} & \(-\) & \(-\) & \(+\) \\
+				\hline 6 & \(+\) & \(-\) & \(+\) \\
+				\hline 7 & \(-\) & \(+\) & \(+\) \\
+				\hline \color{myOrange} \textbf{8} & \(+\) & \(+\) & \(+\) \\
+				\hline
+			\end{tabulary}
+	\end{columns}	
+\end{frame}
+
+\begin{frame}\frametitle{If you'd like to do half the work, which 4 experiments would you pick?}
+	\begin{columns}
+		\column{0.65\textwidth}
+			\begin{center}
+				\includegraphics[width=.9\textwidth]{\imagedir/doe/half-fraction-in-3-factors-MOOC-collapse-low.png}
+			\end{center}
+			
+		\column{0.45\textwidth}
+			\begin{tabulary}{\linewidth}{|c||c|c|c|}\hline 
+				\textsf{\relax Experiment } & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C } \\
+				\hline 1 & \(-\) & \(-\) & \(-\) \\
+				\hline \color{myOrange} \textbf{2} & \(+\) & \(-\) & \(-\) \\
+				\hline \color{myOrange} \textbf{3} & \(-\) & \(+\) & \(-\) \\
+				\hline 4 & \(+\) & \(+\) & \(-\) \\
+				\hline \color{myOrange} \textbf{5} & \(-\) & \(-\) & \(+\) \\
+				\hline 6 & \(+\) & \(-\) & \(+\) \\
+				\hline 7 & \(-\) & \(+\) & \(+\) \\
+				\hline \color{myOrange} \textbf{8} & \(+\) & \(+\) & \(+\) \\
+				\hline
+			\end{tabulary}
+	\end{columns}	
+\end{frame}
+
+\begin{frame}\frametitle{If you'd like to do half the work, which 4 experiments would you pick?}
+	\begin{columns}
+		\column{0.65\textwidth}
+			\begin{center}
+				\includegraphics[width=.9\textwidth]{\imagedir/doe/half-fraction-in-3-factors-MOOC-collapse-high.png}
+			\end{center}
+			
+		\column{0.45\textwidth}
+			\begin{tabulary}{\linewidth}{|c||c|c|c|}\hline 
+				\textsf{\relax Experiment } & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C } \\
+				\hline 1 & \(-\) & \(-\) & \(-\) \\
+				\hline \color{myOrange} \textbf{2} & \(+\) & \(-\) & \(-\) \\
+				\hline \color{myOrange} \textbf{3} & \(-\) & \(+\) & \(-\) \\
+				\hline 4 & \(+\) & \(+\) & \(-\) \\
+				\hline \color{myOrange} \textbf{5} & \(-\) & \(-\) & \(+\) \\
+				\hline 6 & \(+\) & \(-\) & \(+\) \\
+				\hline 7 & \(-\) & \(+\) & \(+\) \\
+				\hline \color{myOrange} \textbf{8} & \(+\) & \(+\) & \(+\) \\
+				\hline
+			\end{tabulary}
+	\end{columns}	
+\end{frame}
+
+\begin{frame}\frametitle{If you'd like to do half the work, which 4 experiments would you pick?}
+	\begin{columns}
+		\column{0.65\textwidth}
+			\begin{center}
+				\includegraphics[width=.9\textwidth]{\imagedir/doe/half-fraction-in-3-factors-MOOC-collapse-both.png}
+			\end{center}
+			
+		\column{0.45\textwidth}
+			\begin{tabulary}{\linewidth}{|c||c|c|c|}\hline 
+				\textsf{\relax Experiment } & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C } \\
+				\hline 1 & \(-\) & \(-\) & \(-\) \\
+				\hline \color{myOrange} \textbf{2} & \(+\) & \(-\) & \(-\) \\
+				\hline \color{myOrange} \textbf{3} & \(-\) & \(+\) & \(-\) \\
+				\hline 4 & \(+\) & \(+\) & \(-\) \\
+				\hline \color{myOrange} \textbf{5} & \(-\) & \(-\) & \(+\) \\
+				\hline 6 & \(+\) & \(-\) & \(+\) \\
+				\hline 7 & \(-\) & \(+\) & \(+\) \\
+				\hline \color{myOrange} \textbf{8} & \(+\) & \(+\) & \(+\) \\
+				\hline
+			\end{tabulary}
+	\end{columns}	
+\end{frame}
+
+\begin{frame}\frametitle{If you'd like to do half the work, which 4 experiments would you pick?}
+	\begin{columns}
+		\column{0.65\textwidth}
+			\begin{center}
+				\includegraphics[width=.9\textwidth]{\imagedir/doe/half-fraction-in-3-factors-MOOC-collapse-3-in.png}
+			\end{center}
+			
+		\column{0.45\textwidth}
+			\begin{tabulary}{\linewidth}{|c||c|c|c|}\hline 
+				\textsf{\relax Experiment } & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C } \\
+				\hline 1 & \(-\) & \(-\) & \(-\) \\
+				\hline \color{myOrange} \textbf{2} & \(+\) & \(-\) & \(-\) \\
+				\hline \color{myOrange} \textbf{3} & \(-\) & \(+\) & \(-\) \\
+				\hline 4 & \(+\) & \(+\) & \(-\) \\
+				\hline \color{myOrange} \textbf{5} & \(-\) & \(-\) & \(+\) \\
+				\hline 6 & \(+\) & \(-\) & \(+\) \\
+				\hline 7 & \(-\) & \(+\) & \(+\) \\
+				\hline \color{myOrange} \textbf{8} & \(+\) & \(+\) & \(+\) \\
+				\hline
+			\end{tabulary}
+	\end{columns}	
+\end{frame}
+
+\begin{frame}\frametitle{If you'd like to do half the work, which 4 experiments would you pick?}
+	\begin{columns}
+		\column{0.65\textwidth}
+			\begin{center}
+				\includegraphics[width=.9\textwidth]{\imagedir/doe/half-fraction-in-3-factors-MOOC-collapse-6-in.png}
+			\end{center}
+			
+		\column{0.45\textwidth}
+			\begin{tabulary}{\linewidth}{|c||c|c|c|}\hline 
+				\textsf{\relax Experiment } & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C } \\
+				\hline 1 & \(-\) & \(-\) & \(-\) \\
+				\hline \color{myOrange} \textbf{2} & \(+\) & \(-\) & \(-\) \\
+				\hline \color{myOrange} \textbf{3} & \(-\) & \(+\) & \(-\) \\
+				\hline 4 & \(+\) & \(+\) & \(-\) \\
+				\hline \color{myOrange} \textbf{5} & \(-\) & \(-\) & \(+\) \\
+				\hline 6 & \(+\) & \(-\) & \(+\) \\
+				\hline 7 & \(-\) & \(+\) & \(+\) \\
+				\hline \color{myOrange} \textbf{8} & \(+\) & \(+\) & \(+\) \\
+				\hline
+			\end{tabulary}
+	\end{columns}	
+\end{frame}
+
+\begin{frame}\frametitle{If you'd like to do half the work, which 4 experiments would you pick?}
+	\begin{columns}
+		\column{0.65\textwidth}
+			\begin{center}
+				\includegraphics[width=.9\textwidth]{\imagedir/doe/half-fraction-in-3-factors-MOOC-collapse-total.png}
+			\end{center}
+			
+		\column{0.45\textwidth}
+			\begin{tabulary}{\linewidth}{|c||c|c|c|}\hline 
+				\textsf{\relax Experiment } & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C } \\
+				\hline 1 & \(-\) & \(-\) & \(-\) \\
+				\hline \color{myOrange} \textbf{2} & \(+\) & \(-\) & \(-\) \\
+				\hline \color{myOrange} \textbf{3} & \(-\) & \(+\) & \(-\) \\
+				\hline 4 & \(+\) & \(+\) & \(-\) \\
+				\hline \color{myOrange} \textbf{5} & \(-\) & \(-\) & \(+\) \\
+				\hline 6 & \(+\) & \(-\) & \(+\) \\
+				\hline 7 & \(-\) & \(+\) & \(+\) \\
+				\hline \color{myOrange} \textbf{8} & \(+\) & \(+\) & \(+\) \\
+				\hline
+			\end{tabulary}
+	\end{columns}	
+\end{frame}
+
+\begin{frame}\frametitle{If you'd like to do half the work, which 4 experiments would you pick?}
+	\begin{columns}
+		\column{0.65\textwidth}
+			\begin{center}
+				\includegraphics[width=.9\textwidth]{\imagedir/doe/half-fraction-in-3-factors-MOOC-collapse-total-rotate.png}
+			\end{center}
+			
+		\column{0.45\textwidth}
+			\begin{tabulary}{\linewidth}{|c||c|c|c|}\hline 
+				\textsf{\relax Experiment } & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C } \\
+				\hline 1 & \(-\) & \(-\) & \(-\) \\
+				\hline \color{myOrange} \textbf{2} & \(+\) & \(-\) & \(-\) \\
+				\hline \color{myOrange} \textbf{3} & \(-\) & \(+\) & \(-\) \\
+				\hline 4 & \(+\) & \(+\) & \(-\) \\
+				\hline \color{myOrange} \textbf{5} & \(-\) & \(-\) & \(+\) \\
+				\hline 6 & \(+\) & \(-\) & \(+\) \\
+				\hline 7 & \(-\) & \(+\) & \(+\) \\
+				\hline \color{myOrange} \textbf{8} & \(+\) & \(+\) & \(+\) \\
+				\hline
+			\end{tabulary}
+	\end{columns}	
+\end{frame}
+
+\begin{frame}\frametitle{If you'd like to do half the work, which 4 experiments would you pick?}
+	\begin{columns}
+		\column{0.65\textwidth}
+			\begin{center}
+				\includegraphics[width=.9\textwidth]{\imagedir/doe/half-fraction-in-3-factors-MOOC-collapse-total-rotate-labelled.png}
+			\end{center}
+			
+		\column{0.45\textwidth}
+			\begin{tabulary}{\linewidth}{|c||c|c|c|}\hline 
+				\textsf{\relax Experiment } & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C } \\
+				\hline 1 & \(-\) & \(-\) & \(-\) \\
+				\hline \color{myOrange} \textbf{2} & \(+\) & \(-\) & \(-\) \\
+				\hline \color{myOrange} \textbf{3} & \(-\) & \(+\) & \(-\) \\
+				\hline 4 & \(+\) & \(+\) & \(-\) \\
+				\hline \color{myOrange} \textbf{5} & \(-\) & \(-\) & \(+\) \\
+				\hline 6 & \(+\) & \(-\) & \(+\) \\
+				\hline 7 & \(-\) & \(+\) & \(+\) \\
+				\hline \color{myOrange} \textbf{8} & \(+\) & \(+\) & \(+\) \\
+				\hline
+			\end{tabulary}
+	\end{columns}	
+\end{frame}
+
+\begin{frame}\frametitle{There are embedded full factorials inside the fractional factorial}
+	\begin{columns}[T]
+		\column{0.55\textwidth}
+			\includegraphics[width=\textwidth]{\imagedir/doe/projectivity-of-a-half-fraction-in-3-factors-MOOC.png}
+		
+		\column{0.35\textwidth}
+			
+			
+			\vspace{4cm}
+			If we choose our runs in a smart way, then fractional factorials will collapse to full factorials if an effect is insignificant.
+	\end{columns}
+	
+\end{frame}
+
+\begin{frame}\frametitle{If you'd like to do half the work, which 4 experiments would you pick?}
+	\begin{columns}
+		\column{0.65\textwidth}
+			\begin{center}
+				\includegraphics[width=.9\textwidth]{\imagedir/doe/half-fraction-in-3-factors-MOOC-optimum-4.png}
+			\end{center}
+			
+		\column{0.55\textwidth}
+			\begin{tabulary}{\linewidth}{|c||c|c|c|}\hline 
+				\textsf{\relax Experiment } & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C } \\
+				\hline 1 & \(-\) & \(-\) & \(-\) \\
+				\hline \color{myOrange} \textbf{2} & \(+\) & \(-\) & \(-\) \\
+				\hline \color{myOrange} \textbf{3} & \(-\) & \(+\) & \(-\) \\
+				\hline 4 & \(+\) & \(+\) & \(-\) \\
+				\hline \color{myOrange} \textbf{5} & \(-\) & \(-\) & \(+\) \\
+				\hline 6 & \(+\) & \(-\) & \(+\) \\
+				\hline 7 & \(-\) & \(+\) & \(+\) \\
+				\hline \color{myOrange} \textbf{8} & \(+\) & \(+\) & \(+\) \\
+				\hline
+			\end{tabulary}
+			
+			\vspace{1cm}
+			{\color{myOrange} We will consider the 4 open circles next.}
+	\end{columns}	
+
+\end{frame}
+
+\begin{frame}\frametitle{If you'd like to do half the work, which 4 experiments would you pick?}
+	\begin{columns}
+		\column{0.65\textwidth}
+			\begin{center}
+				\includegraphics[width=.9\textwidth]{\imagedir/doe/half-fraction-in-3-factors-MOOC-optimum-4.png}
+			\end{center}
+			
+		\column{0.55\textwidth}
+			\begin{tabulary}{\linewidth}{|c||c|c|c|}\hline 
+				\textsf{\relax Experiment } & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C } \\
+				\hline \color{lightgray} 1 & \color{lightgray} \(-\) & \color{lightgray}\(-\) & \color{lightgray}\(-\) \\
+				\hline \color{myOrange} \textbf{2} & \(+\) & \(-\) & \(-\) \\
+				\hline \color{myOrange} \textbf{3} & \(-\) & \(+\) & \(-\) \\
+				\hline \color{lightgray}4 & \color{lightgray}\(+\) & \color{lightgray}\(+\) & \color{lightgray}\(-\) \\
+				\hline \color{myOrange} \textbf{5} & \(-\) & \(-\) & \(+\) \\
+				\hline \color{lightgray}6 & \color{lightgray}\(+\) & \color{lightgray}\(-\) & \color{lightgray}\(+\) \\
+				\hline \color{lightgray}7 & \color{lightgray}\(-\) & \color{lightgray}\(+\) & \color{lightgray}\(+\) \\
+				\hline \color{myOrange} \textbf{8} & \(+\) & \(+\) & \(+\) \\
+				\hline
+			\end{tabulary}
+			
+			\vspace{1cm}
+			{\color{myOrange} We will consider the 4 open circles next.}
+	\end{columns}	
+
+\end{frame}
+
+\begin{frame}\frametitle{Model comparison between the full and fractional factorials}
+	\begin{columns}[T]
+		\column{0.35\textwidth}
+			\begin{center}\textbf{Full factorial model}\end{center}
+			
+				%Coefficients:
+				%  (Intercept)    C            T            S          C:T          C:S          T:S        C:T:S  
+				%11.25         6.25         0.75        -7.25         0.25        -6.75        -0.25        -0.25  
+				
+				\begin{align*}
+					\hat{y} &= {\color{myOrange}11.25}\\
+							&+ {\color{myOrange}6.25\,}x_\text{A}\\
+							&+ {\color{blue}0.75\,}x_\text{B}\\
+							&- {\color{myOrange}7.25\,}x_\text{C}\\
+							&+ {\color{myOrange}0.25\,}x_\text{A}x_\text{B}\\
+							&- {\color{blue}6.75\,}x_\text{A}x_\text{C}\\
+							&- {\color{myOrange}0.25\,}x_\text{B}x_\text{C}\\
+							&- {\color{myOrange}0.25\,}x_\text{A}x_\text{B}x_\text{C}		
+				\end{align*}
+			
+		\onslide+<2->	{
+		\column{0.02\textwidth}
+			\rule[3mm]{0.03cm}{65mm}
+		\column{0.35\textwidth}
+			\begin{center}\textbf{Fractional factorial model}\end{center}
+				
+				\begin{align*}
+					\hat{y} &= {\color{myOrange}11.0}\\
+							&+ {\color{myOrange}6.0\,}x_\text{A}\\
+							&- {\color{blue}6.0\,}x_\text{B}\\
+							&- {\color{myOrange}7.0\,}x_\text{C}\\
+							& \color{lightgray}+ \cancel{b_\text{AB}\,x_\text{A}x_\text{B}}\\
+							& \color{lightgray}+ \cancel{b_\text{AC}\,x_\text{A}x_\text{C}}\\
+							& \color{lightgray}+ \cancel{b_\text{BC}\,x_\text{B}x_\text{C}}\\
+							& \color{lightgray}+ \cancel{b_\text{ABC}\,x_\text{A}x_\text{B}x_\text{C}}\\
+				\end{align*}
+				}
+	\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{The mathematics behind a fractional factorial}
+	\begin{columns}
+		\column{0.65\textwidth}
+			\begin{center}
+				\includegraphics[width=.9\textwidth]{\imagedir/doe/half-fraction-in-3-factors-MOOC-optimum-4.png}
+			\end{center}
+			
+		\column{0.55\textwidth}
+			{\fontsize{1cm}{2em}\selectfont  $2^3 = 8$}
+	
+			\pause
+			\vspace{1cm}
+			{\fontsize{1cm}{2em}\selectfont  $\dfrac{2^3}{2} = 4$}
+	
+			\pause
+			\vspace{1cm}
+			{\fontsize{1cm}{2em}\selectfont  $2^{3-1} = 2^2 = 4$}
+	\end{columns}	
+
+\end{frame}
+
+\begin{frame}\frametitle{Setting up the half-fraction in 3 factors}
+	\begin{columns}
+		\column{0.65\textwidth}
+			\begin{center}
+				\includegraphics[width=.9\textwidth]{\imagedir/doe/half-fraction-in-3-factors-MOOC-no-labels.png}
+			\end{center}
+			
+		\onslide+<2->	{
+		\column{0.55\textwidth}
+			\begin{tabulary}{\linewidth}{|c||c|c|}\hline 
+				\textsf{\relax Experiment } & \textbf{\relax A } & \textbf{\relax B } \\ %& \textbf{\relax C } \\
+				\hline \textbf{1} & \(-\) & \(-\) \\%& \(-\) \\
+				\hline \textbf{2} & \(+\) & \(-\) \\%& \(-\) \\
+				\hline \textbf{3} & \(-\) & \(+\) \\%& \(+\) \\
+				\hline \textbf{4} & \(+\) & \(+\) \\%& \(+\) \\
+				\hline
+			\end{tabulary}
+		}
+	\end{columns}	
+\end{frame}
+
+\begin{frame}\frametitle{Setting up the half-fraction in 3 factors}
+	\begin{columns}
+		\column{0.65\textwidth}
+			\begin{center}
+				\includegraphics[width=.9\textwidth]{\imagedir/doe/half-fraction-in-3-factors-MOOC-no-labels.png}
+			\end{center}
+			
+		\column{0.55\textwidth}
+			\begin{tabulary}{\linewidth}{|c||c|c|c|}\hline 
+				\textsf{\relax Experiment } & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C = AB } \\
+				\hline \textbf{1} & \(-\) & \(-\) & \((-)(-) = +\) \\
+				\hline \textbf{2} & \(+\) & \(-\) & \((+)(-) = -\) \\
+				\hline \textbf{3} & \(-\) & \(+\) & \((-)(+) = -\) \\
+				\hline \textbf{4} & \(+\) & \(+\) & \((+)(+) = +\) \\
+				\hline
+			\end{tabulary}
+			
+			%\pause
+		%\vspace{12pt}
+			%Cost for this: \$40,000
+	\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{\includegraphics[width=0.3\textwidth]{\imagedir/doe/examples/advice-logo.png} on when fractional-factorials are suitable}
+	\textbf{Screening} is when you evaluate a new system
+	\begin{itemize}
+		\item	lab-scale exploration
+		\item	making a new product
+		\item	troubleshooting a problem to isolate major causes
+	\end{itemize}
+	
+	\pause
+	\vspace{1cm}
+	\textbf{Optimization}: where you need that prediction accuracy
+	\begin{itemize}
+		\item	avoid optimizing prematurely
+		\item	a less-fractionated design is used for optimization (more on this later)
+	\end{itemize}
+	
+\end{frame}
+
+\begin{frame}\frametitle{Quote from George Box}
+	\begin{columns}[T]
+		\column{0.45\textwidth}
+			\includegraphics[width=0.7\textwidth]{\imagedir/doe/GeorgeEPBox-wikipedia.png}
+		
+			{\tiny \href{https://en.wikiquote.org/wiki/George\_E.\_P.\_Box}{Wikipedia}}
+		
+		\column{0.48\textwidth}
+			``In an ongoing investigation, a rough rule is that only a portion (say 25\%) of the experimental effort and budget should be invested in the first design.''
+	\end{columns}	
+\end{frame}
+
+\begin{frame}\frametitle{In the next class ...}
+	We learn how to create half-fractions for any general system.
+	
+	\vspace{2cm}
+	For example, how did we get $\mathbf{C = AB}$?
+\end{frame}
+\end{comment}
+
+\begin{frame}\frametitle{}
+
+	{\LARGE 
+	
+	\begin{tabular}{cccc}\hline 
+	\textsf{\relax Number of } & \textsf{\relax Total  } & \textsf{\relax Cost of all} & \textsf{\relax Time to } \\
+	\textsf{\relax factors} & \textsf{\relax experiments} & \textsf{\relax experiments} & \textsf{\relax run experiments}\\	\hline \hline
+	\onslide+<1->{
+	& & & \vspace{-.5cm} \\}
+	\onslide+<2->{
+	2 & 4 & \$300 & 1 day\\}
+	\onslide+<3->{
+	3 & 8 & \$600 & 2 days\\}
+	\onslide+<4->{
+	4 & 16 & \$1,200 & 4 days\\}
+	\onslide+<5->{
+	5 & 32 & \$2,400 & 8 days\\}
+	\onslide+<6->{
+	6 & 64 & \$4,800 & 16 days\\}
+	\onslide+<7->{
+	7 & 128 & \$9,600 & 32 days\\}
+	\end{tabular}
+	
+	}
+	\onslide+<8->{
+	assuming 6 hours and \$150 per experiment}
+	
+\end{frame}
+
+\begin{frame}\frametitle{There are $2^k$ model parameters in a full-factorial: not all are meaningful!}
+	\vspace{6pt}
+	For $k=4$ factors:
+	\vspace{-6pt}
+		{\scriptsize
+		\begin{align*}
+			\hat{y} &= {\color{myOrange}b_0}\\
+					&+ {\color{myOrange}b_\text{A}\,}x_\text{A}\\
+					&+ {\color{myOrange}b_\text{B}\,}x_\text{B}\\
+					&+ {\color{myOrange}b_\text{C}\,}x_\text{C}\\
+					&+ {\color{myOrange}b_\text{D}\,}x_\text{D}\\
+					&+ {\color{myOrange}b_\text{AB}\,}x_\text{A}x_\text{B}\\
+					&+ {\color{myOrange}b_\text{AC}\,}x_\text{A}x_\text{C}\\
+					&+ {\color{myOrange}b_\text{BC}\,}x_\text{B}x_\text{C}\\
+					&+ {\color{myOrange}b_\text{AD}\,}x_\text{A}x_\text{D}\\
+					&+ {\color{myOrange}b_\text{BD}\,}x_\text{B}x_\text{D}\\
+					&+ {\color{myOrange}b_\text{CD}\,}x_\text{C}x_\text{D}\\
+					&+ {\color{myOrange}b_\text{ABC}\,}x_\text{A}x_\text{B}x_\text{C}\\
+					&+ {\color{myOrange}b_\text{ABD}\,}x_\text{A}x_\text{B}x_\text{D}\\
+					&+ {\color{myOrange}b_\text{ACD}\,}x_\text{A}x_\text{C}x_\text{D}\\
+					&+ {\color{myOrange}b_\text{BCD}\,}x_\text{B}x_\text{C}x_\text{D}\\
+					&+ {\color{myOrange}b_\text{ABCD}\,}x_\text{A}x_\text{B}x_\text{C}x_\text{D}
+		\end{align*}
+		}
+	
+
+\end{frame}
+
+\begin{frame}\frametitle{Most real systems exhibit minor interactions; main effects usually dominate}
+	\begin{columns}[T]
+		\column{0.45\textwidth}
+			\includegraphics[width=\textwidth]{\imagedir/doe/examples/chemical-conversion-pareto.png}
+			
+			{\tiny p. 200 in Box, Hunter and Hunter, 2$^\text{nd}$ ed}
+			
+		\column{0.45\textwidth}
+			\includegraphics[width=\textwidth]{\imagedir/doe/examples/metal-removal-pareto.png}
+			
+			{\tiny Metal removal from wastewater; McMaster student project}
+			
+	\end{columns}
+	
+\end{frame}
+
+\begin{frame}\frametitle{Core assumption regarding fractional factorials}
+	\begin{columns}
+		\column{0.65\textwidth}
+			{\scriptsize
+			\begin{align*}
+				\hat{y} &= {\color{myOrange}b_0}\\
+						&+ {\color{myOrange}b_\text{A}\,}x_\text{A}\\
+						&+ {\color{myOrange}b_\text{B}\,}x_\text{B}\\
+						&+ {\color{myOrange}b_\text{C}\,}x_\text{C}\\
+						&+ {\color{myOrange}b_\text{D}\,}x_\text{D}\\
+						&+ {\color{myOrange}b_\text{AB}\,}x_\text{A}x_\text{B}\\
+						&+ {\color{myOrange}b_\text{AC}\,}x_\text{A}x_\text{C}\\
+						&+ {\color{myOrange}b_\text{BC}\,}x_\text{B}x_\text{C}\\
+						&+ {\color{myOrange}b_\text{AD}\,}x_\text{A}x_\text{D}\\
+						&+ {\color{myOrange}b_\text{BD}\,}x_\text{B}x_\text{D}\\
+						&+ {\color{myOrange}b_\text{CD}\,}x_\text{C}x_\text{D}\\
+						&+ {\color{myOrange}b_\text{ABC}\,}x_\text{A}x_\text{B}x_\text{C}\\
+						&+ {\color{myOrange}b_\text{ABD}\,}x_\text{A}x_\text{B}x_\text{D}\\
+						&+ {\color{myOrange}b_\text{ACD}\,}x_\text{A}x_\text{C}x_\text{D}\\
+						&+ {\color{myOrange}b_\text{BCD}\,}x_\text{B}x_\text{C}x_\text{D}\\
+						&+ {\color{myOrange}b_\text{ABCD}\,}x_\text{A}x_\text{B}x_\text{C}x_\text{D}
+			\end{align*}
+			}
+			
+		\column{0.45\textwidth}
+			\pause
+			The main effects and some two factor interactions are often the only parameters of interest
+			
+			\vspace{36pt}
+			The higher order interactions can safely be ignored
+			\begin{itemize}
+				\item	Now it is an assumption, but it's reasonable in many cases
+				\item	The cost of obtaining them can be prohibitive
+			\end{itemize}
+			
+	\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{If you'd like to do half the work, which 4 experiments would you pick?}
+	\begin{columns}
+		\column{0.65\textwidth}
+			\begin{center}
+				\includegraphics[width=.9\textwidth]{\imagedir/doe/half-fraction-in-3-factors-MOOC-all-8.png}
+			\end{center}
+			
+		\column{0.45\textwidth}
+			\begin{tabulary}{\linewidth}{|c||c|c|c|}\hline 
+				\textsf{\relax Experiment } & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C } \\
+				\hline 1 & \(-\) & \(-\) & \(-\) \\
+				\hline 2 & \(+\) & \(-\) & \(-\) \\
+				\hline 3 & \(-\) & \(+\) & \(-\) \\
+				\hline 4 & \(+\) & \(+\) & \(-\) \\
+				\hline 5 & \(-\) & \(-\) & \(+\) \\
+				\hline 6 & \(+\) & \(-\) & \(+\) \\
+				\hline 7 & \(-\) & \(+\) & \(+\) \\
+				\hline 8 & \(+\) & \(+\) & \(+\) \\
+				\hline
+			\end{tabulary}
+	\end{columns}	
+\end{frame}
+
+\begin{frame}\frametitle{If you'd like to do half the work, which 4 experiments would you pick?}
+	\begin{columns}
+		\column{0.65\textwidth}
+			\begin{center}
+				\includegraphics[width=.9\textwidth]{\imagedir/doe/half-fraction-in-3-factors-MOOC-front-4.png}
+			\end{center}
+			
+		\column{0.45\textwidth}
+			\begin{tabulary}{\linewidth}{|c||c|c|c|}\hline 
+				\textsf{\relax Experiment } & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C } \\
+				\hline \color{myOrange} \textbf{1} & \(-\) & \(-\) & \(-\) \\
+				\hline \color{myOrange} \textbf{2} & \(+\) & \(-\) & \(-\) \\
+				\hline \color{myOrange} \textbf{3} & \(-\) & \(+\) & \(-\) \\
+				\hline \color{myOrange} \textbf{4} & \(+\) & \(+\) & \(-\) \\
+				\hline 5 & \(-\) & \(-\) & \(+\) \\
+				\hline 6 & \(+\) & \(-\) & \(+\) \\
+				\hline 7 & \(-\) & \(+\) & \(+\) \\
+				\hline 8 & \(+\) & \(+\) & \(+\) \\
+				\hline
+			\end{tabulary}
+	\end{columns}	
+\end{frame}
+
+\begin{frame}\frametitle{If you'd like to do half the work, which 4 experiments would you pick?}
+	\begin{columns}
+		\column{0.65\textwidth}
+			\begin{center}
+				\includegraphics[width=.9\textwidth]{\imagedir/doe/half-fraction-in-3-factors-MOOC-middle-4.png}
+			\end{center}
+			
+		\column{0.45\textwidth}
+			\begin{tabulary}{\linewidth}{|c||c|c|c|}\hline 
+				\textsf{\relax Experiment } & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C } \\
+				\hline 1 & \(-\) & \(-\) & \(-\) \\
+				\hline 2 & \(+\) & \(-\) & \(-\) \\
+				\hline \color{myOrange} \textbf{3} & \(-\) & \(+\) & \(-\) \\
+				\hline \color{myOrange} \textbf{4} & \(+\) & \(+\) & \(-\) \\
+				\hline \color{myOrange} \textbf{5} & \(-\) & \(-\) & \(+\) \\
+				\hline \color{myOrange} \textbf{6} & \(+\) & \(-\) & \(+\) \\
+				\hline 7 & \(-\) & \(+\) & \(+\) \\
+				\hline 8 & \(+\) & \(+\) & \(+\) \\
+				\hline
+			\end{tabulary}
+	\end{columns}	
+\end{frame}
+
+\begin{frame}\frametitle{If you'd like to do half the work, which 4 experiments would you pick?}
+	\begin{columns}
+		\column{0.65\textwidth}
+			\begin{center}
+				\includegraphics[width=.9\textwidth]{\imagedir/doe/half-fraction-in-3-factors-MOOC-optimum-4.png}
+			\end{center}
+			
+		\column{0.45\textwidth}
+			\begin{tabulary}{\linewidth}{|c||c|c|c|}\hline 
+				\textsf{\relax Experiment } & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C } \\
+				\hline 1 & \(-\) & \(-\) & \(-\) \\
+				\hline \color{myOrange} \textbf{2} & \(+\) & \(-\) & \(-\) \\
+				\hline \color{myOrange} \textbf{3} & \(-\) & \(+\) & \(-\) \\
+				\hline 4 & \(+\) & \(+\) & \(-\) \\
+				\hline \color{myOrange} \textbf{5} & \(-\) & \(-\) & \(+\) \\
+				\hline 6 & \(+\) & \(-\) & \(+\) \\
+				\hline 7 & \(-\) & \(+\) & \(+\) \\
+				\hline \color{myOrange} \textbf{8} & \(+\) & \(+\) & \(+\) \\
+				\hline
+			\end{tabulary}
+	\end{columns}	
+\end{frame}
+
+\begin{frame}\frametitle{If you'd like to do half the work, which 4 experiments would you pick?}
+	\begin{columns}
+		\column{0.65\textwidth}
+			\begin{center}
+				\includegraphics[width=.9\textwidth]{\imagedir/doe/half-fraction-in-3-factors-MOOC-optimum-4.png}
+			\end{center}
+			
+		\column{0.45\textwidth}
+			\begin{tabulary}{\linewidth}{|c||c|c|c|}\hline 
+				\textsf{\relax Experiment } & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C } \\
+				\hline \color{blue} \textbf{1} & \(-\) & \(-\) & \(-\) \\
+				\hline 2 & \(+\) & \(-\) & \(-\) \\
+				\hline 3 & \(-\) & \(+\) & \(-\) \\
+				\hline \color{blue} \textbf{4} & \(+\) & \(+\) & \(-\) \\
+				\hline 5 & \(-\) & \(-\) & \(+\) \\
+				\hline \color{blue} \textbf{6} & \(+\) & \(-\) & \(+\) \\
+				\hline \color{blue} \textbf{7} & \(-\) & \(+\) & \(+\) \\
+				\hline 8 & \(+\) & \(+\) & \(+\) \\
+				\hline
+			\end{tabulary}
+	\end{columns}	
+\end{frame}
+
+\begin{frame}\frametitle{If you'd like to do half the work, which 4 experiments would you pick?}
+	\begin{columns}
+		\column{0.65\textwidth}
+			\begin{center}
+				\includegraphics[width=.9\textwidth]{\imagedir/doe/half-fraction-in-3-factors-MOOC-collapse-6-in.png}
+			\end{center}
+			
+		\column{0.45\textwidth}
+			\begin{tabulary}{\linewidth}{|c||c|c|c|}\hline 
+				\textsf{\relax Experiment } & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C } \\
+				\hline 1 & \(-\) & \(-\) & \(-\) \\
+				\hline \color{myOrange} \textbf{2} & \(+\) & \(-\) & \(-\) \\
+				\hline \color{myOrange} \textbf{3} & \(-\) & \(+\) & \(-\) \\
+				\hline 4 & \(+\) & \(+\) & \(-\) \\
+				\hline \color{myOrange} \textbf{5} & \(-\) & \(-\) & \(+\) \\
+				\hline 6 & \(+\) & \(-\) & \(+\) \\
+				\hline 7 & \(-\) & \(+\) & \(+\) \\
+				\hline \color{myOrange} \textbf{8} & \(+\) & \(+\) & \(+\) \\
+				\hline
+			\end{tabulary}
+	\end{columns}	
+\end{frame}
+
+\begin{frame}\frametitle{If you'd like to do half the work, which 4 experiments would you pick?}
+	\begin{columns}
+		\column{0.65\textwidth}
+			\begin{center}
+				\includegraphics[width=.9\textwidth]{\imagedir/doe/half-fraction-in-3-factors-MOOC-collapse-total.png}
+			\end{center}
+			
+		\column{0.45\textwidth}
+			\begin{tabulary}{\linewidth}{|c||c|c|c|}\hline 
+				\textsf{\relax Experiment } & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C } \\
+				\hline 1 & \(-\) & \(-\) & \(-\) \\
+				\hline \color{myOrange} \textbf{2} & \(+\) & \(-\) & \(-\) \\
+				\hline \color{myOrange} \textbf{3} & \(-\) & \(+\) & \(-\) \\
+				\hline 4 & \(+\) & \(+\) & \(-\) \\
+				\hline \color{myOrange} \textbf{5} & \(-\) & \(-\) & \(+\) \\
+				\hline 6 & \(+\) & \(-\) & \(+\) \\
+				\hline 7 & \(-\) & \(+\) & \(+\) \\
+				\hline \color{myOrange} \textbf{8} & \(+\) & \(+\) & \(+\) \\
+				\hline
+			\end{tabulary}
+	\end{columns}	
+\end{frame}
+
+\begin{frame}\frametitle{If you'd like to do half the work, which 4 experiments would you pick?}
+	\begin{columns}
+		\column{0.65\textwidth}
+			\begin{center}
+				\includegraphics[width=.9\textwidth]{\imagedir/doe/half-fraction-in-3-factors-MOOC-collapse-total-rotate.png}
+			\end{center}
+			
+		\column{0.45\textwidth}
+			\begin{tabulary}{\linewidth}{|c||c|c|c|}\hline 
+				\textsf{\relax Experiment } & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C } \\
+				\hline 1 & \(-\) & \(-\) & \(-\) \\
+				\hline \color{myOrange} \textbf{2} & \(+\) & \(-\) & \(-\) \\
+				\hline \color{myOrange} \textbf{3} & \(-\) & \(+\) & \(-\) \\
+				\hline 4 & \(+\) & \(+\) & \(-\) \\
+				\hline \color{myOrange} \textbf{5} & \(-\) & \(-\) & \(+\) \\
+				\hline 6 & \(+\) & \(-\) & \(+\) \\
+				\hline 7 & \(-\) & \(+\) & \(+\) \\
+				\hline \color{myOrange} \textbf{8} & \(+\) & \(+\) & \(+\) \\
+				\hline
+			\end{tabulary}
+	\end{columns}	
+\end{frame}
+
+\begin{frame}\frametitle{If you'd like to do half the work, which 4 experiments would you pick?}
+	\begin{columns}
+		\column{0.65\textwidth}
+			\begin{center}
+				\includegraphics[width=.9\textwidth]{\imagedir/doe/half-fraction-in-3-factors-MOOC-collapse-total-rotate-labelled.png}
+			\end{center}
+			
+		\column{0.45\textwidth}
+			\begin{tabulary}{\linewidth}{|c||c|c|c|}\hline 
+				\textsf{\relax Experiment } & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C } \\
+				\hline 1 & \(-\) & \(-\) & \(-\) \\
+				\hline \color{myOrange} \textbf{2} & \(+\) & \(-\) & \(-\) \\
+				\hline \color{myOrange} \textbf{3} & \(-\) & \(+\) & \(-\) \\
+				\hline 4 & \(+\) & \(+\) & \(-\) \\
+				\hline \color{myOrange} \textbf{5} & \(-\) & \(-\) & \(+\) \\
+				\hline 6 & \(+\) & \(-\) & \(+\) \\
+				\hline 7 & \(-\) & \(+\) & \(+\) \\
+				\hline \color{myOrange} \textbf{8} & \(+\) & \(+\) & \(+\) \\
+				\hline
+			\end{tabulary}
+	\end{columns}	
+\end{frame}
+
+\begin{frame}\frametitle{There are embedded full factorials inside the fractional factorial}
+	\begin{columns}[T]
+		\column{0.55\textwidth}
+			\includegraphics[width=\textwidth]{\imagedir/doe/projectivity-of-a-half-fraction-in-3-factors-MOOC.png}
+		
+		\column{0.35\textwidth}
+			
+			
+			\vspace{4cm}
+			If we choose our runs in a smart way, then fractional factorials will collapse to full factorials if an effect is insignificant.
+	\end{columns}
+	
+\end{frame}
+
+\begin{frame}\frametitle{If you'd like to do half the work, which 4 experiments would you pick?}
+	\begin{columns}
+		\column{0.65\textwidth}
+			\begin{center}
+				\includegraphics[width=.9\textwidth]{\imagedir/doe/half-fraction-in-3-factors-MOOC-optimum-4.png}
+			\end{center}
+			
+		\column{0.55\textwidth}
+			\begin{tabulary}{\linewidth}{|c||c|c|c|}\hline 
+				\textsf{\relax Experiment } & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C } \\
+				\hline \color{lightgray} 1 & \color{lightgray} \(-\) & \color{lightgray}\(-\) & \color{lightgray}\(-\) \\
+				\hline \color{myOrange} \textbf{2} & \(+\) & \(-\) & \(-\) \\
+				\hline \color{myOrange} \textbf{3} & \(-\) & \(+\) & \(-\) \\
+				\hline \color{lightgray}4 & \color{lightgray}\(+\) & \color{lightgray}\(+\) & \color{lightgray}\(-\) \\
+				\hline \color{myOrange} \textbf{5} & \(-\) & \(-\) & \(+\) \\
+				\hline \color{lightgray}6 & \color{lightgray}\(+\) & \color{lightgray}\(-\) & \color{lightgray}\(+\) \\
+				\hline \color{lightgray}7 & \color{lightgray}\(-\) & \color{lightgray}\(+\) & \color{lightgray}\(+\) \\
+				\hline \color{myOrange} \textbf{8} & \(+\) & \(+\) & \(+\) \\
+				\hline
+			\end{tabulary}
+			
+			\vspace{1cm}
+			{\color{myOrange} We will consider the 4 open circles next.}
+	\end{columns}	
+
+\end{frame}
+
+\begin{frame}\frametitle{Model comparison between the full and fractional factorials}
+	\begin{columns}[T]
+		\column{0.35\textwidth}
+			\begin{center}\textbf{Full factorial model}\end{center}
+			
+				%Coefficients:
+				%  (Intercept)    C            T            S          C:T          C:S          T:S        C:T:S  
+				%11.25         6.25         0.75        -7.25         0.25        -6.75        -0.25        -0.25  
+				
+				\begin{align*}
+					\hat{y} &= {\color{myOrange}11.25}\\
+							&+ {\color{myOrange}6.25\,}x_\text{A}\\
+							&+ {\color{blue}0.75\,}x_\text{B}\\
+							&- {\color{myOrange}7.25\,}x_\text{C}\\
+							&+ {\color{myOrange}0.25\,}x_\text{A}x_\text{B}\\
+							&- {\color{blue}6.75\,}x_\text{A}x_\text{C}\\
+							&- {\color{myOrange}0.25\,}x_\text{B}x_\text{C}\\
+							&- {\color{myOrange}0.25\,}x_\text{A}x_\text{B}x_\text{C}		
+				\end{align*}
+			
+		\onslide+<2->	{
+		\column{0.02\textwidth}
+			\rule[3mm]{0.03cm}{65mm}
+		\column{0.35\textwidth}
+			\begin{center}\textbf{Fractional factorial model}\end{center}
+				
+				\begin{align*}
+					\hat{y} &= {\color{myOrange}11.0}\\
+							&+ {\color{myOrange}6.0\,}x_\text{A}\\
+							&- {\color{blue}6.0\,}x_\text{B}\\
+							&- {\color{myOrange}7.0\,}x_\text{C}\\
+							& \color{lightgray}+ \cancel{b_\text{AB}\,x_\text{A}x_\text{B}}\\
+							& \color{lightgray}+ \cancel{b_\text{AC}\,x_\text{A}x_\text{C}}\\
+							& \color{lightgray}+ \cancel{b_\text{BC}\,x_\text{B}x_\text{C}}\\
+							& \color{lightgray}+ \cancel{b_\text{ABC}\,x_\text{A}x_\text{B}x_\text{C}}\\
+				\end{align*}
+				}
+	\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{The mathematics behind a fractional factorial}
+	\begin{columns}
+		\column{0.65\textwidth}
+			\begin{center}
+				\includegraphics[width=.9\textwidth]{\imagedir/doe/half-fraction-in-3-factors-MOOC-optimum-4.png}
+			\end{center}
+			
+		\column{0.55\textwidth}
+			{\fontsize{1cm}{2em}\selectfont  $2^3 = 8$}
+	
+			\pause
+			\vspace{1cm}
+			{\fontsize{1cm}{2em}\selectfont  $\dfrac{2^3}{2} = 4$}
+	
+			\pause
+			\vspace{1cm}
+			{\fontsize{1cm}{2em}\selectfont  $2^{3-1} = 2^2 = 4$}
+	\end{columns}	
+
+\end{frame}
+
+\begin{frame}\frametitle{Setting up the half-fraction in 3 factors}
+	\begin{columns}
+		\column{0.65\textwidth}
+			\begin{center}
+				\includegraphics[width=.9\textwidth]{\imagedir/doe/half-fraction-in-3-factors-MOOC-no-labels.png}
+			\end{center}
+			
+		\onslide+<2->	{
+		\column{0.55\textwidth}
+			\begin{tabulary}{\linewidth}{|c||c|c|}\hline 
+				\textsf{\relax Experiment } & \textbf{\relax A } & \textbf{\relax B } \\ %& \textbf{\relax C } \\
+				\hline \textbf{1} & \(-\) & \(-\) \\%& \(-\) \\
+				\hline \textbf{2} & \(+\) & \(-\) \\%& \(-\) \\
+				\hline \textbf{3} & \(-\) & \(+\) \\%& \(+\) \\
+				\hline \textbf{4} & \(+\) & \(+\) \\%& \(+\) \\
+				\hline
+			\end{tabulary}
+		}
+	\end{columns}	
+\end{frame}
+
+\begin{frame}\frametitle{Setting up the half-fraction in 3 factors}
+	\begin{columns}
+		\column{0.65\textwidth}
+			\begin{center}
+				\includegraphics[width=.9\textwidth]{\imagedir/doe/half-fraction-in-3-factors-MOOC-no-labels.png}
+			\end{center}
+			
+		\column{0.55\textwidth}
+			\begin{tabulary}{\linewidth}{|c||c|c|c|}\hline 
+				\textsf{\relax Experiment } & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C = AB } \\
+				\hline \textbf{1} & \(-\) & \(-\) & \((-)(-) = +\) \\
+				\hline \textbf{2} & \(+\) & \(-\) & \((+)(-) = -\) \\
+				\hline \textbf{3} & \(-\) & \(+\) & \((-)(+) = -\) \\
+				\hline \textbf{4} & \(+\) & \(+\) & \((+)(+) = +\) \\
+				\hline
+			\end{tabulary}
+			
+			%\pause
+		%\vspace{12pt}
+			%Cost for this: \$40,000
+	\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{\includegraphics[width=0.3\textwidth]{\imagedir/doe/examples/advice-logo.png} on when fractional-factorials are suitable}
+	\textbf{Screening} is when you evaluate a new system
+	\begin{itemize}
+		\item	lab-scale exploration
+		\item	making a new product
+		\item	troubleshooting a problem to isolate major causes
+	\end{itemize}
+	
+	\pause
+	\vspace{1cm}
+	\textbf{Optimization}: where you need that prediction accuracy
+	\begin{itemize}
+		\item	avoid optimizing prematurely
+		\item	a less-fractionated design is used for optimization (more on this later)
+	\end{itemize}
+	
+\end{frame}
+
+\begin{frame}\frametitle{Quote from George Box}
+	\begin{columns}[T]
+		\column{0.45\textwidth}
+			\includegraphics[width=0.7\textwidth]{\imagedir/doe/GeorgeEPBox-wikipedia.png}
+		
+			{\tiny \href{https://en.wikiquote.org/wiki/George\_E.\_P.\_Box}{Wikipedia}}
+		
+		\column{0.48\textwidth}
+			``In an ongoing investigation, a rough rule is that only a portion (say 25\%) of the experimental effort and budget should be invested in the first design.''
+	\end{columns}	
+\end{frame}
+
+\begin{frame}\frametitle{In the next class ...}
+	We learn how to create half-fractions for any general system.
+	
+	\vspace{2cm}
+	For example, how did we get $\mathbf{C = AB}$?
+\end{frame}
+

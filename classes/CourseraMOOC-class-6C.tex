@@ -1,0 +1,1053 @@
+\begin{frame}\frametitle{Before we get started: a quick look back at OFAT (COST)}
+	
+	OFAT is not recommended for a variety of reasons:
+	\begin{columns}[T]
+		\column{0.75\textwidth}
+			\vspace{0.5cm}
+			\begin{itemize}
+				\item	With OFAT you are never really sure you are at the peak.
+					\begin{itemize}
+						\item	you keep iterating through all the factors
+						\item	no conclusive indication that you converged
+					\end{itemize}
+				
+		\onslide+<2->{
+				\vspace{0.5cm}
+				\item	OFAT is order-dependent (it is a lottery\emph{!})
+		}
+		\onslide+<3->{
+				\vspace{0.5cm}
+		
+				\item	OFAT does not scale well 
+					\begin{itemize}
+						\item	For 3 or more factors: we often end up using more runs
+						\item	For 2 factors: I find OFAT and RSM (response surface methods) use about the same number of
+								runs
+					\end{itemize}
+		}
+		\onslide+<4->{
+				\vspace{0.5cm}
+		
+				\item	We don't learn about interactions; only about  main effects 
+		}
+			\end{itemize}
+		\column{0.3\textwidth}
+		
+			\centerline{\includegraphics[width=\textwidth]{../6C/Supporting materials/COST-contours-shopping-extend-20.png}}
+			\onslide+<2->{
+				\centerline{\includegraphics[width=\textwidth]{../6C/Supporting materials/COST-contours-shopping-reorder-09.png}}
+			}
+
+	\end{columns}
+	
+	
+
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-26.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6C/Supporting materials/COST-contours-shopping-extend-01.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6C/Supporting materials/COST-contours-shopping-extend-02.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6C/Supporting materials/COST-contours-shopping-extend-03.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6C/Supporting materials/COST-contours-shopping-extend-04.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6C/Supporting materials/COST-contours-shopping-extend-05.png}}
+\end{frame} 
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6C/Supporting materials/COST-contours-shopping-extend-06.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6C/Supporting materials/COST-contours-shopping-extend-07.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6C/Supporting materials/COST-contours-shopping-extend-08.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6C/Supporting materials/COST-contours-shopping-extend-09.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6C/Supporting materials/COST-contours-shopping-extend-13.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6C/Supporting materials/COST-contours-shopping-extend-14.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6C/Supporting materials/COST-contours-shopping-extend-15.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6C/Supporting materials/COST-contours-shopping-extend-16.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6C/Supporting materials/COST-contours-shopping-extend-17.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6C/Supporting materials/COST-contours-shopping-extend-18.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6C/Supporting materials/COST-contours-shopping-extend-19.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6C/Supporting materials/COST-contours-shopping-extend-20.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6C/Supporting materials/COST-contours-shopping-reorder-01.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6C/Supporting materials/COST-contours-shopping-reorder-02.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6C/Supporting materials/COST-contours-shopping-reorder-03.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6C/Supporting materials/COST-contours-shopping-reorder-04.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6C/Supporting materials/COST-contours-shopping-reorder-05.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6C/Supporting materials/COST-contours-shopping-reorder-06.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6C/Supporting materials/COST-contours-shopping-reorder-07.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6C/Supporting materials/COST-contours-shopping-reorder-08.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6C/Supporting materials/COST-contours-shopping-reorder-09.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-26.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-27.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-28.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-29.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-30.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-31.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-32.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-33.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-34.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6C/Supporting materials/no-interaction.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6C/Supporting materials/with-interaction.png}}
+\end{frame}
+
+\begin{frame}\frametitle{The 3 models we have built so far}
+	Factorial 1:  
+	\[\color{blue}\hat{y} = 389.8  +134  x_\text{P} +  55 x_\text{T} -3.5 x_\text{P}x_\text{T} \]
+	Factorial 2: 
+	\[\color{myGreen} \hat{y} =  645.4  +47 x_\text{P} +  22.500 x_\text{T} -2.0 x_\text{P}x_\text{T} \]
+	Factorial 3:
+	\[\hat{y} = 723.6  -2.5 x_\text{P} +  7.500 x_\text{T} -1.5 x_\text{P}x_\text{T} \]
+	
+\end{frame}
+
+\begin{frame}\frametitle{Taking the next step for experiment 15: {\color{myOrange}solution}}
+	\begin{columns}[T]
+		\column{0.2066\textwidth}
+		
+			\vspace{0.1cm}
+			{\tiny 
+				\begin{enumerate}
+					\item	Pick change in coded units in one factor.
+				\end{enumerate}
+			 \par}
+			 
+			\onslide+<1->{
+				{\tiny 
+					\begin{enumerate}\setcounter{enumi}{1}
+						\item	Find the ratios for\\ the other factor(s).
+					\end{enumerate}
+				
+				\par}
+			}
+			
+			\vspace{0.0cm}
+			\onslide+<1->{
+				{\tiny 
+					\begin{enumerate}\setcounter{enumi}{2}
+						\item	Calculate step size in coded units.
+					\end{enumerate}
+				
+				\par}
+			}
+			
+			\onslide+<1->{
+				{\tiny 
+					\begin{enumerate}\setcounter{enumi}{3}
+						\item	Convert these to real-world \emph{changes}.
+					\end{enumerate}
+				
+				\par}
+			}
+			
+			\onslide+<1->{
+				{\tiny 
+					\begin{enumerate}\setcounter{enumi}{4}
+						\item	Get the real-world location
+						of the next experiment.
+					\end{enumerate}
+				
+				\par}
+			}
+			
+			
+			\vspace{-0.2cm}
+			\onslide+<1->{
+				{\tiny 
+					\begin{enumerate}\setcounter{enumi}{5}
+						\item	Convert these back\\ to coded-units.
+					\end{enumerate}
+				
+				\par}
+			}
+				
+		\column{0.01\textwidth}
+			\rule[3mm]{0.01cm}{60mm}%
+			
+			
+		\column{0.4\textwidth}
+			\centerline{\textbf{Price}}
+			
+			\vspace{-0.5cm}
+			\onslide+<1->{
+				\vspace{0.cm}
+				\begin{align*}
+					\Delta x_\text{P} &= {\color{blue} = \dfrac{b_\text{P}}{b_\text{T}} \times \Delta x_\text{T} }
+				\end{align*}
+			}
+			
+			\vspace{-1.15cm}
+			\onslide+<1->{
+				\vspace{0.cm}
+				\begin{align*}
+					\Delta x_\text{P} &= {\color{blue}  \dfrac{-2.5}{7.5} \times 2 = -\dfrac{2}{3}}
+				\end{align*}
+			}
+			
+			\vspace{-0.65cm}
+			\onslide+<1->{
+				\vspace{-0.6cm}
+				\begin{align*} 
+					\Delta \text{P} &= {\color{blue} -\dfrac{2}{3}\cdot\frac{1}{2}(0.36) = -\$0.12}
+				\end{align*}
+			}
+			
+			\vspace{-1.2cm}
+			\onslide+<1->{
+				\begin{align*} 
+					\text{P}^{(15)} &= {\color{blue} \text{P}^{(10)} + \Delta \text{P} = \$1.63 - 0.12 = \$1.51}
+				\end{align*}
+			}
+			
+			\vspace{-1.5cm}
+			\onslide+<1->{	
+				\begin{align*} 
+					x_\text{P}^{(15)} &={\color{blue}\dfrac{1.51-1.63}{\tfrac{1}{2}\cdot (0.36)} = -\dfrac{2}{3}}
+				\end{align*}
+			}
+		
+		\column{0.01\textwidth}
+			\rule[3mm]{0.01cm}{56.5mm}%
+			
+		\column{0.4\textwidth}
+			\centerline{\textbf{Throughput}}
+			
+			$\Delta x_\text{T} = 2$ (this was chosen)
+			
+			\vspace{1.3cm}
+			$\Delta x_\text{T} = 2$ 
+		
+			\vspace{-0.85cm}
+			\onslide+<1->{
+				\begin{align*} 
+					\Delta \text{T} &= {\color{blue} 6} \\
+				\end{align*}
+			}
+			
+			\vspace{-2cm}
+			\onslide+<1->{
+				\begin{align*} 
+					 \text{T}^{(15)} &=  {\color{blue} \text{T}^{(10)} + \Delta \text{T}}\\
+					 \text{T}^{(15)} &= 339 + 6 = 345\\
+				\end{align*}
+			}
+			
+			\vspace{-1.9cm}
+			\onslide+<1->{	
+				\begin{align*} 
+					x_\text{T}^{(15)} &= {\color{blue} 2} 
+				\end{align*}
+			}
+	\end{columns}
+	
+	\vspace{-0.5cm}
+	\begin{columns}[T]
+		\column{0.2\textwidth}
+
+			\vspace{-0.0cm}
+			\onslide+<1->{
+				{\tiny 
+					\begin{enumerate}\setcounter{enumi}{6}
+						\item	Predict the next experiment's outcome.
+					\end{enumerate}
+				
+				\par}
+			}
+			
+			\vspace{0cm}
+			\onslide+<2->{
+				{\tiny 
+					\begin{enumerate}\setcounter{enumi}{7}
+						\item	Now run the next experiment, and record the values
+					\end{enumerate}
+				
+				\par}
+			}
+			
+		\column{0.01\textwidth}
+			\rule[3mm]{0.01cm}{85mm}%
+			
+		\column{0.912\textwidth}
+			
+			\onslide+<1->{	
+				\hrule
+				\vspace{-0.2cm}
+				\begin{align*}
+					\hat{y}       &&=&& 723.6 &&-&& 2.5  x_\text{P} &&+&& 7.5 x_\text{T} &&-&& 1.5x_\text{P}x_\text{T}&& \\
+					\hat{y}^{(15)} && \approx&& {\color{blue}\$ 742~\text{profit per hour}} \span\omit\span\omit\span\omit\span\omit\span\omit
+				\end{align*}
+			}
+			
+			\vspace{-1.6cm}
+			\onslide+<2->{	
+				\begin{align*}
+					y^{(15)} &=  \color{blue} \$ 735 ~\text{profit per hour}
+				\end{align*}
+			}
+	\end{columns}
+	
+\end{frame}
+
+\begin{frame}\frametitle{Dealing with curvature when we suspect we are approaching an optimum}
+	{\color{myOrange}We detect curvature in several ways (in practice, you will detect one or more of these)}
+	
+	\vspace{.7cm}
+	\begin{enumerate}
+		\item	interaction terms are comparable to main effects
+	\end{enumerate}
+	
+	
+	\begin{columns}[T]
+		\column{0.33\textwidth}
+			\centerline{\includegraphics[width=\textwidth]{../6C/Supporting materials/no-interaction.pdf}}
+			\vspace{-0.5cm}
+			\[ \hat{y} = -2.5 x_\text{P} +7.5 x_\text{T} + \cancelto{0}{0 \cdot x_\text{P}x_\text{T}} \]
+		\column{0.33\textwidth}
+			\centerline{\includegraphics[width=\textwidth]{../6C/Supporting materials/with-interaction.pdf}}
+			\[\hat{y} = -2.5 x_\text{P} +  7.5 x_\text{T} \color{red}-1.5 x_\text{P}x_\text{T}\]
+		\column{0.33\textwidth}
+			\centerline{\includegraphics[width=\textwidth]{../6C/Supporting materials/system-with-a-saddle.pdf}}
+			\vspace{-0.5cm}
+			\[\hat{y} = -2.5 x_\text{P} +  5.35 x_\text{T} \color{red}- 7.5 x_\text{P}x_\text{T}\]
+	\end{columns}
+	
+\end{frame}
+
+\begin{frame}\frametitle{Dealing with curvature when we suspect we are approaching an optimum}
+	{\color{myOrange}We detect curvature in several ways (in practice, you will detect one or more of these)}
+	
+	\vspace{.7cm}
+	\begin{enumerate}\setcounter{enumi}{1}
+		\item	differences in the {\color{myGreen} spread}$^\ast$ are becoming smaller and smaller
+	\end{enumerate}
+	
+	\vspace{.3cm}
+	$^\ast${\color{myGreen}\scriptsize can be crudely quantified as (highest outcome) $-$ (lowest outcome)}
+	\vspace{.5cm}
+	\begin{columns}[T]
+		\column{0.33\textwidth}
+			Factorial 1
+			
+			\vspace{.5cm}
+			\centerline{\includegraphics[width=\textwidth]{../6C/Supporting materials/factorial-1.png}}
+			
+			spread = \$ 378
+		\column{0.33\textwidth}
+		
+			\onslide+<2->{
+				Factorial 2 
+			
+				\vspace{.5cm}
+				\centerline{\includegraphics[width=\textwidth]{../6C/Supporting materials/factorial-2.png}}
+			
+				spread = \$ 139
+			}
+		\column{0.33\textwidth}
+			\onslide+<3->{
+				Factorial 3
+				
+				\vspace{.5cm}
+				\centerline{\includegraphics[width=\textwidth]{../6C/Supporting materials/factorial-3.png}}
+			
+				\vspace{0.4cm}
+				spread = \$ 20
+			}
+	\end{columns}
+	
+\end{frame}
+
+\begin{frame}\frametitle{{\color{red} Aside}: If we are judging differences, we need an estimate of ``noise''}
+	\begin{columns}[T]
+		\column{0.5\textwidth}
+			\centerline{\includegraphics[width=\textwidth]{../6A/Supporting materials/RSM-35.png}}
+		\column{0.5\textwidth}
+			\centerline{\includegraphics[width=\textwidth]{../6A/Supporting materials/RSM-36.png}}
+	\end{columns}	
+\end{frame}
+
+\begin{frame}\frametitle{Dealing with curvature when we suspect we are approaching an optimum}
+	{\color{myOrange}We detect curvature in several ways (in practice, you will detect one or more of these)}
+	
+	\vspace{.7cm}
+	\begin{enumerate}\setcounter{enumi}{2}
+		\item	we notice prediction errors with our model that indicate the surface is changing
+	\end{enumerate}
+	
+	
+	\vspace{.5cm}
+	\begin{columns}[T]
+		\column{0.33\textwidth}
+			
+			\onslide+<2->{
+			
+				\centerline{\includegraphics[width=\textwidth]{../6C/Supporting materials/flickr-rmkoske-2558420300_a9a3005dc7_o-burned-modified.jpg}}
+				\see{\href{https://secure.flickr.com/photos/67146024@N00/2558420300/}{Flickr: rmkoske}}
+			}
+			
+		\column{0.33\textwidth}
+		
+			\onslide+<2->{
+			
+				\vspace{.5cm}
+				
+			
+			}
+		\column{0.33\textwidth}
+			\onslide+<3->{
+				
+				\centerline{\includegraphics[width=\textwidth]{../6C/Supporting materials/flickr-93653851-8514973597_3e189570e2_o-cliff.jpg}}
+				\vspace{-1.2cm}
+				\see{\href{https://secure.flickr.com/photos/93653851@N04/8514973597/}{Flickr: Digital Temi}}
+			}
+	\end{columns}
+	
+\end{frame}
+
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-37.png}}
+\end{frame}
+
+\begin{frame}\frametitle{Dealing with curvature when we suspect we are approaching an optimum}
+	{\color{myOrange}We detect curvature in several ways (in practice, you will detect one or more of these)}
+	
+	\vspace{.7cm}
+	\begin{enumerate}\setcounter{enumi}{3}
+		\item	we detect ``lack of fit'' in our empirical model
+	\end{enumerate}
+	
+	\begin{columns}[T]
+		\column{0.2\textwidth}
+
+		\column{0.912\textwidth}
+			
+			\centerline{\includegraphics[height=0.7\textheight]{\imagedir/doe/lack-of-fit-illustration.png}}
+	\end{columns}
+	
+\end{frame}
+
+\begin{frame}\frametitle{Dealing with curvature when we suspect we are approaching an optimum}
+	{\color{myOrange}We detect curvature in several ways (in practice, you will detect one or more of these)}
+	
+	\vspace{.7cm}
+	\begin{enumerate}\setcounter{enumi}{3}
+		\item	we detect ``lack of fit'' in our empirical model
+	\end{enumerate}
+	
+	\begin{columns}[T]
+		\column{0.35\textwidth}
+			\onslide+<1->{
+				\centerline{\includegraphics[width=\textwidth]{../6C/Supporting materials/factorial-1.png}}
+				
+				\scriptsize
+				$\hat{y} = 390  +134  x_\text{P} +  55 x_\text{T} -3.5 x_\text{P}x_\text{T}$
+				\normalsize
+				
+				\vspace{0.2cm}
+				
+					$\left.\begin{array}{c}
+						y^{(0)} = \$ 407\\
+						\hat{y}^{(0)} = \$ 390
+					\end{array}\onslide+<2->{  \right\} }$
+					 \onslide+<2->{
+					 	{\scriptsize difference = \$17}
+					} 
+			}
+			
+		\column{0.01\textwidth}
+			\rule[3mm]{0.01cm}{60mm}%
+			
+		\column{0.35\textwidth}
+			\onslide+<3->{
+				\centerline{\includegraphics[width=\textwidth]{../6C/Supporting materials/factorial-2.png}}
+				
+				\scriptsize
+				$\hat{y} =  645  +47 x_\text{P} +  22.5 x_\text{T} -2.0 x_\text{P}x_\text{T}$
+				\normalsize
+				
+				\vspace{0.2cm}
+				
+				
+					$\left.\begin{array}{c}
+						y^{(8)} = \$ 657\\
+						\hat{y}^{(8)} = \$ 645
+					\end{array}\right\}$ {\scriptsize difference = \$12}
+			}
+			
+		\column{0.01\textwidth}
+			\rule[3mm]{0.01cm}{60mm}%
+			
+		\column{0.37\textwidth}
+			\onslide+<4->{
+				\centerline{\includegraphics[width=\textwidth]{../6C/Supporting materials/factorial-3-with-multiple-centers.png}}
+				
+				\vspace{0.4cm}
+				\scriptsize
+				$\hat{y} = 724  -2.5 x_\text{P} +  7.5 x_\text{T} -1.5 x_\text{P}x_\text{T} $
+				\normalsize
+				
+				\vspace{0.2cm}
+				
+				$\left.\begin{array}{c}
+					y^{(\text{mid})} = \$ 734\\
+					\hat{y}^{(\text{mid})} = \$ 724
+				\end{array}\right\}$ {\scriptsize difference = \$10}
+			}
+	\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{The one-dimensional equivalent of what we are seeing in two dimensions}
+	
+	{\color{myOrange}We detect curvature in several ways (in practice, you will detect one or more of these)}
+	
+	\vspace{.7cm}
+	\begin{enumerate}\setcounter{enumi}{3}
+		\item	we detect ``lack of fit'' in our empirical model
+	\end{enumerate}
+	
+	\begin{columns}[T]
+		\column{0.68\textwidth}
+			\centerline{\includegraphics[width=5cm]{\imagedir/doe/lack-of-fit-illustration-linear-region.png}}
+		\column{0.01\textwidth}
+			\rule[3mm]{0.01cm}{60mm}%
+		\column{0.32\textwidth}
+			\centerline{\includegraphics[width=5cm]{\imagedir/doe/lack-of-fit-illustration.png}}
+	\end{columns}	
+\end{frame}
+
+\begin{frame}\frametitle{Dealing with curvature when we suspect we are approaching an optimum}
+	{\color{myOrange}We detect curvature in several ways (in practice, you will detect one or more of these)}
+	
+	\vspace{.7cm}
+	\begin{enumerate}
+		\item	interaction terms are comparable to main effects
+		\item	differences in the spread are becoming smaller and smaller
+		\item	we notice prediction errors with our model that indicate the surface is changing
+		\item	we detect ``lack of fit''
+		\item	confidence intervals show some model coefficients are not significant
+	\end{enumerate}
+	
+\end{frame}
+
+\begin{frame}\frametitle{Improving the model's prediction ability by adding quadratic terms}
+	Current situation, displaying lack of fit:
+	
+	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/lack-of-fit-illustration-nonlinear.png}}
+\end{frame}
+
+\begin{frame}\frametitle{Improving the model's prediction ability by adding quadratic terms}
+	Add specially placed points:
+	
+	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/lack-of-fit-illustration-nonlinear-extra-points.png}}
+\end{frame}
+
+\begin{frame}\frametitle{Improving the model's prediction ability by adding quadratic terms}
+	And fit a quadratic model now:
+	
+	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/lack-of-fit-illustration-nonlinear-extra-points-quadratic.png}}
+\end{frame}
+
+\begin{frame}\frametitle{Adding experiments so we can fit quadratic terms: where do we put them?}
+	\begin{columns}[T]
+		\column{0.5\textwidth}
+			\centerline{\includegraphics[width=\textwidth]{\imagedir/doe/central-composite-design-MOOC-FCD-points-no-persective.png}}
+		\column{0.5\textwidth}			
+			\centerline{\includegraphics[width=\textwidth]{\imagedir/doe/central-composite-design-MOOC-CCD-points-no-persective.png}}
+			\vspace{-0.5cm}
+			\[\alpha = 1.41\]
+	\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{Adding experiments so we can fit quadratic terms: where do we put them?}
+	\begin{columns}[T]
+		\column{0.5\textwidth}
+			\centerline{\includegraphics[width=\textwidth]{\imagedir/doe/central-composite-design-MOOC-FCD-points.png}}
+		\column{0.5\textwidth}			
+			\centerline{\includegraphics[width=\textwidth]{\imagedir/doe/central-composite-design-MOOC-CCD-points.png}}
+			
+			\vspace{-0.5cm}
+			\[\alpha = 1.41\]
+	\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{Adding experiments so we can fit quadratic terms: where do we put them?}
+	\begin{columns}[T]
+		\column{0.5\textwidth}
+		
+			\vspace{1cm}
+			
+			\begin{itemize}
+				\item	Run the factorial points first
+				\onslide+<2->{
+					\item	Then run the star (axial) points after$^\ast$
+				}
+				\onslide+<2->{
+					\Large
+					\[\alpha  = \left(2^k\right)^{0.25}\]
+					
+			
+					\begin{itemize}
+						\onslide+<2->{\item	$k = 2$; then $\alpha = \sqrt{2} \approx 1.41$ }
+						\onslide+<2->{\item	$k = 3$; then $\alpha = 2^{\tfrac{3}{4}} \approx 1.68$}
+					\end{itemize}
+					\normalsize
+				}
+				\onslide+<2->{
+					\item	Run several center points randomly, during the above two stages
+				}
+			\end{itemize}
+			
+			\onslide+<2->{
+				\vspace{0cm}
+				\tiny
+				$^\ast$ Astute viewers will wonder about confounding disturbances, since these runs are not randomized.
+			
+				You can show that these {\color[rgb]{0,0.5,1}\textbf{two}} {\color[rgb]{0.5,0, 0.5}\textbf{groups}} of experiments are blocked.
+			}
+			
+			
+		\column{0.5\textwidth}			
+			\centerline{\includegraphics[width=\textwidth]{\imagedir/doe/central-composite-design-MOOC-anim-01.png}}
+			
+			\vspace{-0.5cm}
+			\[\alpha = 1.41\]
+	\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{Adding experiments so we can fit quadratic terms: where do we put them?}
+	\begin{columns}[T]
+		\column{0.5\textwidth}
+		
+			\vspace{1cm}
+			
+			\begin{itemize}
+				\item	Run the factorial points first
+				\onslide+<1->{
+					\item	Then run the star (axial) points after$^\ast$
+				}
+				\onslide+<1->{
+					\Large
+					\[\alpha  = \left(2^k\right)^{0.25}\]
+					
+			
+					\begin{itemize}
+						\onslide+<2->{\item	$k = 2$; then $\alpha = \sqrt{2} \approx 1.41$ }
+						\onslide+<3->{\item	$k = 3$; then $\alpha = 2^{\tfrac{3}{4}} \approx 1.68$}
+					\end{itemize}
+					\normalsize
+				}
+				\onslide+<4->{
+					\item	Run several center points randomly, during the above two stages
+				}
+			\end{itemize}
+			
+			\onslide+<4->{
+				\vspace{0cm}
+				\tiny
+				$^\ast$ Astute viewers will wonder about confounding disturbances, since these runs are not randomized.
+			
+				You can show that these {\color[rgb]{0,0.5,1}\textbf{two}} {\color[rgb]{0.5,0, 0.5}\textbf{groups}} of experiments are blocked.
+			}
+			
+			
+		\column{0.5\textwidth}			
+			\centerline{\includegraphics[width=\textwidth]{\imagedir/doe/central-composite-design-MOOC-anim-02.png}}
+			
+			\vspace{-0.5cm}
+			\[\alpha = 1.41\]
+	\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{Adding experiments so we can fit quadratic terms: where do we put them?}
+	\begin{columns}[T]
+		\column{0.5\textwidth}
+		
+			\vspace{1cm}
+			
+			\begin{itemize}
+				\item	Run the factorial points first
+				\onslide+<1->{
+					\item	Then run the star (axial) points after$^\ast$
+				}
+				\onslide+<1->{
+					\Large
+					\[\alpha  = \left(2^k\right)^{0.25}\]
+					
+			
+					\begin{itemize}
+						\onslide+<1->{\item	$k = 2$; then $\alpha = \sqrt{2} \approx 1.41$ }
+						\onslide+<1->{\item	$k = 3$; then $\alpha = 2^{\tfrac{3}{4}} \approx 1.68$}
+					\end{itemize}
+					\normalsize
+				}
+				\onslide+<2->{
+					\item	Run several center points randomly, during the above two stages
+				}
+			\end{itemize}
+			
+			\onslide+<2->{
+				\vspace{0cm}
+				\tiny
+				$^\ast$ Astute viewers will wonder about confounding disturbances, since these runs are not randomized.
+			
+				You can show that these {\color[rgb]{0,0.5,1}\textbf{two}} {\color[rgb]{0.5,0, 0.5}\textbf{groups}} of experiments are blocked.
+			}
+			
+			
+		\column{0.5\textwidth}			
+			\centerline{\includegraphics[width=\textwidth]{\imagedir/doe/central-composite-design-MOOC-3-factors.png}}
+			
+			\vspace{-0.5cm}
+			\[\alpha = 1.68\]
+	\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{Adding experiments so we can fit quadratic terms: where do we put them?}
+	\begin{columns}[T]
+		\column{0.5\textwidth}
+		
+			\vspace{1cm}
+			
+			\begin{itemize}
+				\item	Run the factorial points first
+				\onslide+<1->{
+					\item	Then run the star (axial) points after$^\ast$
+				}
+				\onslide+<1->{
+					\Large
+					\[\alpha  = \left(2^k\right)^{0.25}\]
+					
+			
+					\begin{itemize}
+						\onslide+<1->{\item	$k = 2$; then $\alpha = \sqrt{2} \approx 1.41$ }
+						\onslide+<1->{\item	$k = 3$; then $\alpha = 2^{\tfrac{3}{4}} \approx 1.68$}
+					\end{itemize}
+					\normalsize
+				}
+				\onslide+<1->{
+					\item	Run several center points randomly, during the above two stages
+				}
+			\end{itemize}
+			
+			\onslide+<2->{
+				\vspace{0cm}
+				\tiny
+				$^\ast$ Astute viewers will wonder about confounding disturbances, since these runs are not randomized.
+			
+				You can show that these {\color[rgb]{0,0.5,1}\textbf{two}} {\color[rgb]{0.5,0, 0.5}\textbf{groups}} of experiments are blocked.
+			}
+			
+			
+		\column{0.5\textwidth}			
+			\centerline{\includegraphics[width=\textwidth]{\imagedir/doe/central-composite-design-MOOC-anim-03.png}}
+			
+			\vspace{-0.5cm}
+			\[\alpha = 1.41\]
+	\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{Adding experiments so we can fit quadratic terms: where do we put them?}
+	\begin{columns}[T]
+		\column{0.5\textwidth}
+		
+			\vspace{1cm}
+			
+			\begin{itemize}
+				\item	Run the factorial points first
+				\onslide+<1->{
+					\item	Then run the star (axial) points after$^\ast$
+				}
+				\onslide+<1->{
+					\Large
+					\[\alpha  = \left(2^k\right)^{0.25}\]
+					
+			
+					\begin{itemize}
+						\onslide+<1->{\item	$k = 2$; then $\alpha = \sqrt{2} \approx 1.41$ }
+						\onslide+<1->{\item	$k = 3$; then $\alpha = 2^{\tfrac{3}{4}} \approx 1.68$}
+					\end{itemize}
+					\normalsize
+				}
+				\onslide+<1->{
+					\item	Run several center points randomly, during the above two stages
+				}
+			\end{itemize}
+			
+			\onslide+<1->{
+				\vspace{0cm}
+				\tiny
+				$^\ast$ Astute viewers will wonder about confounding disturbances, since these runs are not randomized.
+			
+				You can show that these {\color[rgb]{0,0.5,1}\textbf{two}} {\color[rgb]{0.5,0, 0.5}\textbf{groups}} of experiments are blocked.
+			}
+			
+			
+		\column{0.5\textwidth}			
+			\centerline{\includegraphics[width=\textwidth]{\imagedir/doe/central-composite-design-MOOC-anim-04.png}}
+			
+			\vspace{-0.5cm}
+			\[\alpha = 1.41\]
+	\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{Adding experiments so we can fit quadratic terms: where do we put them?}
+	\begin{columns}[T]
+		\column{0.5\textwidth}
+		
+			\vspace{1cm}
+			
+			\begin{itemize}
+				\item	Run the factorial points first
+				\onslide+<1->{
+					\item	Then run the star (axial) points after$^\ast$
+				}
+				\onslide+<1->{
+					\Large
+					\[\alpha  = \left(2^k\right)^{0.25}\]
+					
+			
+					\begin{itemize}
+						\onslide+<1->{\item	$k = 2$; then $\alpha = \sqrt{2} \approx 1.41$ }
+						\onslide+<1->{\item	$k = 3$; then $\alpha = 2^{\tfrac{3}{4}} \approx 1.68$}
+					\end{itemize}
+					\normalsize
+				}
+				\onslide+<1->{
+					\item	Run several center points randomly, during the above two stages
+				}
+			\end{itemize}
+			
+			\onslide+<1->{
+				\vspace{0cm}
+				\tiny
+				$^\ast$ Astute viewers will wonder about confounding disturbances, since these runs are not randomized.
+			
+				You can show that these {\color[rgb]{0,0.5,1}\textbf{two}} {\color[rgb]{0.5,0, 0.5}\textbf{groups}} of experiments are blocked.
+			}
+			
+			
+		\column{0.5\textwidth}			
+			\centerline{\includegraphics[width=\textwidth]{\imagedir/doe/central-composite-design-MOOC-anim-05.png}}
+			
+			\vspace{-0.5cm}
+			\[\alpha = 1.41\]
+	\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-38.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-39.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-40.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-41.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-42.png}}
+\end{frame}
+\begin{frame}\frametitle{List of all experiments}
+	\begin{tabulary}{\linewidth}{c|cc|cc|c|c|cc}
+		\textbf{\relax Experiment} & \textbf{\relax P } & \textbf{\relax T} & \textbf{\relax $x_\text{P}$} & \textbf{\relax $x_\text{T}$} & \textbf{\relax $\hat{y}$} & \textbf{\relax Actual = $y$} & \textbf{\relax Type } \\ \hline
+			10 & ~~1.63 & 339 & $~0$ & $~0$ &  & \$ 732 &~Center \\
+			11 & ~~1.45 & 336 & $-1$ & $-1$ &  & ~~715  &~Factorial \\
+			12 & ~~1.81 & 336 & $+1$ & $-1$ &  & ~~713  &~Factorial \\
+			13 & ~~1.45 & 342 & $-1$ & $+1$ &  & ~~733  &~Factorial \\ 
+			14 & ~~1.81 & 342 & $+1$ & $+1$ &  & ~~725  &~Factorial \\
+			15 & ~~1.51 & 345 & $-\tfrac{2}{3}$ & $+2$ & \$ 742 & ~~735  & Steepest path \\ \hline
+			16 & ~~1.63 & 339 & $~0$ & $~0$ &  & \$ 733 &~Center \\
+			17 & ~~1.63 & 339 & $~0$ & $~0$ &  & ~~737 &~Center \\ \hline
+			\onslide+<2->{18 & ~~1.63 & 343 & $~0$ & $+1.41$ &  & \onslide+<6->{\$ 738} &~Star} \\ 
+			\onslide+<3->{19 & ~~1.38 & 339 & $-1.41$ & $0$ &  & \onslide+<6->{~~717} &~Star \\ 
+				20 & ~~1.63 & 335 & $0$ & $-1.41$ &  & \onslide+<6->{~~721} &~Star \\ 
+				21 & ~~1.88 & 339 & $+1.41$ & $0$ &  & \onslide+<6->{~~710} &~Star}
+			\onslide+<4->{\\ \hline
+				22 & ~~1.63 & 339 & $~0$ & $~0$ &  & \onslide+<6->{\$ 735} &~Center} 
+			\onslide+<7->{\\ \hline
+				23 & ~~ &  &  &  &  &  &~Optimum?} 
+			\end{tabulary}
+\end{frame}
+\begin{frame}\frametitle{Results of the 12 runs: (factorial + star + center). Are we nearly there?}
+	\[\hat{y} = 734.23 -2.5x_\text{P}    +    6.97  x_\text{T}    -10.6  x^2_\text{P}     -2.5  x^2_\text{T}     -1.5x_\text{P}x_\text{T}\]
+	\begin{columns}[T]
+		\column{0.6\textwidth}
+			\begin{enumerate}
+				\onslide+<2->{
+					\item	We get good predictions at the center,
+							indicating a ``small lack of fit''
+							\begin{itemize}
+								\item	$\hat{y}^{(\text{center})} = \$ 734$
+								\item	$y^{(\text{center})}_\text{actual} = \$ 734.25$
+							\end{itemize}
+				}
+				\onslide+<3->{
+					\vspace{0.5cm}
+					\item	We have good predictions of other points in the region
+						\centerline{\includegraphics[width=.8\textwidth]{../6C/Supporting materials/software-prediction.png}}
+						\vspace{-0.3cm}
+						\begin{itemize}
+							\item	$\hat{y}^{(15)} = \$ 737$
+							\item	$y^{(15)}_\text{actual} = \$ 735$
+						\end{itemize}
+					}
+			\end{enumerate}
+			
+		\column{0.01\textwidth}
+			\rule[3mm]{0.01cm}{60mm}%
+		
+		\column{0.4\textwidth}	
+			Output from the R software:
+
+			\centerline{\includegraphics[width=\textwidth]{../6C/Supporting materials/R-software-output.png}}
+
+	\end{columns}
+	
+	
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-43.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-44.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-45.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-46.png}}
+\end{frame}
+\begin{frame}\frametitle{Finding the optimum analytically (with differentiation)}
+	\[\hat{y} =	 734  -2.5x_\text{P}    +    6.97  x_\text{T}    -10.6  x^2_\text{P}     -2.5  x^2_\text{T}     -1.5x_\text{P}x_\text{T}	 \]
+
+	\onslide+<2->{
+		\begin{align*}
+			\dfrac{\partial \hat{y}}{\partial x_\text{P}} &&=&& -2.5 &&-&& 21.2x_\text{P} &&-&& 1.5x_\text{T} &&=&& 0 \\
+			\dfrac{\partial \hat{y}}{\partial x_\text{T}} &&=&& 6.97 &&-&& 1.5x_\text{P} &&-&& 5.0x_\text{T} &&=&& 0 \\
+		\end{align*}
+	}
+	\vspace{-0.5cm}
+	\onslide+<3->{
+		\[
+		\begin{pmatrix}-21.2 && -1.5 \\ \\ -1.5 && -5.0\end{pmatrix}\begin{pmatrix}x_\text{P} \\ \\ x_\text{T}\end{pmatrix} = \begin{pmatrix}2.5 \\ \\ -6.97\end{pmatrix}
+		\]
+	}
+	\vspace{0.4cm}
+	\onslide+<4->{
+		\begin{align*}
+			x^{(23)}_\text{P} &= -0.22 &&& \onslide+<5->{\text{P}^{(23)}& = -0.22 \cdot \tfrac{1}{2}(0.36) +1.63 = {\color{red}\$1.59}}\\
+			x^{(23)}_\text{T} &= 1.46 &&&  \onslide+<5->{\text{T}^{(23)} &= 1.46\cdot \tfrac{1}{2}(6) +339 \approx {\color{red} 343~\text{parts per hour}}} \\
+		\end{align*}
+	}
+	
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-47.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-48.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-49.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-50.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-51.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-52.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-53.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-54.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-55.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-56.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-57.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-58.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-59.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../6A/Supporting materials/RSM-60.png}}
+\end{frame}

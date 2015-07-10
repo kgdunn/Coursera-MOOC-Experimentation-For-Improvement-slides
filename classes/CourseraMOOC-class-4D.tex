@@ -1,0 +1,475 @@
+\begin{comment}
+		
+	\begin{frame}\frametitle{\includegraphics[width=0.3\textwidth]{\imagedir/doe/examples/advice-logo.png}\,\, plan your experiments carefully ahead of time}
+	\end{frame}
+	
+	\begin{columns}[T]
+		\column{0.45\textwidth}
+			\includegraphics[width=0.7\textwidth]{\imagedir/statistics/flicfcb_o.jpg}
+		
+			{\scriptsize (p. 230 in Box, Hunter and Hunter, 2$^\text{nd}$ ed)}
+		
+		\column{0.48\textwidth}
+			\includegraphics[width=\textwidth]{\imagedir/doe/examples/solar-panel-mendelu-cz-website.png}
+		
+		
+			\see{\href{http://yint.org/solar-panel-study}{http://yint.org/solar-panel-study}}
+	\end{columns}
+	
+	\begin{center}\rule[8mm]{4cm}{0.01cm}\end{center}
+	\rule[3mm]{0.01cm}{25mm}%
+	
+\end{comment}
+
+\begin{frame}\frametitle{}
+	\begin{center}
+		\includegraphics[width=.97\textwidth]{\imagedir/doe/disturbance-classification-MOOC.png}
+	\end{center}
+	%They should fall into one of these 3 categories.
+\end{frame}
+
+\begin{frame}\frametitle{Can you classify all the variables in your experimental system?}
+	\begin{center}
+		\includegraphics[width=.7\textwidth]{\imagedir/doe/disturbance-classification-MOOC.png}
+	\end{center}
+	They should fall into one of these 3 categories.
+\end{frame}
+
+\begin{frame}\frametitle{The ``CalApp'' example continues}
+	
+	\begin{columns}[t]
+	
+		\column{1\textwidth}
+			\begin{tabulary}{\linewidth}{l|ll}\hline
+				& \textbf{\relax Low level $-$} & \textbf{\relax High level $+$}\\ \hline  \\
+				\textbf{A}: ``Promotion'' & 1 free in-app upgrade & 30-day trial of all features\\ \\
+				\textbf{B}: ``Message'' & \parbox[t]{5.cm}{``CalApp has your schedule available at your fingertips, on any device.''} & \parbox[t]{5.5cm}{``CalApp features are configurable; only pay for the features you want.''} \\ \\
+				\textbf{C}: ``Price'' & in-app purchase price is 89c &  in-app purchase price is 99c  \\& \\\hline
+			\end{tabulary}
+			
+			
+	\end{columns}
+		
+\end{frame}
+
+\begin{frame}\frametitle{A subtlety: characteristics of a nuisance factor}
+	\begin{columns}[T]
+		\column{0.25\textwidth}
+
+			\includegraphics[width=\textwidth]{../4D/Supporting files/flickr-6449132251_dd669e13dd_b-nuisance.jpg}
+
+			\see{\href{https://secure.flickr.com/photos/nickwebb/6449132251}{Flickr: nickwebb}}
+					
+			
+		\column{0.75\textwidth}
+		
+		\begin{itemize}
+			\item	the factor does vary during your experiments
+			\item	it is controllable, and it is measurable (just like a regular factor)
+			\item	the factor is not the focus of your experiment
+
+		\end{itemize}
+		
+			\onslide+<2->{
+				
+
+				\color{myOrange} How do we deal with a nuisance factor to avoid bias?
+			}
+			\onslide+<3->{
+				\begin{itemize}
+					\item	randomization will minimize the effect, but not eliminate it
+					\item	your experiments should be successful, despite the nuisance factor
+					\item	we use a process called {\color{purple} blocking}
+				\end{itemize}
+			}			
+	\end{columns}
+	
+	\onslide+<4->{
+		\vspace{0.5cm}
+		
+		\hbox{\hspace{-1.5em}
+			\fbox{\parbox[b][3.5em][t]{1.04\textwidth}{
+				{\color{myGreen} ``Does the process have to work successfully with different levels of the nuisance variable?''}\\
+				\hbox{\hspace{1.5em}If \textbf{yes}: you must actively plan for blocking (that's the next topic)}\\
+				\hbox{\hspace{1.5em}If \textbf{no}: that indicates you have good control over your system}\\
+			}}
+		}
+		
+	}
+\end{frame}
+
+\begin{frame}\frametitle{Some examples of nuisance factors}
+	\begin{columns}[t]
+		\column{0.25\textwidth}
+			\textbf{CalApp}
+			
+			\includegraphics[width=\textwidth]{../4C/Supporting materials/4C-7-cell-phone-2830319467_1faaecc974_o-flickr.jpg}
+			\\
+			{\tiny{\href{https://secure.flickr.com/photos/williamhook/2830319467/}{Flickr: williamhook}}}
+			
+			\vspace{1cm}
+			Apple or Android 
+		
+		
+			\column{0.25\textwidth}
+			\onslide+<2->{
+				\textbf{Baking}
+				\includegraphics[width=\textwidth]{../4D/Supporting files/flour-and-flour-cropped.png}
+		
+				\vspace{1.1cm}
+				Brand of flour
+			}
+			
+		\column{0.25\textwidth}
+			\onslide+<3->{
+				\textbf{Shift work}
+				%\vspace{0.1cm}
+				\includegraphics[width=\textwidth]{../4D/Supporting files/flickr-4140348113_f0efc8235b_z-clock.jpg}
+				\\
+				{\tiny{\href{https://secure.flickr.com/photos/leehaywood/4140348113}{Flickr: leehaywood}}}
+				
+				
+				
+				\vspace{0.8cm}
+				Day shift or night shift
+			}
+		
+		\column{0.25\textwidth}
+			\onslide+<4->{
+				\textbf{Gas mileage}
+				
+				%\vspace{-0.1cm}
+				\includegraphics[width=\textwidth]{../4C/Supporting materials/4C-6-gas-mileage.png}
+				
+				\vspace{1.65cm}
+				Driver 1 or driver 2
+			}
+			
+	\end{columns}
+			
+\end{frame}
+
+\begin{frame}\frametitle{The ``CalApp'' example continues}
+	
+	\begin{columns}[t]
+	
+		\column{1\textwidth}
+			\begin{tabulary}{\linewidth}{l|ll}\hline
+				& \textbf{\relax Low level $-$} & \textbf{\relax High level $+$}\\ \hline  \\
+				\textbf{A}: ``Promotion'' & 1 free in-app upgrade & 30-day trial of all features\\ \\
+				\textbf{B}: ``Message'' & \parbox[t]{5.cm}{``CalApp has your schedule available at your fingertips, on any device.''} & \parbox[t]{5.5cm}{``CalApp features are configurable; only pay for the features you want.''} \\ \\
+				\textbf{C}: ``Price'' & in-app purchase price is 89c &  in-app purchase price is 99c  \\& \\\hline
+			\end{tabulary}
+			
+			
+	\end{columns}
+	
+	
+\end{frame}
+
+\begin{frame}\frametitle{Planning for blocking: {\color{myOrange} add a new factor column to the standard order table}}
+	
+	\newcommand{\white}{\color{white}}
+	\begin{tabulary}{\linewidth}{ccccc}\hline 
+		\multirow{2}{*}{\textbf{\relax Run }} & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C } & \textbf{\relax D	}  \\
+		 & \scriptsize ``Promotion'' & \scriptsize ``Message'' & \scriptsize ``Price'' & \scriptsize ``Apple or Android'' \\
+		\hline 
+		1 & \(-\) & \(-\) & \(-\) & \\
+		2 & \(+\) & \(-\) & \(-\) & \\
+		3 & \(-\) & \(+\) & \(-\) & \\
+		4 & \(+\) & \(+\) & \(-\) & \\
+		5 & \(-\) & \(-\) & \(+\) & \\
+		6 & \(+\) & \(-\) & \(+\) & \\
+		7 & \(-\) & \(+\) & \(+\) & \\
+		8 & \(+\) & \(+\) & \(+\) & \\
+		 \hline
+	\end{tabulary}
+	
+	\begin{itemize}
+	 	\item	Factor \textbf{D}: experiment with either  Android $(-)$ or Apple $(+)$ users \pause
+	
+	 	\item	This would require 16 experiments for a full factorial in factors \textbf{A}, \textbf{B}, \textbf{C}, and \textbf{D} \pause
+	 	\item	but, we only want 8 experiments
+	\end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{Planning for blocking: {\color{myOrange} add a new factor column to the standard order table}}
+	
+	\newcommand{\apple}{\scriptsize ~~\,Apple}
+	\newcommand{\andrd}{\scriptsize Android}
+	\begin{tabulary}{\linewidth}{ccccc}\hline 
+		\multirow{2}{*}{\textbf{\relax Run }} & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C } & \textbf{\relax D=ABC}  \\
+		 & \scriptsize ``Promotion'' & \scriptsize ``Message'' & \scriptsize ``Price'' & \scriptsize ``Apple or Android'' \\
+		\hline 
+		1 & \(-\) & \(-\) & \(-\) & $-$ \andrd \\
+		2 & \(+\) & \(-\) & \(-\) & $+$ \apple \\
+		3 & \(-\) & \(+\) & \(-\) & $+$ \apple \\
+		4 & \(+\) & \(+\) & \(-\) & $-$ \andrd \\
+		5 & \(-\) & \(-\) & \(+\) & $+$ \apple \\
+		6 & \(+\) & \(-\) & \(+\) & $-$ \andrd \\
+		7 & \(-\) & \(+\) & \(+\) & $-$ \andrd \\
+		8 & \(+\) & \(+\) & \(+\) & $+$ \apple \\
+		 \hline
+	\end{tabulary}
+	
+	\begin{itemize}
+	 	\item	Factor \textbf{D}: experiment with either  Android $(-)$ or Apple $(+)$ users 
+	 	\item	This would require 16 experiments for a full factorial in factors \textbf{A}, \textbf{B}, \textbf{C}, and \textbf{D}
+	 	\item	but, we only want 8 experiments
+	\end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{Visualizing the blocking procedure on a cube plot}
+	
+	\newcommand{\apple}{\scriptsize ~~\,Apple}
+	\newcommand{\andrd}{\scriptsize Android}
+	\begin{columns}[T]
+		\column{0.5\textwidth}
+			\begin{tabulary}{\linewidth}{ccccc}\hline 
+				\multirow{2}{*}{\textbf{\relax Run }} & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C } & \textbf{\relax D=ABC}  \\
+				 & \scriptsize ``Promotion'' & \scriptsize ``Message'' & \scriptsize ``Price'' & \scriptsize ``Apple or Android'' \\
+				\hline 
+				1 & \(-\) & \(-\) & \(-\) & $-$ \andrd \\
+				2 & \(+\) & \(-\) & \(-\) & $+$ \apple \\
+				3 & \(-\) & \(+\) & \(-\) & $+$ \apple \\
+				4 & \(+\) & \(+\) & \(-\) & $-$ \andrd \\
+				5 & \(-\) & \(-\) & \(+\) & $+$ \apple \\
+				6 & \(+\) & \(-\) & \(+\) & $-$ \andrd \\
+				7 & \(-\) & \(+\) & \(+\) & $-$ \andrd \\
+				8 & \(+\) & \(+\) & \(+\) & $+$ \apple \\
+				 \hline
+			\end{tabulary}
+		\column{0.1\textwidth}
+		\column{0.4\textwidth}
+		
+			\vspace{1cm}
+			\centerline{\includegraphics[width=\textwidth]{\imagedir/doe/examples/half-fraction-in-3-factors-Apple-Android.png}}
+			
+	\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{Planning for blocking: {\color{myOrange} add a new factor column to the standard order table}}
+	
+	\newcommand{\apple}{\scriptsize ~~\,Apple}
+	\newcommand{\andrd}{\scriptsize Android}
+	\newcommand{\white}{\color{white}}
+	\begin{tabulary}{\linewidth}{ccccccc}\hline 
+		\multirow{2}{*}{\textbf{\relax Run }} & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C } & \textbf{\relax D = ABC	} & \textbf{\relax Outcome, $y$	}\\
+		 & \scriptsize ``Promotion'' & \scriptsize ``Message'' & \scriptsize ``Price'' & \scriptsize ``Apple or Android'' \\
+		\hline 
+		1 & \(-\) & \(-\) & \(-\) & $-$ \andrd & $y_{(1)} \white + g = \widetilde{y}_{(1)}$\\
+		2 & \(+\) & \(-\) & \(-\) & $+$ \apple & $y_{(2)} \white + h = \mathring{y}_{(2)}$\\
+		3 & \(-\) & \(+\) & \(-\) & $+$ \apple & $y_{(3)} \white + h = \mathring{y}_{(3)}$\\
+		4 & \(+\) & \(+\) & \(-\) & $-$ \andrd & $y_{(4)} \white + g = \widetilde{y}_{(4)}$\\
+		5 & \(-\) & \(-\) & \(+\) & $+$ \apple & $y_{(5)} \white + h = \mathring{y}_{(5)}$\\
+		6 & \(+\) & \(-\) & \(+\) & $-$ \andrd & $y_{(6)} \white + g = \widetilde{y}_{(6)}$\\
+		7 & \(-\) & \(+\) & \(+\) & $-$ \andrd & $y_{(7)} \white + g = \widetilde{y}_{(7)}$\\
+		8 & \(+\) & \(+\) & \(+\) & $+$ \apple & $y_{(8)} \white + h = \mathring{y}_{(8)}$\\
+		 \hline
+	\end{tabulary}
+	
+	\vspace{0.5cm}
+	
+	\begin{itemize}
+		\item	Android users: ${\white\widetilde{y}_{(i)} =}\,\, y_{(i)} + g$
+		\item	Apple users:\,\,\,\,\, ${\white \mathring{y}_{(i)} =}\,\, y_{(i)} + h$
+	\end{itemize}
+	
+\end{frame}
+
+\begin{frame}\frametitle{Planning for blocking: {\color{myOrange} add a new factor column to the standard order table}}
+	
+	\newcommand{\apple}{\scriptsize ~~\,Apple}
+	\newcommand{\andrd}{\scriptsize Android}
+	\newcommand{\white}{}
+	\begin{tabulary}{\linewidth}{ccccccc}\hline 
+		\multirow{2}{*}{\textbf{\relax Run }} & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C } & \textbf{\relax D = ABC	} & \textbf{\relax Outcome, $y$	}\\
+		 & \scriptsize ``Promotion'' & \scriptsize ``Message'' & \scriptsize ``Price'' & \scriptsize ``Apple or Android'' \\
+		\hline 
+		1 & \(-\) & \(-\) & \(-\) & $-$ \andrd & $y_{(1)} + g = \widetilde{y}_{(1)}$\\
+		2 & \(+\) & \(-\) & \(-\) & $+$ \apple & $y_{(2)} + h = \mathring{y}_{(2)}$\\
+		3 & \(-\) & \(+\) & \(-\) & $+$ \apple & $y_{(3)} + h = \mathring{y}_{(3)}$\\
+		4 & \(+\) & \(+\) & \(-\) & $-$ \andrd & $y_{(4)} + g = \widetilde{y}_{(4)}$\\
+		5 & \(-\) & \(-\) & \(+\) & $+$ \apple & $y_{(5)} + h = \mathring{y}_{(5)}$\\
+		6 & \(+\) & \(-\) & \(+\) & $-$ \andrd & $y_{(6)} + g = \widetilde{y}_{(6)}$\\
+		7 & \(-\) & \(+\) & \(+\) & $-$ \andrd & $y_{(7)} + g = \widetilde{y}_{(7)}$\\
+		8 & \(+\) & \(+\) & \(+\) & $+$ \apple & $y_{(8)} + h = \mathring{y}_{(8)}$\\
+		 \hline
+	\end{tabulary}
+	
+	\vspace{0.5cm}
+
+	
+	\begin{itemize}
+		\item	Android users: ${\widetilde{y}_{(i)} =}\,\, y_{(i)} + g$
+		\item	Apple users:\,\,\,\,\, ${\mathring{y}_{(i)} =}\,\, y_{(i)} + h$
+	\end{itemize} 
+	
+\end{frame}
+
+\begin{frame}\frametitle{Why does blocking like this work so successfully? (math alert!)}
+	
+	The main effect of \textbf{A}
+	
+	\newcommand{\mo}{\color{myOrange}}
+	
+	\begin{align*}
+	\mathbf{A} &= \dfrac{1}{2}\left[ \dfrac{\left( \mathring{y}_{(8)} - \widetilde{y}_{(7)}\right)
+										+   \left( \widetilde{y}_{(4)} - \mathring{y}_{(3)}\right)	
+										+   \left( \widetilde{y}_{(6)} - \mathring{y}_{(5)}\right)
+										+   \left( \mathring{y}_{(2)} - \widetilde{y}_{(1)}\right)	} {4}\right]\\
+		\intertext{\color{myOrange}Notice two $+\widetilde{y}$ values and two $-\widetilde{y}$; and also two $+\mathring{y}$ values and two $-\mathring{y}$}	
+	\onslide+<2->{
+	\mathbf{A} &=  \dfrac{1}{8}\bigg[   \left( y_{(8)} + h - y_{(7)} - g\right)
+									+  \left( y_{(4)} + g - y_{(3)} - h\right)	\bigg.\\
+							   &\bigg.\qquad\qquad\qquad\qquad\qquad+ \left( y_{(6)} + g - y_{(5)} - h\right)
+									+  \left( y_{(2)} + h - y_{(1)} - g\right)	\bigg]\\
+		}
+	\onslide+<3->{
+		\intertext{which simplifies to}
+	\mathbf{A} &= \dfrac{1}{8} \Big[ +y_{(1)} - y_{(2)} +  y_{(3)} - y_{(4)} + y_{(5)} - y_{(6)} + y_{(7)} - y_{(8)}	\,\,\cancelto{0}{-2g + 2g} \,\, \cancelto{0}{-2h+2h}\,\, \Big]\\
+	}
+	\onslide+<4->{
+		\mathbf{A} &= \text{pure effect of \textbf{A},  without bias}
+	}
+	\end{align*}
+\end{frame}
+
+\begin{frame}\frametitle{Why does blocking like this work so successfully? (math alert!)}
+	
+	\vspace{1cm}
+	In a similar way, you can show all effects are estimated without bias:
+	\begin{itemize}
+		\item	\textbf{A}
+		\item	\textbf{B}
+		\item	\textbf{C}
+		\item	\textbf{AB}
+		\item	\textbf{AC}
+		\item	\textbf{BC}
+		
+		\vspace{1cm}
+		\item	except, for the effect of \textbf{ABC}:
+			\begin{align*}
+			\mathbf{ABC} &= \dfrac{1}{8} \Big[  \underbrace{-y_{(1)} + y_{(2)} +  y_{(3)} - y_{(4)} + y_{(5)} - y_{(6)} - y_{(7)} + y_{(8)}}_{\mathclap{\text{pure effect of \textbf{ABC}}}} \underbrace{\,\,\,\,{\color{red}-4g} \,\, {\color{red}+ 4h_{\color{white}(i)}}}_{\mathclap{\text{\emph{with} bias}}}	 \Big]\\	
+			\\
+			%\mathbf{ABC} &= \underbrace{\text{, }}_{\mathclap{\text{confounding with the blocking effect}}}
+			\end{align*}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{Why does blocking like this work so successfully? (math alert!)}
+	
+	\vspace{1cm}
+	In a similar way, you can show all effects are estimated without bias:
+	\begin{itemize}
+		\item	\textbf{A}
+		\item	\textbf{B}
+		\item	\textbf{C}
+		\item	\textbf{AB}
+		\item	\textbf{AC}
+		\item	\textbf{BC}
+		
+		\vspace{1cm}
+		\item	except, for the effect of \textbf{ABC}:
+			\begin{align*}
+			\mathbf{ABC} &= \dfrac{1}{8} \Big[  \underbrace{-y_{(1)} + y_{(2)} +  y_{(3)} - y_{(4)} + y_{(5)} - y_{(6)} - y_{(7)} + y_{(8)}}_{\mathclap{\text{pure effect of \textbf{ABC}}}} \underbrace{\,\,\,\,{\color{red}-4g} \,\, {\color{red}+ 4h_{\color{white}(i)}}}_{\mathclap{\text{confounded with the blocking effect}}}	 \Big]\\	
+			\\
+			\end{align*}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{More than two blocks are easily possible}
+	
+	\begin{columns}[t]
+		\column{0.25\textwidth}
+			\textbf{CalApp}
+			
+			\includegraphics[width=\textwidth]{../4C/Supporting materials/4C-7-cell-phone-2830319467_1faaecc974_o-flickr.jpg}
+			\\
+			{\tiny{\href{https://secure.flickr.com/photos/williamhook/2830319467/}{Flickr: williamhook}}}
+			
+			\vspace{1cm}
+			Apple, Android, Blackberry
+		
+		
+			\column{0.25\textwidth}
+			\onslide+<2->{
+				\textbf{Baking}
+				\includegraphics[width=\textwidth]{../4D/Supporting files/flour-and-flour-cropped.png}
+		
+				\vspace{1.1cm}
+				4 different brands of flour
+			}
+			
+		\column{0.25\textwidth}
+			\onslide+<3->{
+				\textbf{Shift work}
+				%\vspace{0.1cm}
+				\includegraphics[width=\textwidth]{../4D/Supporting files/flickr-4140348113_f0efc8235b_z-clock.jpg}
+				\\
+				{\tiny{\href{https://secure.flickr.com/photos/leehaywood/4140348113}{Flickr: leehaywood}}}
+				
+				
+				
+				\vspace{0.8cm}
+				Day shift\\
+				Afternoon shift\\
+				Night shift
+			}
+		
+		\column{0.25\textwidth}
+			\onslide+<4->{
+				\textbf{Gas mileage}
+				
+				%\vspace{-0.1cm}
+				\includegraphics[width=\textwidth]{../4C/Supporting materials/4C-6-gas-mileage.png}
+				
+				\vspace{1.65cm}
+				Gasoline brand 1\\
+				Gasoline brand 2\\
+				Gasoline brand 3\\
+			}
+			
+	\end{columns}
+	
+	
+\end{frame}
+
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[width=\textwidth]{../4D/Supporting files/blocking-tables.jpg}}
+\end{frame}
+
+\begin{frame}\frametitle{General rule for blocking in two blocks}
+	\begin{columns}[T]
+		\column{0.45\textwidth}
+			\begin{enumerate}
+				\item	Write out your existing standard order table
+				\item	Add an extra ``factor'' to your standard order table
+				\item	Generate a half-fraction, using the trade-off table, on this new factor
+				\item	Signs with $-$ are in one block; and signs with $+$ are in the other block
+			\end{enumerate}
+		
+		\column{0.48\textwidth}
+			\newcommand{\apple}{\scriptsize ~~\,Apple}
+			\newcommand{\andrd}{\scriptsize Android}
+			\begin{tabulary}{\linewidth}{cccc|c}\hline 
+				\multirow{1}{*}{\textbf{\relax Run }} & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C } & \textbf{\relax D=ABC}  \\
+				\hline 
+				1 & \(-\) & \(-\) & \(-\) & $-$ \andrd \\
+				2 & \(+\) & \(-\) & \(-\) & $+$ \apple \\
+				3 & \(-\) & \(+\) & \(-\) & $+$ \apple \\
+				4 & \(+\) & \(+\) & \(-\) & $-$ \andrd \\
+				5 & \(-\) & \(-\) & \(+\) & $+$ \apple \\
+				6 & \(+\) & \(-\) & \(+\) & $-$ \andrd \\
+				7 & \(-\) & \(+\) & \(+\) & $-$ \andrd \\
+				8 & \(+\) & \(+\) & \(+\) & $+$ \apple \\
+				 \hline
+			\end{tabulary}
+	\end{columns}
+	
+	
+\end{frame}
+
+
+
+

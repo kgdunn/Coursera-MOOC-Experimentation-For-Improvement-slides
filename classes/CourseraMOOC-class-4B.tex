@@ -1,0 +1,951 @@
+\begin{comment}
+	
+	
+	\begin{frame}\frametitle{\includegraphics[width=0.3\textwidth]{\imagedir/doe/examples/advice-logo.png}\,\, plan your experiments carefully ahead of time}
+	\end{frame}
+	
+	\begin{columns}[T]
+		\column{0.45\textwidth}
+			\includegraphics[width=0.7\textwidth]{\imagedir/statistics/flicfcb_o.jpg}
+		
+			{\scriptsize (p. 230 in Box, Hunter and Hunter, 2$^\text{nd}$ ed)}
+		
+		\column{0.48\textwidth}
+			\includegraphics[width=\textwidth]{\imagedir/doe/examples/solar-panel-mendelu-cz-website.png}
+		
+		
+			\see{\href{http://tiny.cc/solar-panel-study}{http://tiny.cc/solar-panel-study}}
+	\end{columns}
+	
+	\begin{center}\rule[8mm]{4cm}{0.01cm}\end{center}
+	\rule[3mm]{0.01cm}{25mm}%
+
+\end{comment}
+\begin{frame}\frametitle{}
+	\begin{center}
+	\includegraphics[height=.9\textheight]{\imagedir/doe/DOE-trade-off-table-MOOC.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}\frametitle{}
+	\begin{center}
+	\includegraphics[height=.9\textheight]{\imagedir/doe/DOE-trade-off-table-MOOC-annotated.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}\frametitle{}
+	\begin{center}
+	\includegraphics[height=.9\textheight]{\imagedir/doe/DOE-trade-off-table-MOOC-cell1.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}\frametitle{For your own case: be prepared to remap your letters ... temporarily}
+	\begin{columns}[b]
+		\column{0.45\textwidth}
+			\emph{Original factor names}
+			
+			\begin{itemize}
+				\item	\textbf{C}: chemical variable
+				\item	\textbf{T}: temperature variable
+				\item	\textbf{S}: stirring speed variable
+			\end{itemize}
+			
+			\vspace{1cm}
+			\textbf{$+$S = CT}
+			
+			\vspace{1cm}
+			\textbf{$-$S = CT}
+			
+		\column{0.45\textwidth}
+			\emph{Factor names in the table}
+			
+			\begin{itemize}
+				\item	\textbf{A}
+				\item	\textbf{B}
+				\item	\textbf{C}
+			\end{itemize}
+			
+			\vspace{1cm}
+			\textbf{$+$C = AB}
+			
+			\vspace{1cm}
+			\textbf{$-$C = AB}
+	\end{columns}	
+\end{frame}
+
+\begin{frame}\frametitle{Setting up the half-fraction in 3 factors: using the complementary half}
+	\begin{columns}
+		\column{0.6\textwidth}
+			\begin{center}
+				\includegraphics[width=.9\textwidth]{\imagedir/doe/half-fraction-in-3-factors-MOOC-no-labels.png}
+			\end{center}
+			
+		\column{0.55\textwidth}
+			\begin{tabulary}{\linewidth}{|c||c|c|c|}\hline 
+				\textsf{\relax Experiment } & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C = $-$AB } \\
+				\hline \textbf{1} & \(-\) & \(-\) & \(-(-)(-) = -\) \\
+				\hline \textbf{2} & \(+\) & \(-\) & \(-(+)(-) = +\) \\
+				\hline \textbf{3} & \(-\) & \(+\) & \(-(-)(+) = +\) \\
+				\hline \textbf{4} & \(+\) & \(+\) & \(-(+)(+) = -\) \\
+				\hline
+			\end{tabulary}
+			
+			\small
+			\vspace{1cm}
+			\textbf{\relax $-$C = AB} can be rewritten as \textbf{\relax C = $-$AB}
+			
+			\vspace{1cm}
+			Notice how these 4 runs correspond to the closed circles.
+			
+	\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{{\large Creating and understanding fractional factorials from a half-fraction example}}
+	\begin{columns}
+		\column{0.65\textwidth}
+			\begin{center}
+				\includegraphics[width=.9\textwidth]{\imagedir/doe/half-fraction-in-3-factors-MOOC-optimum-4.png}
+			\end{center}
+			
+		\onslide+<2->	{
+		\column{0.55\textwidth}
+			\begin{tabulary}{\linewidth}{cccl}\hline 
+				\textsf{\relax Experiment } & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C } \\
+				\hline 
+				1 & \(-\) & \(-\) & \(-\) \\
+				\color{myOrange} \textbf{2} & \(+\) & \(-\) & \(-\) \\
+				\color{myOrange} \textbf{3} & \(-\) & \(+\) & \(-\) \\
+				4 & \(+\) & \(+\) & \(-\) \\
+				\color{myOrange} \textbf{5} & \(-\) & \(-\) & \(+\) \\
+				6 & \(+\) & \(-\) & \(+\) \\
+				7 & \(-\) & \(+\) & \(+\) \\
+				\color{myOrange} \textbf{8} & \(+\) & \(+\) & \(+\) \\  \hline
+			\end{tabulary}
+		}
+			
+	\end{columns}	
+\end{frame}
+
+\begin{frame}\frametitle{{\large Creating and understanding fractional factorials from a half-fraction example}}
+	\begin{columns}
+		\column{0.65\textwidth}
+			\begin{center}
+				\includegraphics[width=.9\textwidth]{\imagedir/doe/half-fraction-in-3-factors-MOOC-optimum-4.png}
+			\end{center}
+
+		\column{0.55\textwidth}
+			\begin{tabulary}{\linewidth}{cccl}\hline 
+				\textsf{\relax Experiment } & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C } \\
+				\hline 
+				 & & & \\
+				\color{myOrange} \textbf{2} & \(+\) & \(-\) & \(-\) \\
+				\color{myOrange} \textbf{3} & \(-\) & \(+\) & \(-\) \\
+				 & & & \\
+				\color{myOrange} \textbf{5} & \(-\) & \(-\) & \(+\) \\
+				 & & & \\
+				 & & & \\
+				\color{myOrange} \textbf{8} & \(+\) & \(+\) & \(+\) \\ \hline
+			\end{tabulary}
+	\end{columns}	
+\end{frame}
+
+\begin{frame}\frametitle{{\large Creating and understanding fractional factorials from a half-fraction example}}
+	\begin{columns}
+		\column{0.65\textwidth}
+			\begin{center}
+				\includegraphics[width=.9\textwidth]{\imagedir/doe/half-fraction-in-3-factors-MOOC-optimum-4.png}
+			\end{center}
+
+		\column{0.55\textwidth}
+			\begin{tabulary}{\linewidth}{cccl}\hline 
+				\textsf{\relax Experiment } & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C } \\
+				\hline 
+				\color{myOrange} \textbf{5} & \(-\) & \(-\) & \(+\) \\
+				\color{myOrange} \textbf{2} & \(+\) & \(-\) & \(-\) \\
+				\color{myOrange} \textbf{3} & \(-\) & \(+\) & \(-\) \\
+				 & & & \\
+				 & & & \\
+				 & & & \\
+				 & & & \\
+				\color{myOrange} \textbf{8} & \(+\) & \(+\) & \(+\) \\  \hline
+			\end{tabulary}
+	\end{columns}	
+\end{frame}
+
+\begin{frame}\frametitle{{\large Creating and understanding fractional factorials from a half-fraction example}}
+	\begin{columns}
+		\column{0.65\textwidth}
+			\begin{center}
+				\includegraphics[width=.9\textwidth]{\imagedir/doe/half-fraction-in-3-factors-MOOC-optimum-4.png}
+			\end{center}
+
+		\column{0.55\textwidth}
+			\begin{tabulary}{\linewidth}{cccl}\hline 
+				\textsf{\relax Experiment } & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C } \\
+				\hline 
+				 \color{myOrange} \textbf{5} & \(-\) & \(-\) & \(+\) \\
+				 \color{myOrange} \textbf{2} & \(+\) & \(-\) & \(-\) \\
+				 \color{myOrange} \textbf{3} & \(-\) & \(+\) & \(-\) \\
+				 \color{myOrange} \textbf{8} & \(+\) & \(+\) & \(+\) \\ \hline
+				  & & & \\
+				  & & & \\
+				  & & & \\
+				  & & & 
+			\end{tabulary}
+	\end{columns}	
+\end{frame}
+
+\begin{frame}\frametitle{{\large Creating and understanding fractional factorials from a half-fraction example}}
+	\begin{columns}
+		\column{0.65\textwidth}
+			\begin{center}
+				\includegraphics[width=.9\textwidth]{\imagedir/doe/half-fraction-in-3-factors-MOOC-optimum-4.png}
+			\end{center}
+
+		\column{0.55\textwidth}
+			\begin{tabulary}{\linewidth}{cccl}\hline 
+				\textsf{\relax Experiment } & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C = AB } \\
+				\hline 
+				 \color{myOrange} \textbf{5} & \(-\) & \(-\) & \(+\) \\
+				 \color{myOrange} \textbf{2} & \(+\) & \(-\) & \(-\) \\
+				 \color{myOrange} \textbf{3} & \(-\) & \(+\) & \(-\) \\
+				 \color{myOrange} \textbf{8} & \(+\) & \(+\) & \(+\) \\ \hline
+				  & & & \\
+				  & & & \\
+				  & & & \\
+				  & & & 
+			\end{tabulary}
+	\end{columns}	
+\end{frame}
+
+\begin{frame}\frametitle{Our predictive model \color[rgb]{0,0,0}{\scriptsize  $ \hat{y} = $ {\color[rgb]{0.54,0.12,0.03}$b_\text{0}$}  
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{C}$}$x_\text{C}$ 
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{T}$}$x_\text{T}$ 
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{S}$}$x_\text{S}$ 
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{CT}$}$x_\text{C}x_\text{T}$ 
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{CS}$}$x_\text{C}x_\text{S}$ 
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{TS}$}$x_\text{T}x_\text{S}$ 
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{CTS}$}$x_\text{C}x_\text{T}x_\text{S}$}}  
+	
+	% The CTS one	
+	
+	\newcommand{\mw}{\color[rgb]{1,1,1}}
+	\newcommand{\mm}{\color{lightgray}}
+		
+	\vspace{-0.8cm}
+	 {\LARGE
+	\begin{flalign*}
+				&{\mw =}\normalsize  \qquad\,\,\begin{matrix} \mm \,b_\text{0} & \mm \quad b_\text{C} & \mm \quad b_\text{T} & \mm \quad b_\text{S}
+				& \mm \,\,\, b_\text{CT} & \mm \,\,\, b_\text{CS} & \mm \,\,\,b_\text{TS} & \mm \,\,b_\text{CTS} 
+			\end{matrix}
+				\\
+		\begin{pmatrix}y_1\\y_2\\y_3\\y_4\\y_5\\y_6\\y_7\\y_8\end{pmatrix} &= 
+		\left(\begin{matrix}
+			+1 & -1 & -1 & -1 & +1 & +1 & +1 & -1 \\ 
+			+1 & +1 & -1 & -1 & -1 & -1 & +1 & +1 \\ 
+			+1 & -1 & +1 & -1 & -1 & +1 & -1 & +1 \\
+			+1 & +1 & +1 & -1 & +1 & -1 & -1 & -1 \\
+			+1 & -1 & -1 & +1 & +1 & -1 & -1 & +1 \\ 
+			+1 & +1 & -1 & +1 & -1 & +1 & -1 & -1 \\ 
+			+1 & -1 & +1 & +1 & -1 & -1 & +1 & -1 \\
+			+1 & +1 & +1 & +1 & +1 & +1 & +1 & +1 \\
+		\end{matrix}\right)	
+		\begin{pmatrix}{\color[rgb]{0.54,0.12,0.03}b_0}\\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{C} }\\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{T}} \\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{S}} \\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{CT}} \\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{CS}} \\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{TS}} \\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{CTS}}\\
+		 \end{pmatrix}	 \\
+		 \mathbf{y} &= \mathbf{X}{\color[rgb]{0.54,0.12,0.03}\mathbf{b}}	 		
+	\end{flalign*}
+	}
+\end{frame}
+
+\begin{frame}\frametitle{Our predictive model \color[rgb]{0,0,0}{\scriptsize  $ \hat{y} = $ {\color[rgb]{0.54,0.12,0.03}$b_\text{0}$}  
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{A}$}$x_\text{A}$ 
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{B}$}$x_\text{B}$ 
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{C}$}$x_\text{C}$ 
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{AB}$}$x_\text{A}x_\text{B}$ 
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{AC}$}$x_\text{A}x_\text{C}$ 
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{BC}$}$x_\text{B}x_\text{C}$ 
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{ABC}$}$x_\text{A}x_\text{B}x_\text{C}$}}   % The ABC, with all the "-1" and "+1"
+	
+	
+	\newcommand{\mw}{\color[rgb]{1,1,1}}
+	\newcommand{\mm}{\color{lightgray}}
+		
+	\vspace{-0.8cm}
+	{\LARGE
+	\begin{flalign*}
+			&{\mw =}\normalsize  \qquad\,\,\begin{matrix} \mm \,b_\text{0} & \mm \quad b_\text{A} & \mm \quad b_\text{B} & \mm \quad b_\text{C}
+			& \mm \,\,\, b_\text{AB} & \mm \,\,\, b_\text{AC} & \mm \,\,\,b_\text{BC} & \mm \,\,b_\text{ABC} 
+		\end{matrix}
+			\\ 
+		\begin{pmatrix}y_1\\y_2\\y_3\\y_4\\y_5\\y_6\\y_7\\y_8\end{pmatrix} &= 
+		\left(\begin{matrix}
+			+1 & -1 & -1 & -1 & +1 & +1 & +1 & -1 \\ 
+			+1 & +1 & -1 & -1 & -1 & -1 & +1 & +1 \\ 
+			+1 & -1 & +1 & -1 & -1 & +1 & -1 & +1 \\
+			+1 & +1 & +1 & -1 & +1 & -1 & -1 & -1 \\
+			+1 & -1 & -1 & +1 & +1 & -1 & -1 & +1 \\ 
+			+1 & +1 & -1 & +1 & -1 & +1 & -1 & -1 \\ 
+			+1 & -1 & +1 & +1 & -1 & -1 & +1 & -1 \\
+			+1 & +1 & +1 & +1 & +1 & +1 & +1 & +1 \\
+		 \end{matrix}\right)	
+		\begin{pmatrix}{\color[rgb]{0.54,0.12,0.03}b_0}\\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{A} }\\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{B}} \\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{C}} \\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{AB}} \\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{AC}} \\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{BC}} \\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{ABC}}\\
+		 \end{pmatrix}\\
+			 \mathbf{y} &= \mathbf{X}{\color[rgb]{0.54,0.12,0.03}\mathbf{b}}	 		
+	\end{flalign*}
+	}	
+\end{frame}
+
+\begin{frame}\frametitle{Our predictive model \color[rgb]{0,0,0}{\scriptsize  $ \hat{y} = $ {\color[rgb]{0.54,0.12,0.03}$b_\text{0}$}  
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{A}$}$x_\text{A}$ 
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{B}$}$x_\text{B}$ 
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{C}$}$x_\text{C}$ 
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{AB}$}$x_\text{A}x_\text{B}$ 
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{AC}$}$x_\text{A}x_\text{C}$ 
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{BC}$}$x_\text{B}x_\text{C}$ 
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{ABC}$}$x_\text{A}x_\text{B}x_\text{C}$}}  % The ABC, now just with signs
+	
+	\newcommand{\mw}{\color[rgb]{1,1,1}}
+	\newcommand{\mm}{\color{lightgray}}
+	
+	\vspace{-0.8cm}
+	{\LARGE
+	\begin{flalign*}
+			&{\mw =}\normalsize  \qquad\,\,\begin{matrix} \mm b_\text{0} & \mm b_\text{A} & \mm \,b_\text{B} & \mm \,b_\text{C}
+			& \mm b_\text{AB} & \mm b_\text{AC} & \mm \hspace{-0.03cm}b_\text{BC} & \mm \hspace{-0.13cm}b_\text{ABC} 
+		\end{matrix}
+			\\
+		\begin{pmatrix}y_1\\y_2\\y_3\\y_4\\y_5\\y_6\\y_7\\y_8\end{pmatrix} &= 
+		\left(\begin{matrix}
+			+ & - & - & - & + & + & + & - \\ 
+			+ & + & - & - & - & - & + & + \\ 
+			+ & - & + & - & - & + & - & + \\
+			+ & + & + & - & + & - & - & - \\
+			+ & - & - & + & + & - & - & + \\ 
+			+ & + & - & + & - & + & - & - \\ 
+			+ & - & + & + & - & - & + & - \\
+			+ & + & + & + & + & + & + & + \\
+		 \end{matrix}\right)	
+		\begin{pmatrix}{\color[rgb]{0.54,0.12,0.03}b_0}\\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{A} }\\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{B}} \\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{C}} \\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{AB}} \\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{AC}} \\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{BC}} \\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{ABC}}\\
+		 \end{pmatrix}\\
+			 \mathbf{y} &= \mathbf{X}{\color[rgb]{0.54,0.12,0.03}\mathbf{b}} & % trailing "&" is required for flalign
+	\end{flalign*}
+	}	
+\end{frame}
+
+\begin{frame}\frametitle{Our predictive model \color[rgb]{0,0,0}{\scriptsize  $ \hat{y} = $ {\color[rgb]{0.54,0.12,0.03}$b_\text{0}$}  
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{A}$}$x_\text{A}$ 
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{B}$}$x_\text{B}$ 
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{C}$}$x_\text{C}$ 
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{AB}$}$x_\text{A}x_\text{B}$ 
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{AC}$}$x_\text{A}x_\text{C}$ 
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{BC}$}$x_\text{B}x_\text{C}$ 
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{ABC}$}$x_\text{A}x_\text{B}x_\text{C}$}}
+
+	\newcommand{\mw}{\color[rgb]{1,1,1}}
+	\newcommand{\mm}{\color{lightgray}}
+	\vspace{-0.8cm}
+	{\LARGE
+	\begin{flalign*}
+			&{\mw =}\normalsize  \qquad\,\,\begin{matrix} \mm b_\text{0} & \mm b_\text{A} & \mm \,b_\text{B} & \mm \,b_\text{C}
+			& \mm b_\text{AB} & \mm b_\text{AC} & \mm \hspace{-0.03cm}b_\text{BC} & \mm \hspace{-0.13cm}b_\text{ABC} 
+		\end{matrix}
+			\\
+		\begin{pmatrix}\\y_2\\y_3\\\\y_5\\\\\\y_8\end{pmatrix} &= 
+		\left(\begin{matrix}
+			  &   &   &   &   &   &   &  \mw -  \\ 
+			+ & + & - & - & - & - & + & + \\ 
+			+ & - & + & - & - & + & - & + \\
+			  &   &   &   &   &   &   &    \\ 
+			+ & - & - & + & + & - & - & + \\ 
+			  &   &   &   &   &   &   &    \\ 
+			  &   &   &   &   &   &   &    \\ 
+			+ & + & + & + & + & + & + & + \\
+		 \end{matrix}\right)		 
+		\begin{pmatrix}{\color[rgb]{0.54,0.12,0.03}b_0}\\
+		{\color[rgb]{0.54,0.12,0.03} b_\text{A} }\\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{B}} \\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{C}} \\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{AB}} \\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{AC}} \\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{BC}} \\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{ABC}}\\
+		 \end{pmatrix}\\
+			 \mathbf{y} &= \mathbf{X}{\color[rgb]{0.54,0.12,0.03}\mathbf{b}}& % trailing "&" is required for flalign	 		
+	\end{flalign*}
+	}
+\end{frame}
+
+\begin{frame}\frametitle{Our predictive model \color[rgb]{0,0,0}{\scriptsize  $ \hat{y} = $ {\color[rgb]{0.54,0.12,0.03}$b_\text{0}$}  
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{A}$}$x_\text{A}$ 
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{B}$}$x_\text{B}$ 
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{C}$}$x_\text{C}$ 
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{AB}$}$x_\text{A}x_\text{B}$ 
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{AC}$}$x_\text{A}x_\text{C}$ 
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{BC}$}$x_\text{B}x_\text{C}$ 
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{ABC}$}$x_\text{A}x_\text{B}x_\text{C}$}}
+
+	\newcommand{\mw}{\color[rgb]{1,1,1}}
+	\newcommand{\mm}{\color{lightgray}}
+	\vspace{-0.8cm}
+	{\LARGE
+	\begin{flalign*}
+			&{\mw =}\normalsize  \qquad\,\,\begin{matrix} \mm b_\text{0} & \mm b_\text{A} & \mm \,b_\text{B} & \mm \,b_\text{C}
+			& \mm b_\text{AB} & \mm b_\text{AC} & \mm \hspace{-0.03cm}b_\text{BC} & \mm \hspace{-0.13cm}b_\text{ABC} 
+		\end{matrix}\\
+		\begin{pmatrix}y_5\\y_2\\y_3\\\\\\\\\\y_8\end{pmatrix} &= 
+		\left(\begin{matrix}
+			+  & -  & -  & +  & +  & -  & -  & +  \\ 
+			+  & +  & -  & -  & -  & -  & +  & +  \\ 
+			+  & -  & +  & -  & -  & +  & -  & +  \\
+			   &    &    &    &    &    &    &    \\ 
+			   &    &    &    &    &    &    &  \mw-   \\ 
+			   &    &    &    &    &    &    &    \\ 
+			   &    &    &    &    &    &    &    \\ 
+			+  & +  & +  & +  & +  & +  & +  & +  \\
+		 \end{matrix}\right)		 
+		\begin{pmatrix}{\color[rgb]{0.54,0.12,0.03}b_0}\\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{A} }\\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{B}} \\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{C}} \\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{AB}} \\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{AC}} \\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{BC}} \\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{ABC}}\\
+		 \end{pmatrix}\\
+			 \mathbf{y} &= \mathbf{X}{\color[rgb]{0.54,0.12,0.03}\mathbf{b}} & % trailing "&" is required for		
+	\end{flalign*}
+	}
+\end{frame}
+
+\begin{frame}\frametitle{Our predictive model \color[rgb]{0,0,0}{\scriptsize  $ \hat{y} = $ {\color[rgb]{0.54,0.12,0.03}$b_\text{0}$}  
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{A}$}$x_\text{A}$ 
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{B}$}$x_\text{B}$ 
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{C}$}$x_\text{C}$ 
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{AB}$}$x_\text{A}x_\text{B}$ 
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{AC}$}$x_\text{A}x_\text{C}$ 
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{BC}$}$x_\text{B}x_\text{C}$ 
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{ABC}$}$x_\text{A}x_\text{B}x_\text{C}$}}
+	 
+	\newcommand{\mw}{\color[rgb]{1,1,1}}
+	\newcommand{\mm}{\color{lightgray}}
+	\vspace{-0.8cm}
+	{\LARGE
+	\begin{flalign*}
+		&{\mw =}\normalsize  \qquad\,\,\begin{matrix} \mm b_\text{0} & \mm b_\text{A} & \mm \,b_\text{B} & \mm \,b_\text{C}
+		& \mm b_\text{AB} & \mm b_\text{AC} & \mm \hspace{-0.03cm}b_\text{BC} & \mm \hspace{-0.13cm}b_\text{ABC} 
+	\end{matrix}
+		\\
+		\begin{pmatrix}y_5\\y_2\\y_3\\y_8\\\\\\\\\\\end{pmatrix} &= 
+		\left(\begin{matrix}
+			+  & -  & -  & +  & +  & -  & -  & +  \\ 
+			+  & +  & -  & -  & -  & -  & +  & +  \\ 
+			+  & -  & +  & -  & -  & +  & -  & +  \\
+			+  & +  & +  & +  & +  & +  & +  & +  \\
+			  &    &    &    &    &    &    &    \\ 
+			  &    &    &    &    &    &    &  \mw-   \\ 
+			  &    &    &    &    &    &    &    \\ 
+			  &    &    &    &    &    &    &    \\ 			
+		 \end{matrix}\right)		 
+		\begin{pmatrix}{\color[rgb]{0.54,0.12,0.03}b_0}\\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{A} }\\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{B}} \\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{C}} \\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{AB}} \\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{AC}} \\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{BC}} \\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{ABC}}\\
+		 \end{pmatrix}\\
+			 \mathbf{y} &= \mathbf{X}{\color[rgb]{0.54,0.12,0.03}\mathbf{b}}& % trailing "&" is required for			 		
+	\end{flalign*}
+	}
+\end{frame}
+
+\begin{frame}\frametitle{Our predictive model \color[rgb]{0,0,0}{\scriptsize  $ \hat{y} = $ {\color[rgb]{0.54,0.12,0.03}$b_\text{0}$}  
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{A}$}$x_\text{A}$ 
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{B}$}$x_\text{B}$ 
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{C}$}$x_\text{C}$ 
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{AB}$}$x_\text{A}x_\text{B}$ 
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{AC}$}$x_\text{A}x_\text{C}$ 
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{BC}$}$x_\text{B}x_\text{C}$ 
+	+ {\color[rgb]{0.54,0.12,0.03}$b_\text{ABC}$}$x_\text{A}x_\text{B}x_\text{C}$}}
+	 
+	\newcommand{\mw}{\color[rgb]{1,1,1}}
+	\newcommand{\mm}{\color{lightgray}}
+	\vspace{-0.8cm}
+	{\LARGE
+	\begin{flalign*}
+		&{\mw =}\normalsize  \qquad\,\,\begin{matrix} \mm b_\text{0} & \mm b_\text{A} & \mm \,b_\text{B} & \mm \,b_\text{C}
+		& \mm b_\text{AB} & \mm b_\text{AC} & \mm \hspace{-0.03cm}b_\text{BC} & \mm \hspace{-0.13cm}b_\text{ABC} 
+	\end{matrix}
+		\\
+		\begin{pmatrix}y_5\\y_2\\y_3\\y_8\end{pmatrix} &= 
+		\left(\begin{matrix}
+			+  & -  & -  & +  & +  & -  & -  & +  \\ 
+			+  & +  & -  & -  & -  & -  & +  & +  \\ 
+			+  & -  & +  & -  & -  & +  & -  & +  \\
+			+  & +  & +  & +  & +  & +  & +  & +  \\
+		 \end{matrix}\right)	{	 \small
+		\begin{pmatrix}{\color[rgb]{0.54,0.12,0.03}b_0}\\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{A} }\\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{B}} \\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{C}} \\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{AB}} \\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{AC}} \\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{BC}} \\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{ABC}}\\
+		 \end{pmatrix}}\\
+			 \mathbf{y} &= \mathbf{X}{\color[rgb]{0.54,0.12,0.03}\mathbf{b}}& % trailing "&" is required for			 		
+	\end{flalign*}
+	}
+\end{frame}
+
+\begin{frame}\frametitle{We have ``aliasing'' taking place here}
+	\begin{columns}
+		\column{0.48\textwidth}	
+			 Who is \emph{Jorge Mario Bergoglio}?
+		
+		\onslide+<2->	{
+		\column{0.48\textwidth}
+			\includegraphics[width=.75\textwidth]{../4B/Supporting files/Wikipedia-Pope_Francis_among_the_people_at_St._Peter's_Square_-_12_May_2013.png}		
+
+			{\scriptsize  \href{https://en.wikipedia.org/wiki/Pope\_Francis}{Wikipedia}}
+			}
+	\end{columns}
+	
+\end{frame}
+
+\begin{frame}\frametitle{We have ``aliasing'' taking place here}
+	\begin{columns}
+		\column{0.48\textwidth}	
+			 Who is \emph{Kevin George Dunn}?		
+
+		\column{0.48\textwidth}
+			\begin{itemize}
+				\item	My email address
+				\item	A username for a website
+			\end{itemize}
+	\end{columns}
+	
+\end{frame}
+
+\begin{frame}\frametitle{Aliasing: when we have more than one name for the same thing}
+	
+	\vspace{1cm}
+	What is aliased in this experimental design (i.e. which columns are the same)?
+		
+		\vspace{0.5cm}
+		\begin{itemize}
+			\item	\textbf{A=BC}
+			
+			\onslide+<2->	{
+			\vspace{1cm}
+			\item	\textbf{B=AC}
+			
+			\vspace{1cm}
+			\item	\textbf{C=AB} (this was intentional: read from the ``tradeoff'' table)
+			
+			\vspace{1cm}
+			\item	\textbf{ABC = Intercept} (the intercept is indicated as $b_0$)
+			}
+		\end{itemize}
+
+\end{frame}
+
+\begin{frame}\frametitle{Remove the aliases by collapsing identical columns}
+	 
+	\newcommand{\mw}{\color[rgb]{1,1,1}}
+	\newcommand{\mm}{\color{lightgray}}
+	\vspace{-0.8cm}
+	{\LARGE
+	\begin{flalign*}
+		&{\mw =}\normalsize  \qquad\,\,\begin{matrix} \mm b_\text{0} & \mm b_\text{A} & \mm \,b_\text{B} & \mm \,b_\text{C}
+		& \mm b_\text{AB} & \mm b_\text{AC} & \mm \hspace{-0.03cm}b_\text{BC} & \mm \hspace{-0.13cm}b_\text{ABC} 
+	\end{matrix}
+		\\
+		\begin{pmatrix}y_5\\y_2\\y_3\\y_8\end{pmatrix} &= 
+		\left(\begin{matrix}
+			+  & -  & -  & +  & +  & -  & -  & +  \\ 
+			+  & +  & -  & -  & -  & -  & +  & +  \\ 
+			+  & -  & +  & -  & -  & +  & -  & +  \\
+			+  & +  & +  & +  & +  & +  & +  & +  \\
+		 \end{matrix}\right)	{	 \small
+		\begin{pmatrix}{\color[rgb]{0.54,0.12,0.03}b_0}\\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{A} }\\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{B}} \\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{C}} \\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{AB}} \\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{AC}} \\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{BC}} \\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{ABC}}\\
+		 \end{pmatrix}}& % trailing "&" is required for			 		
+	\end{flalign*}
+	}
+	\begin{itemize}
+		\item	4 equations (rows) in 8 unknowns {\color[rgb]{0.54,0.12,0.03}(the entries in the last matrix)}
+		\onslide+<2->	{
+			\item	a
+			\item	s
+			\item	d
+		}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{Remove the aliases by collapsing identical columns}
+	 
+	\newcommand{\mw}{\color[rgb]{1,1,1}}
+	\newcommand{\mm}{\color{lightgray}}
+	\vspace{-0.8cm}
+	{\LARGE
+	\begin{flalign*}
+		&{\mw =}\normalsize  \qquad\,\,\begin{matrix} \mm b_\text{0} + b_\text{ABC} & \mm b_\text{A} + b_\text{BC} & \mm \,b_\text{B} + b_\text{AC} & \mm \,\,b_\text{C}+ b_\text{AB} & \mm  & \mm \hspace{-0.03cm} & 
+	\end{matrix}
+		\\
+		\begin{pmatrix}y_5\\y_2\\y_3\\y_8\end{pmatrix} &= 
+		\left(\begin{matrix}
+			+  & \qquad -  & \qquad -  & \qquad +  \\ 
+			+  & \qquad +  & \qquad -  & \qquad -   \\ 
+			+  & \qquad -  & \qquad +  & \qquad -   \\
+			+  & \qquad +  & \qquad +  & \qquad +   \\
+		 \end{matrix}\,\,\,\right)		 
+		\begin{pmatrix}
+		{\color[rgb]{0.54,0.12,0.03}\,\,b_0 \, + b_\text{ABC}}\\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{A} + b_\text{BC}}\\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{B} + b_\text{AC}} \\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{C} + b_\text{AB}}
+		 \end{pmatrix}	 & % trailing "&" is required for			 		
+	\end{flalign*}
+	}
+	\begin{itemize}
+		\item	4 equations (rows) in 4 unknowns {\color[rgb]{0.54,0.12,0.03}(the entries in the last matrix)}
+		\onslide+<2->	{
+			\item	a
+			\item	s
+			\item	d
+		}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{Remove the aliases by collapsing identical columns}
+	 
+	\newcommand{\mw}{\color[rgb]{1,1,1}}
+	\newcommand{\mm}{\color{lightgray}}
+	\vspace{-0.8cm}
+	{\LARGE
+	\begin{flalign*}
+		&{\mw =}\normalsize  \qquad\,\,\begin{matrix} \mm b_\text{0} + b_\text{ABC} & \mm b_\text{A} + b_\text{BC} & \mm \,b_\text{B} + b_\text{AC} & \mm \,\,b_\text{C}+ b_\text{AB} & \mm  & \mm \hspace{-0.03cm} & 
+	\end{matrix}
+		\\
+		\begin{pmatrix}y_5\\y_2\\y_3\\y_8\end{pmatrix} &= 
+		\left(\begin{matrix}
+			+  & \qquad -  & \qquad -  & \qquad +  \\ 
+			+  & \qquad +  & \qquad -  & \qquad -   \\ 
+			+  & \qquad -  & \qquad +  & \qquad -   \\
+			+  & \qquad +  & \qquad +  & \qquad +   \\
+		 \end{matrix}\,\,\,\right)		 
+		\begin{pmatrix}
+		{\color[rgb]{0.54,0.12,0.03}\,\,b_0 \, + b_\text{ABC}}\\
+		{\color[rgb]{0.54,0.12,0.03}\hat{b}_\text{A}}   \\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{B} + b_\text{AC}} \\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{C} + b_\text{AB}}
+		 \end{pmatrix}	 & % trailing "&" is required for			 		
+	\end{flalign*}
+	}
+	\begin{itemize}
+		\item	Let's call the merged coefficient ${\color[rgb]{0.54,0.12,0.03}\hat{b}_\text{A}} = b_\text{A} + b_\text{BC}$
+		\onslide+<2->	{
+			\item	a
+			\item	s
+			\item	d
+		}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{Remove the aliases by collapsing identical columns}
+	 
+	\newcommand{\mw}{\color[rgb]{1,1,1}}
+	\newcommand{\mm}{\color{lightgray}}
+	\vspace{-0.8cm}
+	{\LARGE
+	\begin{flalign*}
+		&{\mw =}\normalsize  \qquad\,\,\begin{matrix} \mm b_\text{0} + b_\text{ABC} & \mm b_\text{A} + b_\text{BC} & \mm \,b_\text{B} + b_\text{AC} & \mm \,\,b_\text{C}+ b_\text{AB} & \mm  & \mm \hspace{-0.03cm} & 
+	\end{matrix}
+		\\
+		\begin{pmatrix}y_5\\y_2\\y_3\\y_8\end{pmatrix} &= 
+		\left(\begin{matrix}
+			+  & \qquad -  & \qquad -  & \qquad +  \\ 
+			+  & \qquad +  & \qquad -  & \qquad -   \\ 
+			+  & \qquad -  & \qquad +  & \qquad -   \\
+			+  & \qquad +  & \qquad +  & \qquad +   \\
+		 \end{matrix}\,\,\,\right)		 
+		\begin{pmatrix}
+		{\color[rgb]{0.54,0.12,0.03}\,\,b_0 \, + b_\text{ABC}}\\
+		{\color[rgb]{0.54,0.12,0.03}\hat{b}_\text{A}}   \\
+		{\color[rgb]{0.54,0.12,0.03}\hat{b}_\text{B}} \\
+		{\color[rgb]{0.54,0.12,0.03}b_\text{C} + b_\text{AB}}
+		 \end{pmatrix}	 & % trailing "&" is required for			 		
+	\end{flalign*}
+	}
+	\begin{itemize}
+		\item	Let's call the merged coefficient ${\color[rgb]{0.54,0.12,0.03}\hat{b}_\text{A}} = b_\text{A} + b_\text{BC}$
+		\item	${\color[rgb]{0.54,0.12,0.03}\hat{b}_\text{B}} = b_\text{B} + b_\text{AC}$
+		\onslide+<2->	{
+			\item	s
+			\item	d
+		}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{Remove the aliases by collapsing identical columns}
+	 
+	\newcommand{\mw}{\color[rgb]{1,1,1}}
+	\newcommand{\mm}{\color{lightgray}}
+	\vspace{-0.8cm}
+	{\LARGE
+	\begin{flalign*}
+		&{\mw =}\normalsize  \qquad\,\,\begin{matrix} \mm b_\text{0} + b_\text{ABC} & \mm b_\text{A} + b_\text{BC} & \mm \,b_\text{B} + b_\text{AC} & \mm \,\,b_\text{C}+ b_\text{AB} & \mm  & \mm \hspace{-0.03cm} & 
+	\end{matrix}
+		\\
+		\begin{pmatrix}y_5\\y_2\\y_3\\y_8\end{pmatrix} &= 
+		\left(\begin{matrix}
+			+  & \qquad -  & \qquad -  & \qquad +  \\ 
+			+  & \qquad +  & \qquad -  & \qquad -   \\ 
+			+  & \qquad -  & \qquad +  & \qquad -   \\
+			+  & \qquad +  & \qquad +  & \qquad +   \\
+		 \end{matrix}\,\,\,\right)		 
+		\begin{pmatrix}
+		{\color[rgb]{0.54,0.12,0.03}\hat{b}_0}\\
+		{\color[rgb]{0.54,0.12,0.03}\hat{b}_\text{A}}   \\
+		{\color[rgb]{0.54,0.12,0.03}\hat{b}_\text{B}} \\
+		{\color[rgb]{0.54,0.12,0.03}\hat{b}_\text{C}}
+		 \end{pmatrix}	 & % trailing "&" is required for			 		
+	\end{flalign*}
+	}
+	\begin{itemize}
+		\item	${\color[rgb]{0.54,0.12,0.03}\hat{b}_\text{A}} = b_\text{A} + b_\text{BC}$
+		\item	${\color[rgb]{0.54,0.12,0.03}\hat{b}_\text{B}} = b_\text{B} + b_\text{AC}$
+		\item	${\color[rgb]{0.54,0.12,0.03}\hat{b}_\text{C}} = b_\text{C} + b_\text{AB}$
+		\item	${\color[rgb]{0.54,0.12,0.03}\hat{b}_\text{0}} = b_\text{0} + b_\text{ABC}$		
+		
+	\end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{Now that we understand aliasing; how can we work with it in our system?}
+	
+	We'd like to take advantage of the savings (by doing half the work), but still get the most benefit.
+	
+	\vspace{0.2cm}
+	Recall this loss of information from before?
+	
+	\vspace{-0.2cm}
+	\begin{columns}[T]
+		\column{0.35\textwidth}
+			\begin{center}\textbf{Full factorial model}\end{center}
+				\begin{align*}
+					\hat{y} &= {\color{myOrange}11.25}\\
+							&+ {\color{myOrange}6.25\,}x_\text{A}\\
+							&+ {\color{blue}0.75\,}x_\text{B}\\
+							&- {\color{myOrange}7.25\,}x_\text{C}\\
+							&+ {\color{myOrange}0.25\,}x_\text{A}x_\text{B}\\
+							&- {\color{blue}6.75\,}x_\text{A}x_\text{C}\\
+							&- {\color{myOrange}0.25\,}x_\text{B}x_\text{C}\\
+							&- {\color{myOrange}0.25\,}x_\text{A}x_\text{B}x_\text{C}		
+				\end{align*}
+		\column{0.02\textwidth}
+			\vspace{1cm}
+			\rule[3mm]{0.03cm}{45mm}
+		\column{0.35\textwidth}
+			\begin{center}\textbf{Fractional factorial model}\end{center}				
+				\begin{align*}
+					\hat{y} &= {\color{myOrange}11.0}\\
+							&+ {\color{myOrange}6.0\,}x_\text{A}\\
+							&- {\color{blue}6.0\,}x_\text{B}\\
+							&- {\color{myOrange}7.0\,}x_\text{C}\\
+							& \color{lightgray}+ \cancel{b_\text{AB}\,x_\text{A}x_\text{B}}\\
+							& \color{lightgray}+ \cancel{b_\text{AC}\,x_\text{A}x_\text{C}}\\
+							& \color{lightgray}+ \cancel{b_\text{BC}\,x_\text{B}x_\text{C}}\\
+							& \color{lightgray}+ \cancel{b_\text{ABC}\,x_\text{A}x_\text{B}x_\text{C}}\\
+				\end{align*}
+
+	\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{Example: treating water (again)}
+	
+	\begin{columns}[T]
+		\column{0.65\textwidth}
+			We have identified 3 factors to investigate
+			\begin{enumerate}
+				\item	Water treatment chemical used
+				\item	Temperature of the treatment
+				\item	Stirring speed
+			\end{enumerate}
+		
+			\vspace{1cm}
+			\emph{Budget}: for 4, maybe 5, experiments
+			
+			\onslide+<2->{
+				\vspace{1cm}
+				Other criteria:
+				\begin{itemize}
+					\item	We don't expect interactions between temperature, and stirring speed
+					\onslide+<3->{
+						\item	We want a good (i.e. unbiased) estimate of the chemical effect
+					}
+				\end{itemize}
+			}
+			
+		
+		\column{0.38\textwidth}
+			\includegraphics[width=\textwidth]{../4B/Supporting files/177506595-thinkstock-reduced.jpg}
+		
+		
+			
+	\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{Example: treating water (again)}
+	
+	\begin{columns}[T]
+		\column{0.70\textwidth}
+			Now we choose to assign the factor letters: \textbf{A}, \textbf{B}, and \textbf{C}
+			
+			\vspace{0.25cm}
+			\begin{itemize} 
+				\item	\textbf{A}: Temperature of the treatment
+				\item	\textbf{B}: Stirring speed				
+				\item	\textbf{C}: Water treatment chemical used
+
+			\end{itemize}
+			
+			\vspace{0.5cm}
+			Reasons for this choice of letters (assignment):
+			\begin{itemize}
+				\item	We don't expect interaction between temperature (\textbf{A}), and stirring speed (\textbf{B}). That implies $b_\text{AB} \approx 0$
+				\item	We want a clear, unbiased estimate of the chemical effect (\textbf{C}). So an unbiased $b_\text{C}$ is desired.
+				\item	We know that $\hat{b}_\text{C}$ will be the estimated chemical effect in a half-fraction. It will
+					 	be confounded:
+				\begin{itemize}
+					\item	$\hat{b}_\text{C}  = b_\text{C} + b_\text{AB}  = b_\text{C} + \cancelto{\approx 0}{b_\text{AB}} \qquad$ so then $\hat{b}_C \approx b_\text{C}$
+				\end{itemize}
+			\end{itemize}
+		
+		\column{0.35\textwidth}
+			\includegraphics[width=\textwidth]{../4B/Supporting files/177506595-thinkstock-reduced.jpg}
+	\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{\includegraphics[width=0.3\textwidth]{\imagedir/doe/examples/advice-logo.png}\,\, plan your experiments carefully ahead of time}
+	
+	\vspace{24pt}
+	{\color{myOrange} 	\emph{Experiments are expensive to run!}}
+	
+
+	\begin{exampleblock}{}
+		\vspace{12pt}
+		\begin{itemize}
+			\item	so plan not only the experiments, but also \textbf{how you will analyze} the results
+			\item	you don't need outcome values ($y$-values) to do this
+			
+			\vspace{1cm}
+
+			\item	Re-allocate your letters if you don't like the confounding
+		\end{itemize} 
+	\end{exampleblock}
+	
+\end{frame}
+
+\begin{frame}\frametitle{}
+	\vspace{-0.5cm}
+	\includegraphics[height=.9\textheight]{\imagedir/doe/DOE-trade-off-table-MOOC-half-fractions.png}
+	
+	\vspace{10pt}
+	Notice where all the half fractions lie in the table. Do you observe the recurring pattern?
+\end{frame}
+
+\begin{frame}\frametitle{\includegraphics[width=0.3\textwidth]{\imagedir/doe/examples/advice-logo.png}\,\, the utility of half-fractions}
+	
+	\vspace{24pt}
+	Four factors: requires 16 runs for a full factorial. Why not start with a half fraction?
+	
+	\vspace{24pt}
+	\begin{itemize}
+		\item	Start with 8 runs
+		\item	Then come back and do the other 8 later on
+	\end{itemize}
+	
+	\vspace{24pt}
+	{\color{myOrange} Note that quarter, or even $\tfrac{1}{8}^\text{th}$ fractions can be used in this way}
+	
+\end{frame}
+
+\begin{frame}\frametitle{Demonstration on an example we can visualize: a 3-factor system}
+	\begin{columns}
+		\column{0.6\textwidth}
+			\begin{center}
+				\includegraphics[width=.9\textwidth]{\imagedir/doe/half-fraction-in-3-factors-MOOC-no-labels.png}
+			\end{center}
+			
+		\column{0.55\textwidth}
+		
+			{\color{blue}Start with a half fraction $^\ast$}
+			\begin{tabulary}{\linewidth}{cccl}\hline 
+				\textsf{\relax Experiment } & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C = AB} \\
+				\hline 
+				\textbf{1} & \(-\) & \(-\) & \(+\) \\
+				\textbf{2} & \(+\) & \(-\) & \(-\) \\
+				\textbf{3} & \(-\) & \(+\) & \(-\) \\
+				\textbf{4} & \(+\) & \(+\) & \(+\) \\  \hline
+			\end{tabulary}
+			
+			{\color{myOrange}These are the 4 runs with the open circles.}
+
+			\small
+			\vspace{0.5cm}
+			
+			{\color{blue}\emph{Later on} ... come back and complete the complementary half-fraction.$^\ast$}
+			
+			\begin{tabulary}{\linewidth}{cccl}\hline 
+				\textsf{\relax Experiment } & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C = $-$AB } \\
+				\hline 
+				\textbf{5} & \(-\) & \(-\) & \(-\) \\
+				\textbf{6} & \(+\) & \(-\) & \(+\) \\
+				\textbf{7} & \(-\) & \(+\) & \(+\) \\
+				\textbf{8} & \(+\) & \(+\) & \(-\) \\ \hline
+			\end{tabulary}
+			
+			{\color{myOrange}These are the 4 runs with the closed circles.}
+			
+			\vspace{6pt}
+			{\color{blue}$^\ast$\scriptsize {Always randomize within the group of 4!}}
+\	\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{}
+	\vspace{-0.5cm}
+	\includegraphics[height=.9\textheight]{\imagedir/doe/DOE-trade-off-table-MOOC-half-fractions.png}
+	
+	\vspace{10pt}
+	We will see how entries in this table are good building blocks. Consider how you might use it for your experiments.
+\end{frame}
+

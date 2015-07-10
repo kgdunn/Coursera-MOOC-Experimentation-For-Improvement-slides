@@ -1,0 +1,540 @@
+\begin{comment}
+		
+	\begin{frame}\frametitle{\includegraphics[width=0.3\textwidth]{\imagedir/doe/examples/advice-logo.png}\,\, plan your experiments carefully ahead of time}
+	\end{frame}
+	
+	\begin{columns}[T]
+		\column{0.45\textwidth}
+			\includegraphics[width=0.7\textwidth]{\imagedir/statistics/flicfcb_o.jpg}
+		
+			{\scriptsize (p. 230 in Box, Hunter and Hunter, 2$^\text{nd}$ ed)}
+		
+		\column{0.48\textwidth}
+			\includegraphics[width=\textwidth]{\imagedir/doe/examples/solar-panel-mendelu-cz-website.png}
+		
+		
+			\see{\href{http://tiny.cc/solar-panel-study}{http://tiny.cc/solar-panel-study}}
+	\end{columns}
+	
+	\begin{center}\rule[8mm]{4cm}{0.01cm}\end{center}
+	\rule[3mm]{0.01cm}{25mm}%
+\end{comment}
+
+\begin{frame}\frametitle{There's more: we never stop learning\emph{!}}
+	\centerline{
+	\fbox{\parbox[b][5.2em][t]{.7\textwidth}{
+		{\color{myGreen} There is ongoing research on how to efficiently run fewer experiments. \\}\\
+		We give some pointers to this research at the end of video 4F.\\
+		\\
+		{\color{myOrange}In this section we only cover established techniques.}
+	}}
+	}
+\end{frame}	
+
+\begin{frame}\frametitle{Cell-culture example: long duration runs; and many factors are possible}
+	\newcommand{\white}{\color{white}}
+	\begin{columns}[c]
+		\column{0.5\textwidth} 
+			\begin{enumerate}
+				\item	\textbf{T}: the temperature profile
+				\item	\textbf{D}: dissolved oxygen
+				\item	\textbf{A}: agitation rate
+				\item	\textbf{P}: pH
+				\item	\textbf{S}: substrate type (A or B)
+				%\onslide+<2->{
+				%\item	\textbf{W}: water type (distilled or tap water)
+				%\item	\textbf{M}: mixer type (axial or radial)
+				%}
+			\end{enumerate}
+		
+		\column{0.5\textwidth}
+			{\color{blue} \small Industrial scale: {\color{white}y}}   
+			
+			\vspace{0.2cm}
+			
+			\centerline{\includegraphics[height=.7\textwidth]{../4E/Supporting material/flickr-493740898_b98113ae44_o-cell-culture-mod.png}}
+			\see{\href{https://secure.flickr.com/photos/londonmatt/493740898}{Flickr: londonmatt}}
+	\end{columns}
+
+	\vfill
+	At 10 days per cell culture, it would take $\approx$ 1 year for all $2^5 = 32$ runs
+	
+\end{frame}
+
+\begin{frame}\frametitle{Cell-culture example: long duration runs; and many factors are possible}
+	\begin{columns}[c]
+		\column{0.5\textwidth}
+			\begin{enumerate}
+				\item	\textbf{T}: the temperature profile
+				\item	\textbf{D}: dissolved oxygen
+				\item	\textbf{A}: agitation rate
+				\item	\textbf{P}: pH
+				\item	\textbf{S}: substrate type (A or B)
+				%\onslide+<2->{
+				%\item	\textbf{W}: water type (distilled or tap water)
+				%\item	\textbf{M}: mixer type (axial or radial)
+				%}
+			\end{enumerate}
+		
+		\column{0.5\textwidth}
+			{\color{blue} \small Laboratory scale:} 
+			
+			\vspace{0.2cm}
+			
+			\centerline{\includegraphics[height=.7\textwidth]{../4E/Supporting material/flickr-3644661574_79d0810177_b-cell-culture-lab}}
+			\see{\href{https://secure.flickr.com/photos/kaibara/3644661574}{Flickr: kaibara}}
+	\end{columns}
+
+	\vfill
+	At 10 days per cell culture, it would take $\approx$ 1 year for all $2^5 = 32$ runs
+	
+\end{frame}
+
+\begin{frame}\frametitle{Cell-culture example: long duration runs; and many factors are possible}
+	\begin{columns}[c]
+		\column{0.5\textwidth}
+			\begin{enumerate}
+				\item	\textbf{T}: the temperature profile
+				\item	\textbf{D}: dissolved oxygen
+				\item	\textbf{A}: agitation rate
+				\item	\textbf{P}: pH
+				\item	\textbf{S}: substrate type (A or B)
+				%\onslide+<2->{
+				%\item	\textbf{W}: water type (distilled or tap water)
+				%\item	\textbf{M}: mixer type (axial or radial)
+				%}
+			\end{enumerate}
+		
+		\column{0.5\textwidth}
+			{\color{blue} \small Laboratory equipment to control the culture:} 
+			
+			\vspace{0.2cm}
+			
+			\centerline{\includegraphics[height=.7\textwidth]{../4E/Supporting material/flickr-3815183191_98c6296080_b-cell-culture-instrumentation}}
+			\see{\href{https://secure.flickr.com/photos/mjanicki/3815183191}{Flickr: mjanicki}}
+	\end{columns}
+
+	\vfill
+	3 months available: {\color{myOrange} that corresponds to 9 experiments}.
+	
+\end{frame}
+
+\begin{frame}\frametitle{Cell-culture example: long duration runs; and many factors are possible}
+	\begin{columns}[c]
+		\column{0.5\textwidth}
+			\begin{enumerate}
+				\item	\textbf{T}: the temperature profile
+				\item	\textbf{D}: dissolved oxygen
+				\item	$\cancel{\text{\textbf{A}: agitation rate}}$
+				\item	$\cancel{\text{\textbf{P}: pH}}$
+				\item	\textbf{S}: substrate type (A or B)
+				%\onslide+<2->{
+				%\item	\textbf{W}: water type (distilled or tap water)
+				%\item	\textbf{M}: mixer type (axial or radial)
+				%}
+			\end{enumerate}
+		
+		\column{0.5\textwidth}
+			{\color{blue} \small Laboratory equipment to control the culture:} 
+			
+			\vspace{0.2cm}
+			
+			\centerline{\includegraphics[height=.7\textwidth]{../4E/Supporting material/flickr-3815183191_98c6296080_b-cell-culture-instrumentation}}
+			\see{\href{https://secure.flickr.com/photos/mjanicki/3815183191}{Flickr: mjanicki}}
+	\end{columns}
+
+	\vfill
+	{\color{red} Don't do this:} remove factors in order to get a full factorial.
+	
+\end{frame}
+
+\begin{frame}\frametitle{Cell-culture example: long duration runs; and many factors are possible}
+	\begin{columns}[c]
+		\column{0.5\textwidth}
+			\begin{enumerate}
+				\item	\textbf{T}: the temperature profile
+				\item	\textbf{D}: dissolved oxygen
+				\item	\textbf{A}: agitation rate
+				\item	\textbf{P}: pH
+				\item	\textbf{S}: substrate type (A or B)
+				\item	\textbf{W}: water type (distilled or tap water)
+				\item	\textbf{M}: mixer type (axial or radial)
+		
+			\end{enumerate}
+		
+		\column{0.5\textwidth}
+			{\color{blue} \small Different types of mixers (impellers):} 
+			
+			\vspace{0.2cm}
+			
+			\centerline{\includegraphics[height=.7\textwidth]{../4E/Supporting material/Mixing_-_flusso_assiale_e_radiale-wikipedia.jpg}}
+			
+			\see{\href{https://en.wikipedia.org/wiki/File:Mixing_-_flusso_assiale_e_radiale.jpg}{Wikipedia}}
+	\end{columns}
+
+	\vfill
+	3 months available: {\color{myOrange} that corresponds to 9 experiments}.
+	
+\end{frame}
+
+\begin{frame}\frametitle{}
+	\begin{columns}[T]
+		\column{0.9\textwidth}
+			\includegraphics[height=\textheight]{\imagedir/doe/DOE-trade-off-table-MOOC-resolution.png}
+		
+		\column{0.15\textwidth}
+			
+			\onslide+<2->{
+				\vspace{2cm}
+				{\Huge
+					$2^{5-2}$
+					%$2^{k-p}$
+				} 
+			 
+				\vspace{2cm}
+				\onslide+<3->{ 
+					\begin{align*}
+						\textbf{D} &= \textbf{AB}\\
+						\textbf{E}\, &= \textbf{AC} 
+					\end{align*}
+				}
+			}
+	\end{columns}
+	
+\end{frame}
+
+\begin{frame}\frametitle{}
+	\begin{columns}[T]
+		\column{0.9\textwidth}
+			\includegraphics[height=\textheight]{\imagedir/doe/DOE-trade-off-table-MOOC-resolution.png}
+		
+		\column{0.15\textwidth}
+			
+			
+				\vspace{2cm}
+				{\Huge
+					$2^{k-p}$
+				} 
+			 
+				\vspace{2cm}
+				\onslide+<3->{ 
+					\begin{align*}
+						\textbf{D} &= \textbf{AB}\\
+						\textbf{E}\, &= \textbf{AC} 
+					\end{align*}
+				}
+	\end{columns}
+	
+\end{frame}
+
+\begin{frame}\frametitle{}
+	\begin{columns}[T]
+		\column{0.9\textwidth}
+			\includegraphics[height=\textheight]{\imagedir/doe/DOE-trade-off-table-MOOC-resolution-half-marked.png}
+		
+		\column{0.15\textwidth}
+			
+			
+				\vspace{2cm}
+				{\Huge
+					$2^{k-p}$\\
+					
+					\vspace{1cm}
+					
+				} $p=1$
+			 
+				
+	\end{columns}
+	
+\end{frame}
+
+\begin{frame}\frametitle{}
+	\begin{columns}[T]
+		\column{0.9\textwidth}
+			\includegraphics[height=\textheight]{\imagedir/doe/DOE-trade-off-table-MOOC-resolution-quarter-marked.png}
+		
+		\column{0.15\textwidth}
+			
+			
+				\vspace{2cm}
+				{\Huge
+					$2^{k-p}$\\
+					
+					\vspace{1cm}
+					
+				} $p=2$
+			 
+				
+	\end{columns}
+	
+\end{frame}
+
+\begin{frame}\frametitle{Cell-culture example: creating the fractional factorial design}
+	
+	\vspace{0.5cm}
+	\begin{tabulary}{\linewidth}{ccccccc}
+		\textbf{\relax Experiment} & \textbf{\relax A$^\ast$ } & \textbf{\relax B$\,\mathring{}$} & \textbf{\relax C$\,\mathring{}$ } & \onslide+<2->{\textbf{\relax D$\,\mathring{}$ = AB}} & \onslide+<2->{\textbf{\relax E$^\ast$ = AC}}\\ \cline{1-6}
+		\textbf{1} & \(-\) & \(-\) & \(-\) & \onslide+<2->{\(+\)} & \onslide+<2->{\(+\)} \\
+		\textbf{2} & \(+\) & \(-\) & \(-\) & \onslide+<2->{\(-\)} & \onslide+<2->{\(-\)} \\
+		\textbf{3} & \(-\) & \(+\) & \(-\) & \onslide+<2->{\(-\)} & \onslide+<2->{\(+\)} \\
+		\textbf{4} & \(+\) & \(+\) & \(-\) & \onslide+<2->{\(+\)} & \onslide+<2->{\(-\)} \\
+		\textbf{5} & \(-\) & \(-\) & \(+\) & \onslide+<2->{\(+\)} & \onslide+<2->{\(-\)} \\
+		\textbf{6} & \(+\) & \(-\) & \(+\) & \onslide+<2->{\(-\)} & \onslide+<2->{\(+\)} \\
+		\textbf{7} & \(-\) & \(+\) & \(+\) & \onslide+<2->{\(-\)} & \onslide+<2->{\(-\)} \\
+		\textbf{8} & \(+\) & \(+\) & \(+\) & \onslide+<2->{\(+\)} & \onslide+<2->{\(+\)} \\
+		\onslide+<4->{\textbf{9} &  $-1$	& 0 		& 0 & 0 & +1		&\color{myOrange}$\longleftarrow$ this row is a baseline $^\#$} 
+	\end{tabulary}
+	
+	\vspace{0.5cm}
+	\begin{flalign*}
+		^\ast       & \text{categorical factor}\\
+		\mathring{}\,\, & \text{continuous factor} \\
+		\onslide+<4->{\color{myOrange}^\#  & \text{this entry does \textbf{not} use the generators; it should be run first to establish a baseline} &}
+	\end{flalign*}	
+\end{frame}
+
+\begin{frame}\frametitle{$^\text{\color{purple}Video 4B}$ Aliasing: when we have more than one name for the same thing}
+	
+	\vspace{1cm}
+	What is aliased in this experimental design (i.e. which columns are the same)?
+		
+		\vspace{0.5cm}
+		\begin{itemize}
+			\item	\textbf{A=BC}
+			
+			\onslide+<2->	{
+			\vspace{1cm}
+			\item	\textbf{B=AC}
+			
+			\vspace{1cm}
+			\item	\textbf{C=AB} 
+			
+			\vspace{1cm}
+			\item	\textbf{ABC = Intercept} (the intercept is indicated as $b_0$)
+			}
+		\end{itemize}
+
+\end{frame}
+
+\begin{frame}\frametitle{Calculating the aliases using an interesting technique}
+	
+	\begin{columns}[T]
+		\column{0.25\textwidth}
+			\includegraphics[width=\textwidth]{../4E/Supporting material/generators.png}
+		
+		\column{0.04\textwidth}
+		\column{0.75\textwidth}
+		\vspace{-.5cm}
+		{\LARGE
+		
+			\begin{flalign*}			
+				\textbf{D} &= \textbf{AB}&\\
+				\onslide+<2->{
+					\textbf{D\,D} &= \textbf{AB\,D}&
+				}
+				\onslide+<3->{
+					\intertext{{\color{purple}rule:} \textbf{AA=I}; \textbf{BB=I}; ... \textbf{DD=I}, \emph{etc}}
+				}
+				\onslide+<5->{
+					\textbf{I} &= \textbf{ABD}&\\
+				}
+			\end{flalign*}
+		}
+
+	\end{columns}	
+	
+	\uncover<4>{
+		\vspace{-1.8cm}
+		If we have $ \textbf{A} = \begin{pmatrix}-1\\+1\\-1\\+1\\-1\\+1\\-1\\+1\\ \end{pmatrix} \text{then we can say}\,\, \textbf{AA} =  \begin{pmatrix}-1\\+1\\-1\\+1\\-1\\+1\\-1\\+1\\ \end{pmatrix} \begin{pmatrix}-1\\+1\\-1\\+1\\-1\\+1\\-1\\+1\\ \end{pmatrix}  =  \begin{pmatrix}+1\\+1\\+1\\+1\\+1\\+1\\+1\\+1\\ \end{pmatrix} = \textbf{I}$
+	}
+	
+	
+	
+\end{frame}
+
+\begin{frame}\frametitle{Calculating the aliases using an interesting technique}
+	
+	\begin{columns}[T]
+		\column{0.25\textwidth}
+			\includegraphics[width=\textwidth]{../4E/Supporting material/generators.png}
+		
+		\column{0.04\textwidth}
+		\column{0.75\textwidth}
+		{\huge
+			\begin{flalign*}			
+				\textbf{E} &= \textbf{AC}&\\
+				%\onslide+<2->{
+					\textbf{E\,E} &= \textbf{AC\,E}&
+				%}
+				%\onslide+<3->{
+					\intertext{{\color{purple}rule:} \textbf{AA=I}; \textbf{BB=I}; ... \textbf{DD=I}, \emph{etc}}
+				%}
+				\onslide+<2->{
+					\textbf{I} &= \textbf{ACE}&\\
+				}
+			\end{flalign*}
+		}
+
+	\end{columns}	
+	\uncover<2>{
+		{\color{myOrange}Multiple the left and right by the symbol that's on the left.}
+	}
+	
+	
+\end{frame}
+
+\begin{frame}\frametitle{Approach to calculate the aliasing pattern}
+	
+	\begin{columns}[T]
+		\column{0.58\textwidth}
+			\begin{enumerate}
+				\item	Read the generators from the table 
+				\onslide+<2->{
+					\item	Rearrange the generators as  $\textbf{I = \ldots}$
+				}
+				\onslide+<4->{
+				 	\item	Form the {\color{purple}\textbf{defining relationship}} taking all combinations of the words, so that $\textbf{I = \ldots}$
+				}	
+				\onslide+<5->{
+				 	\item	Ensure the defining relationship has $2^p$ words
+				}
+				\onslide+<16->{
+					\item	Use the defining relationship to compute the aliasing pattern
+				}
+			\end{enumerate}
+			
+		\column{0.5\textwidth}
+			\begin{enumerate}
+				\item	$\textbf{D = AB}$  and $\textbf{E = AC}$ 
+				\onslide+<2->{
+					\item	$\textbf{I = ABD}$ and $\textbf{I = ACE}$ 
+				}
+				
+				\onslide+<6->{
+ 					\item	$\textbf{I =}$ \onslide+<7->{$\textbf{ABD}$} \onslide+<8->{$\textbf{= ACE}$} \onslide+<9->{$\textbf{= (ABD)(ACE)}$} 
+					\\ \vspace{0.4cm}
+				}
+				\onslide+<6->{
+								\item	$p=2$\onslide+<15->{, and we have 4 words.}
+				}
+				\onslide+<16->{
+					\item	See the next slides.
+					
+				}
+			\end{enumerate}			
+			
+	\end{columns}
+	\vspace{0.5cm}
+	\onslide+<3-5>{
+		{\color{purple}\textbf{Word}}: a collection of sequential factor letters
+	}
+	\\
+	\onslide+<10->{$\textbf{(ABD)(ACE)}$}
+	\onslide+<11->{$\textbf{ = AABCDE}$}
+	\onslide+<12->{$\textbf{ = (AA)BCDE}$}
+	\onslide+<13->{$\textbf{ = (I)BCDE}$}
+	\onslide+<14->{$\textbf{ = BCDE}$} 	
+\end{frame}
+
+\begin{frame}\frametitle{Approach to calculate the aliasing pattern}
+	
+	\begin{columns}[T]
+		\column{0.58\textwidth}
+			\begin{enumerate}
+				\item	Read the generators from the table 
+					\item	Rearrange the generators as  $\textbf{I = \ldots}$
+				 	\item	Form the {\color{purple}\textbf{defining relationship}} taking all combinations of the words, so that $\textbf{I = \ldots}$
+				 	\item	Ensure the defining relationship has $2^p$ words
+				\onslide+<3->{
+					\item	Use the defining relationship to compute the aliasing pattern
+				}
+			\end{enumerate}
+			
+		\column{0.5\textwidth}
+			\begin{enumerate}
+				\item	$\textbf{D = AB}$  and $\textbf{E = AC}$ 
+					\item	$\textbf{I = ABD}$ and $\textbf{I = ACE}$ 
+ 					\item	$\textbf{I =}$ $\textbf{ABD}$ $\textbf{= ACE}$ $\textbf{= BCDE}$
+					\\ \vspace{0.4cm}
+				
+					\item	$p=2$\onslide+<2->{, and we have 4 words.}
+				
+				\onslide+<3->{
+					\item	We will in the next video.
+					
+				}
+			\end{enumerate}			
+			
+	\end{columns}
+	\vspace{0.5cm}
+	\onslide+<4>{
+		{\color{purple}\textbf{Word}}: a collection of sequential factor letters
+	}
+	\\
+	\onslide+<1-2>{
+		$\textbf{(ABD)(ACE)}$
+		$\textbf{ = AABCDE}$
+		$\textbf{ = (AA)BCDE}$
+		$\textbf{ = (I)BCDE}$
+		$\textbf{ = BCDE}$	
+	}
+\end{frame}
+
+\begin{frame}\frametitle{Example to try yourself: find the defining relationship}
+	
+	\vspace{0.5cm}
+	You'd like to investigate 6 factors, and have a budget for 15 to 20 experiments.
+	
+	\vspace{0.5cm}
+	\begin{columns}[T]
+		\column{0.7\textwidth}
+			\begin{enumerate}
+				\item	Read the generators from the table 
+				\item	Rearrange the generators as  $\textbf{I = \ldots}$
+			 	\item	Form the {\color{purple}defining relationship} taking all combinations of the words, so that $\textbf{I = \ldots}$
+			 	\item	Ensure the defining relationship has $2^p$ words
+				\item	In the next video: use this defining relationship to compute the aliasing pattern
+			\end{enumerate}
+			
+		\column{0.3\textwidth}
+
+	\end{columns}
+
+	
+\end{frame}
+
+\begin{frame}\frametitle{Example to try yourself: {\color{myOrange}solution} for finding the defining relationship}
+	
+	\vspace{0.5cm}
+	You'd like to investigate 6 factors, and have a budget for 15 to 20 experiments.
+	
+	\vspace{0.5cm}
+	\begin{columns}[T]
+		\column{0.85\textwidth}
+			\begin{enumerate}
+				\item	Read the generators from the table for $k=6$, and 16 experiments
+					\begin{itemize}
+						\item	\textbf{E = ABC}	and  \textbf{F = BCD}
+					\end{itemize}
+				\item	Rearrange the generators as  $\textbf{I = \ldots}$
+					\begin{itemize}
+						\item	\textbf{I = ABCE}	and  \textbf{I = BCDF}
+					\end{itemize}
+			 	\item	Form the {\color{purple}defining relationship} taking all combinations of the words, so that $\textbf{I = \ldots}$
+					\begin{itemize}
+						\item	\textbf{I = ABCE = BCDF = A(BB)(CC)DEF = ADEF}
+					\end{itemize}
+			 	\item	Ensure the defining relationship has $2^p$ words
+					\begin{itemize}
+						\item	It does; since $p=2$ in this case
+					\end{itemize} 
+				\item	We will use this defining relationship in video 4F
+			\end{enumerate}
+			
+		\column{0.3\textwidth}
+			\centerline{\includegraphics[height=.7\textwidth]{../4E/Supporting material/ivq-final-solution.png}}
+
+	\end{columns}
+
+	
+\end{frame}
