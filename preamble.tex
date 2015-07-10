@@ -4,9 +4,11 @@
 %\usepackage{textcomp}
 \usepackage{amsmath,amssymb,amsfonts,euscript,mathrsfs,wasysym,textcomp}
 \usepackage{array}
+\usepackage{transparent} 		% to get alpha channel in "\color"
 \usepackage{multirow}
 \usepackage{multimedia}
 \usepackage{fancybox}
+\usepackage{mathtools}
 \usepackage{psfrag}
 \usepackage{listings}
 \usepackage{hyperref}
@@ -35,7 +37,7 @@
 \settoggle{unixmac}{true}
 \iftoggle{unixmac}
 {
-	\newcommand{\imagedir}{/Users/kevindunn/Sync/Figures}
+	\newcommand{\imagedir}{/Users/kevindunn/Dropbox/figures-master}
 }{
 	\newcommand{\imagedir}{C:/Figures}
 }
@@ -47,6 +49,21 @@
 \setbeamertemplate{navigation symbols}{}          % suppress all navigation symbols
 \setbeamertemplate{blocks}[rounded][shadow=true]  % use rounded blocks (boxes), with shadows
 
+% http://www.latex-community.org/forum/viewtopic.php?f=4&t=2251
+\newenvironment<>{varblock}[2][\textwidth]{%
+	\begin{center}
+		\begin{minipage}{#1}
+			\setlength{\textwidth}{#1}
+			\begin{actionenv}#3%
+				\def\insertblocktitle{#2}%
+				\par%
+				\usebeamertemplate{block begin}}
+				{\par%
+				\usebeamertemplate{block end}%
+			\end{actionenv}
+		\end{minipage}
+	\end{center}
+}
 \definecolor{todoGreen}{rgb}{0.0, 0.9, 0.0}
 \definecolor{myGreen}{rgb}{0.,0.4,0.}
 \definecolor{myOrange}{rgb}{1.,0.5,0.}
@@ -57,6 +74,17 @@
 \definecolor{OliveGreen}{cmyk}{0.64,0,0.95,0.40}
 \definecolor{CadetBlue}{cmyk}{0.62,0.57,0.23,0}
 \definecolor{purple}{rgb}{0.70,0.22,0.92}
+
+%https://tex.stackexchange.com/questions/31323/cross-out-with-arrow-as-in-goes-to-zero
+\renewcommand{\CancelColor}{\color{red}} %change cancel color to red
+\makeatletter
+\let\my@cancelto\cancelto %copy over the original cancelto command
+\newcommand<>{\cancelto}[2]{\alt#3{\my@cancelto{#1}{#2}}{\mathrlap{#2}\phantom{\my@cancelto{#1}{#2}}}}
+% redefine the cancelto command, using \phantom to assure that the
+% result doesn't wiggle up and down with and without the arrow
+\makeatother
+
+
 
 % Show page numbers and dates on slides
 % KGD: removed footer completely: 01 Oct 2012: Presentation Zen: no redundant information

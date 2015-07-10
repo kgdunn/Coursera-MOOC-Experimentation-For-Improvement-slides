@@ -1,18 +1,44 @@
-\documentclass[handout, 11pt,aspectratio=169]{beamer}
-%\documentclass[11pt]{beamer}
+\documentclass[handout,11pt,aspectratio=169,mathserif]{beamer}
+%\documentclass[11pt,aspectratio=169,mathserif]{beamer}
+%\documentclass[11pt,mathserif]{beamer}
 
 \input{preamble.tex}
 
 \newdateformat{mydate}{\THEYEAR} % \twodigit{\THEDAY}-\twodigit{\THEMONTH}-\THEYEAR
 \mydate
-\title[]{\LARGE Experimentation for Improvement}
-\subtitle[]{\vspace{0.5cm} \includegraphics[width=0.5\textwidth]{\imagedir/teaching/logos/Coursera-MOOC-logo-2014.png} \vspace{-1.5cm} }\author[]{}
+%\title[]{\LARGE Experimentation for Improvement}
+%\subtitle[]{\vspace{0.5cm} \includegraphics[width=0.5\textwidth]{\imagedir/teaching/logos/Coursera-MOOC-logo-2014.png} \vspace{-1.5cm} }\author[]{}
+\title[]{\LARGE Statistics for Engineers}
+\subtitle[]{\vspace{0.5cm} \includegraphics[width=0.2\textwidth]{\imagedir/teaching/logos/4C3-logo-2015.png} \vspace{-1.5cm} }\author[]{}
 \institute[]{}
 \date[]{\copyright~ Kevin Dunn, \today \\ \vspace{0cm}
-{{\footnotesize {\tt kevin.dunn@mcmaster.ca}\\ \href{http://learnche.mcmaster.ca/4C3}{http://learnche.mcmaster.ca/}\\} \vspace{0.5cm}}
+{{\footnotesize {\tt kevin.dunn@mcmaster.ca}\\ \href{http://learnche.mcmaster.ca/}{http://learnche.mcmaster.ca/}\\} \vspace{0.5cm}}
 
-{\footnotesize Overall revision number: \hgversion (\monthname~\THEYEAR)} %\twodigit{\THEDAY}-\twodigit{\THEMONTH}-
+{\LARGE \color{blue}{Design and Analysis of Experiments}}
+
+%{\footnotesize Overall revision number: \hgversion (\monthname~\THEYEAR)} %\twodigit{\THEDAY}-\twodigit{\THEMONTH}-
 }
+
+
+
+%
+% \newdateformat{mydate}{\THEYEAR} % \twodigit{\THEDAY}-\twodigit{\THEMONTH}-\THEYEAR
+% \mydate
+% \title[]{\LARGE Statistics for Engineers}
+% \subtitle[]{\vspace{0.5cm} \includegraphics[width=0.2\textwidth]{\imagedir/teaching/logos/4C3-logo-2015.png} \vspace{-1.5cm} }\author[]{}
+% \institute[]{}
+% \date[]{\copyright~ Kevin Dunn, \today \\ \vspace{0cm}
+% {{\footnotesize {\tt kevin.dunn@mcmaster.ca}\\ \href{http://learnche.mcmaster.ca/}{http://learnche.mcmaster.ca/}\\} \vspace{0.5cm}}
+%
+% %{\footnotesize Overall revision number: \hgversion (\monthname~\THEYEAR)} %\twodigit{\THEDAY}-\twodigit{\THEMONTH}-
+%
+% {\LARGE \color{blue}{Least Squares Modelling}
+
+
+
+
+
+
 
 \global\let\hgversion
 
@@ -36,13 +62,14 @@
 
 \begin{frame}\frametitle{Copyright, sharing, and attribution notice}
 
-	{\footnotesize This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. To view a copy of this license, 
-	please visit \href{http://creativecommons.org/licenses/by-sa/3.0/}{http://creativecommons.org/licenses/by-sa/3.0/}}
-	\vspace{-1.0cm}
+	{\footnotesize This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 Unported License. To view a copy of this license, 
+	please visit \href{http://creativecommons.org/licenses/by-sa/3.0/}{http://creativecommons.org/licenses/by-sa/4.0/}}
+	
+	\vspace{0.0cm}
 	\begin{flushright}
 		\includegraphics[width=0.2\textwidth]{\imagedir/common/creative-commons-by-sa.png}
 	\end{flushright}	
-	\vspace{-0.2cm}
+	\vspace{-0.4cm}
 	\begin{exampleblock}{}
 		{\small This license allows you: }
 		\begin{itemize}
@@ -84,6 +111,7 @@
 	\vskip24pt
 	Please note that all material is provided ``as-is'' and no liability will be accepted for your usage of the material.
 \end{frame}
+
 
 \input{\jobname}
 
