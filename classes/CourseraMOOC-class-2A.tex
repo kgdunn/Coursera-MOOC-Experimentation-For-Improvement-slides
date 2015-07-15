@@ -1,54 +1,66 @@
-%\begin{frame}\frametitle{Various options for selecting the random order of experiments}	
-%	Let's assume you need 8 random numbers:
-%	\begin{enumerate}
-%		\item	write numbers 1, 2, ... 8 on pieces of paper / cards
-%		\item	spreadsheets: use the following code (ignore any duplicates)
-%			\begin{varblock}[5cm]{}
-%				\texttt{=1 + INT( 8 * RAND() )} 
-%			\end{varblock}
-%
-%		\item	some spreadsheets have a special function
-%			\begin{varblock}[5cm]{}
-%				\texttt{=RANDBETWEEN(1, 8)} 
-%				\begin{center}
-%					% FIGURE GOT DELETED
-%					% \includegraphics[width=0.4\textwidth]{\imagedir/doe/screenshots/randbetween.png}
-%				\end{center}
-%			\end{varblock}
-%		
-%		\item	In R (statistical software)
-%			\begin{varblock}[5cm]{}
-%				\texttt{sample(8)} 
-%			\end{varblock}
-%	\end{enumerate}
-%\end{frame}
+\begin{frame}\frametitle{Two-factor experiments: a recap from the last module}
+    \includegraphics[width=\textwidth]{\imagedir/doe/two-types-of-variables.png}
+\end{frame}
 
-
-% KGD: McMaster omit
-% \begin{frame}\frametitle{Data visualization tips}
-% 	Please see Chapter 1 of the textbook, Process Improvement Using Data
-% 	\href{http://learnche.mcmaster.ca/pid/}{http://learnche.mcmaster.ca/pid/}
-% \end{frame}
-
-% KGD: McMaster omit
-% {\usebackgroundtemplate{\vbox to \paperheight{\vfil\hbox to \paperwidth{\hfil
-%     \includegraphics[width=0.95\paperwidth,trim=0 1.63cm 0 1.63cm, clip]
-% 	{../2A/Slides/01Screen Shot 2014-07-15 at 10.13.08 .png}  \hfil}\vfil}}
-% \begin{frame}\frametitle{}
-% \end{frame}}
-
-% KGD: McMaster omit
-% {\usebackgroundtemplate{\vbox to \paperheight{\vfil\hbox to \paperwidth{\hfil
-%     \includegraphics[width=0.95\paperwidth,trim=0 1.63cm 0 1.63cm, clip]
-% 	{../2A/Slides/02Screen Shot 2014-07-15 at 10.13.42 .png}  \hfil}\vfil}}
-% \begin{frame}\frametitle{}
-% \end{frame}}
+\begin{frame}\frametitle{Two-factor experiments: a recap from the last module}
+    \includegraphics[width=\textwidth]{\imagedir/doe/two-types-of-variables-expanded.png}
+\end{frame}
 
 {\usebackgroundtemplate{\vbox to \paperheight{\vfil\hbox to \paperwidth{\hfil  
-    \includegraphics[width=0.95\paperwidth,trim=0 1.63cm 0 1.63cm, clip]
-	{../2A/Slides/03Screen Shot 2014-07-15 at 10.14.00 .png}  \hfil}\vfil}}
+    \includegraphics[width=\paperwidth]
+	{../2A/Supporting files/flickr-4137738962_064e1f4604_o.jpg}  \hfil}\vfil}}
 \begin{frame}\frametitle{}
+	\vspace{-5cm}
+	\mode<handout>{
+		\see{Flickr: ed\_welker \href{https://www.flickr.com/photos/ed_welker/4137738962/}{4137738962}}
+	}
 \end{frame}}
+
+\begin{frame}\frametitle{A systematic approach}
+	 \begin{enumerate}
+	 	\item	What's my outcome? \pause
+	 	\item	What's my objective? \pause
+	 	\item	Which factors? \pause
+		\item	At what levels?\pause
+	 	\item	Plan the experiment \pause
+	 	\item	Implement the experiment\pause
+	 	\item	Analyze the results\pause
+		\item	Repeat (if required)
+	 \end{enumerate}
+	 \vspace{5cm}
+\end{frame}
+
+{\usebackgroundtemplate{\vbox to \paperheight{\vfil\hbox to \paperwidth{\hfil  
+    \includegraphics[width=\paperwidth]
+	{../2A/Supporting files/flickr-13193465325_b35360c4b8_o.jpg}  \hfil}\vfil}}
+\begin{frame}\frametitle{}
+	
+	{\color{white}
+		\textbf{Outcome}
+		
+		\qquad Number of popped corn
+		
+		\vspace{18pt}
+		
+		\textbf{Objective}
+		
+		\qquad Maximizing number of popped corn
+	
+
+		\vspace{12pt}
+		\onslide+<2->{
+			This is equivalent to:
+
+			``\emph{minimize the number of unpopped corn}''
+		}
+
+	}
+	\vspace{4cm}
+	\mode<handout>{
+		\see{Flickr: booleansplit \href{https://www.flickr.com/photos/booleansplit/13193465325/}{13193465325}}
+	}
+\end{frame}}
+
 
 {\usebackgroundtemplate{\vbox to \paperheight{\vfil\hbox to \paperwidth{\hfil  
     \includegraphics[width=0.95\paperwidth,trim=0 1.63cm 0 1.63cm, clip]
@@ -68,11 +80,50 @@
 \begin{frame}\frametitle{}
 \end{frame}}
 
-{\usebackgroundtemplate{\vbox to \paperheight{\vfil\hbox to \paperwidth{\hfil  
-    \includegraphics[width=0.95\paperwidth,trim=0 1.63cm 0 1.63cm, clip]
-	{../2A/Slides/07Screen Shot 2014-07-15 at 10.14.52 .png}  \hfil}\vfil}}
 \begin{frame}\frametitle{}
-\end{frame}}
+	
+     \includegraphics[width=0.5\textwidth]{\imagedir/doe/examples/advice-logo.png}
+	 \pause
+	 \vspace{2cm}
+	 \begin{center}
+		\color{purple}
+		 \Large Always run experiments
+		 in random order
+	 \end{center}
+     \vspace{2cm}
+\end{frame}
+
+
+% {\usebackgroundtemplate{\vbox to \paperheight{\vfil\hbox to \paperwidth{\hfil
+%     \includegraphics[width=0.95\paperwidth,trim=0 1.63cm 0 1.63cm, clip]
+% 	{../2A/Slides/07Screen Shot 2014-07-15 at 10.14.52 .png}  \hfil}\vfil}}
+% \begin{frame}\frametitle{}
+% \end{frame}}
+
+\begin{frame}\frametitle{Various options for selecting the random order of experiments}
+	Let's assume you need 8 random numbers:
+	\begin{enumerate}
+		\item	write numbers 1, 2, ... 8 on pieces of paper / cards
+		\item	spreadsheets: use the following code (ignore any duplicates)
+			\begin{varblock}[5cm]{}
+				\texttt{=1 + INT( 8 * RAND() )}
+			\end{varblock}
+
+		\item	some spreadsheets have a special function
+			\begin{varblock}[5cm]{}
+				\texttt{=RANDBETWEEN(1, 8)}
+				\begin{center}
+					% FIGURE GOT DELETED
+					% \includegraphics[width=0.4\textwidth]{\imagedir/doe/screenshots/randbetween.png}
+				\end{center}
+			\end{varblock}
+
+		\item	In R (statistical software)
+			\begin{varblock}[5cm]{}
+				\texttt{sample(8)}
+			\end{varblock}
+	\end{enumerate}
+\end{frame}
 
 {\usebackgroundtemplate{\vbox to \paperheight{\vfil\hbox to \paperwidth{\hfil  
     \includegraphics[width=0.95\paperwidth,trim=0 1.63cm 0 1.63cm, clip]
@@ -134,4 +185,33 @@
 \begin{frame}\frametitle{}
 \end{frame}}
 
+\begin{frame}\frametitle{Simple visualization of these factorial designs are powerful!}
+	\begin{columns}[T]
+		\column{0.5\textwidth}
+			1. Tables show numeric trends
+			
+			\vspace{2pt}
+		    \includegraphics[width=0.6\textwidth]{../2A/Slides/popcorn-example-table.png}
+			
+			
+			2.	Cube plots indicate important factors
+			
+			\includegraphics[width=0.55\textwidth]{../2A/Slides/popcorn-example-cube.png}
+			
+		\column{0.01\textwidth}
+			\rule[3mm]{0.01cm}{85mm}%
+			
+		\column{0.5\textwidth}
+			3.	Contour plots show where to move next
+			
+			\includegraphics[width=0.55\textwidth]{../2A/Slides/popcorn-example-contour.png}
+			
+			4.	Interaction plots show synergies [next...]
+			
+			\includegraphics[width=0.55\textwidth]{../2A/Slides/popcorn-example-interaction.png}
+			
+	\end{columns}
+	
+	
+\end{frame}
 
