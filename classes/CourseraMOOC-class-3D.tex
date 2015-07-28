@@ -26,11 +26,27 @@
 				\item	don't ``play around'' with the software: trial-and-error
 			\end{itemize}
 			
-			\begin{center}\rule[8mm]{4cm}{0.01cm}\end{center}
+			%\begin{center}\rule[8mm]{4cm}{0.01cm}\end{center}
+			
+			\vspace{18pt}
+
+			 \fbox{\parbox[b][7em][t]{\textwidth}{
+			 	{\footnotesize
+				 	Many experiments are simulations:
+					\begin{itemize}
+						\item	bridge/building design
+						\item	chemical factory design
+						\item	improve traffic light timing and queuing
+			 			\item	test a stock market buy/sell strategy
+			 		\end{itemize}}
+			 } }
+			 
+				
 		\column{0.01\textwidth}
 			\rule[3mm]{0.01cm}{25mm}%
 			
 		\column{0.48\textwidth}
+		\onslide+<2->{
 			\textbf{Different to regular experiments:}
 			\vspace{12pt}
 			\begin{enumerate}
@@ -44,22 +60,11 @@
 						
 					\end{itemize}
 			\end{enumerate}
-			{\scriptsize $^\ast$ {\emph{except those that use random number generators}}}
+			{\scriptsize $^\ast$ {\emph{except those that have a random component}}}
+		}
 	\end{columns}
 	
-	\vspace{-90pt}
-
-	 \fbox{\parbox[b][8em][t]{0.45\textwidth}{
-	 	{\footnotesize
-		 	Many experiments are run this \\way these days:
-			\begin{itemize}
-				\item	bridge/building design
-				\item	chemical factory design
-				\item	traffic light timing and queuing
-	 			\item	stock market buy/sell strategy
-	 		\end{itemize}
-		}
-	 } }
+	
 \end{frame}
 
 \begin{frame}\frametitle{Solar panel case study}
@@ -146,7 +151,7 @@
 	\end{center}
 	\vspace{-10pt}
 	\begin{columns}[T]
-		\column{0.02\textwidth}
+		\column{0.01\textwidth}
 		\column{0.35\textwidth}
 			$y_1$ = ``collection efficiency'' 
 			
@@ -155,7 +160,7 @@
 		\column{0.45\textwidth}
 			$y_2$ = ``energy delivery efficiency''
 			\includegraphics[width=1.1\textwidth]{\imagedir/doe/examples/y2-solar-panels.png}
-		\column{0.27\textwidth}	
+		\column{0.30\textwidth}	
 			\vspace{12pt}
 			\fbox{\parbox[b][8.5em][t]{.85\textwidth}{
 				Specify at what levels (high or low) should we set the factors\\ \textbf{A}, \textbf{B}, \textbf{C}, and \textbf{D} to achieve a maximum in both $y_1$ \emph{and} in $y_2$.
