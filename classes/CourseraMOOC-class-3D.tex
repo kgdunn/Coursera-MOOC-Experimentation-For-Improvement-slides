@@ -93,6 +93,29 @@
 	\end{columns}
 \end{frame}
 
+\begin{frame}\frametitle{R's automatic expansion of model terms}
+	\texttt{lm(y {\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}} A*B)}\\
+		\qquad expands into: {\color{blue}\texttt{lm(y {\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}} A + B + A*B)}}
+		
+	\vspace{24pt}
+	\texttt{lm(y {\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}} A*B*C)}\\
+		\qquad ultimately expands into: {\color{blue}\texttt{lm(y {\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}} A + B + C + A*B + A*C + B*C + A*B*C)}}
+		
+		\vspace{12pt}
+		\qquad 
+		This is because: \texttt{A*B*C} can be considered to be \texttt{(A*B)*C} \\
+		\qquad which expands into \texttt{(A + B + A*B)*C = A*C + B*C + A*B*C}
+		
+		\vspace{6pt}
+		\qquad  but \texttt{A*C} expands into \texttt{A + C + A*C}\\
+		\qquad  and \texttt{B*C} expands into \texttt{B + C + B*C} \\
+		\qquad which when all collected together gives the full model expansion above.
+		
+		
+	
+\end{frame}
+
+
 {\usebackgroundtemplate{\vbox to \paperheight{\vfil\hbox to \paperwidth{\hfil  
     \includegraphics[width=0.95\paperwidth,trim=0 1.69cm 0 1.69cm, clip]
 	{../3D/Slides/01Screen Shot 2014-07-21 at 22.26.44 .png}  \hfil}\vfil}}
