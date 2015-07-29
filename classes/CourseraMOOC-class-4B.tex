@@ -1,41 +1,42 @@
-\begin{comment}
-	
-	
-	\begin{frame}\frametitle{\includegraphics[width=0.3\textwidth]{\imagedir/doe/examples/advice-logo.png}\,\, plan your experiments carefully ahead of time}
-	\end{frame}
-	
-	\begin{columns}[T]
-		\column{0.45\textwidth}
-			\includegraphics[width=0.7\textwidth]{\imagedir/statistics/flicfcb_o.jpg}
-		
-			{\scriptsize (p. 230 in Box, Hunter and Hunter, 2$^\text{nd}$ ed)}
-		
-		\column{0.48\textwidth}
-			\includegraphics[width=\textwidth]{\imagedir/doe/examples/solar-panel-mendelu-cz-website.png}
-		
-		
-			\see{\href{http://yint.org/solar-panel-study}{http://yint.org/solar-panel-study}}
-	\end{columns}
-	
-	\begin{center}\rule[8mm]{4cm}{0.01cm}\end{center}
-	\rule[3mm]{0.01cm}{25mm}%
+% \begin{comment}
+%
+%
+% 	\begin{frame}\frametitle{\includegraphics[width=0.3\textwidth]{\imagedir/doe/examples/advice-logo.png}\,\, plan your experiments carefully ahead of time}
+% 	\end{frame}
+%
+% 	\begin{columns}[T]
+% 		\column{0.45\textwidth}
+% 			\includegraphics[width=0.7\textwidth]{\imagedir/statistics/flicfcb_o.jpg}
+%
+% 			{\scriptsize (p. 230 in Box, Hunter and Hunter, 2$^\text{nd}$ ed)}
+%
+% 		\column{0.48\textwidth}
+% 			\includegraphics[width=\textwidth]{\imagedir/doe/examples/solar-panel-mendelu-cz-website.png}
+%
+%
+% 			\see{\href{http://yint.org/solar-panel-study}{http://yint.org/solar-panel-study}}
+% 	\end{columns}
+%
+% 	\begin{center}\rule[8mm]{4cm}{0.01cm}\end{center}
+% 	\rule[3mm]{0.01cm}{25mm}%
+%
+% \end{comment}
 
-\end{comment}
 \begin{frame}\frametitle{}
 	\begin{center}
-	\includegraphics[height=.9\textheight]{\imagedir/doe/DOE-trade-off-table-MOOC.png}
+	\includegraphics[height=.9\textheight]{\imagedir/doe/DOE-trade-off-table-no-annotation.png}
 	\end{center}
 \end{frame}
 
 \begin{frame}\frametitle{}
 	\begin{center}
-	\includegraphics[height=.9\textheight]{\imagedir/doe/DOE-trade-off-table-MOOC-annotated.png}
+	\includegraphics[height=.9\textheight]{\imagedir/doe/DOE-trade-off-table.png}
 	\end{center}
 \end{frame}
 
 \begin{frame}\frametitle{}
 	\begin{center}
-	\includegraphics[height=.9\textheight]{\imagedir/doe/DOE-trade-off-table-MOOC-cell1.png}
+	\includegraphics[height=.9\textheight]{\imagedir/doe/DOE-trade-off-table-cell1.png}
 	\end{center}
 \end{frame}
 
@@ -53,10 +54,13 @@
 			\vspace{1cm}
 			\textbf{$+$S = CT}
 			
+		\onslide+<3->{
 			\vspace{1cm}
 			\textbf{$-$S = CT}
+		}
 			
 		\column{0.45\textwidth}
+		\onslide+<2->{
 			\emph{Factor names in the table}
 			
 			\begin{itemize}
@@ -67,9 +71,12 @@
 			
 			\vspace{1cm}
 			\textbf{$+$C = AB}
-			
+		}
+		
+		\onslide+<3->{	
 			\vspace{1cm}
 			\textbf{$-$C = AB}
+		}
 	\end{columns}	
 \end{frame}
 
@@ -95,7 +102,12 @@
 			\textbf{\relax $-$C = AB} can be rewritten as \textbf{\relax C = $-$AB}
 			
 			\vspace{1cm}
-			Notice how these 4 runs correspond to the closed circles.
+			Notice how the 4 runs generated with \textbf{\relax C = $-$AB} correspond to the closed circles.
+
+			\pause
+			\vspace{1cm}
+			The 4 runs generated with \textbf{\relax C = $+$AB} correspond\\
+			to the open circles.
 			
 	\end{columns}
 \end{frame}
@@ -602,7 +614,7 @@
 	\end{flalign*}
 	}
 	\begin{itemize}
-		\item	4 equations (rows) in 8 unknowns {\color[rgb]{0.54,0.12,0.03}(the entries in the last matrix)}
+		\item	4 equations (rows) in 8 unknowns {\color[rgb]{0.54,0.12,0.03}(the entries shown in the last matrix)}
 		\onslide+<2->	{
 			\item	a
 			\item	s
