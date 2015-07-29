@@ -764,10 +764,11 @@
 
 \begin{frame}\frametitle{Now that we understand aliasing; how can we work with it in our system?}
 	
-	We'd like to take advantage of the savings (by doing half the work), but still get the most benefit.
+	We'd like to take advantage of doing half the work, but still get the most benefit. But, 
+	recall we showed that this will lead to a loss of some accuracy:
 	
 	\vspace{0.2cm}
-	Recall this loss of information from before?
+	
 	
 	\vspace{-0.2cm}
 	\begin{columns}[T]
@@ -785,7 +786,7 @@
 				\end{align*}
 		\column{0.02\textwidth}
 			\vspace{1cm}
-			\rule[3mm]{0.03cm}{45mm}
+			\rule[3mm]{0.03cm}{65mm}
 		\column{0.35\textwidth}
 			\begin{center}\textbf{Fractional factorial model}\end{center}				
 				\begin{align*}
@@ -800,164 +801,5 @@
 				\end{align*}
 
 	\end{columns}
-\end{frame}
-
-\begin{frame}\frametitle{Example: treating water (again)}
-	
-	\begin{columns}[T]
-		\column{0.65\textwidth}
-			We have identified 3 factors to investigate
-			\begin{enumerate}
-				\item	Water treatment chemical used
-				\item	Temperature of the treatment
-				\item	Stirring speed
-			\end{enumerate}
-		
-			\vspace{1cm}
-			\emph{Budget}: for 4, maybe 5, experiments
-			
-			\onslide+<2->{
-				\vspace{1cm}
-				Other criteria:
-				\begin{itemize}
-					\item	We don't expect interactions between temperature, and stirring speed
-					\onslide+<3->{
-						\item	We want a good (i.e. unbiased) estimate of the chemical effect
-					}
-				\end{itemize}
-			}
-			
-		
-		\column{0.38\textwidth}
-			\includegraphics[width=\textwidth]{../4B/Supporting files/177506595-thinkstock-reduced.jpg}
-		
-		
-			
-	\end{columns}
-\end{frame}
-
-\begin{frame}\frametitle{Example: treating water (again)}
-	
-	\begin{columns}[T]
-		\column{0.70\textwidth}
-			Now we choose to assign the factor letters: \textbf{A}, \textbf{B}, and \textbf{C}
-			
-			\vspace{0.25cm}
-			\begin{itemize} 
-				\item	\textbf{A}: Temperature of the treatment
-				\item	\textbf{B}: Stirring speed				
-				\item	\textbf{C}: Water treatment chemical used
-
-			\end{itemize}
-			
-			\vspace{0.5cm}
-			Reasons for this choice of letters (assignment):
-			\begin{itemize}
-				\item	We don't expect interaction between temperature (\textbf{A}), and stirring speed (\textbf{B}). That implies $b_\text{AB} \approx 0$
-				\item	We want a clear, unbiased estimate of the chemical effect (\textbf{C}). So an unbiased $b_\text{C}$ is desired.
-				\item	We know that $\hat{b}_\text{C}$ will be the estimated chemical effect in a half-fraction. It will
-					 	be confounded:
-				\begin{itemize}
-					\item	$\hat{b}_\text{C}  = b_\text{C} + b_\text{AB}  = b_\text{C} + \cancelto{\approx 0}{b_\text{AB}} \qquad$ so then $\hat{b}_C \approx b_\text{C}$
-				\end{itemize}
-			\end{itemize}
-		
-		\column{0.35\textwidth}
-			\includegraphics[width=\textwidth]{../4B/Supporting files/177506595-thinkstock-reduced.jpg}
-	\end{columns}
-\end{frame}
-
-\begin{frame}\frametitle{\includegraphics[width=0.3\textwidth]{\imagedir/doe/examples/advice-logo.png}\,\, plan your experiments carefully ahead of time}
-	
-	\vspace{24pt}
-	{\color{myOrange} 	\emph{Experiments are expensive to run!}}
-	
-
-	\begin{exampleblock}{}
-		\vspace{12pt}
-		\begin{itemize}
-			\item	so plan not only the experiments, but also \textbf{how you will analyze} the results
-			\item	you don't need outcome values ($y$-values) to do this
-			
-			\vspace{1cm}
-
-			\item	Re-allocate your letters if you don't like the confounding
-		\end{itemize} 
-	\end{exampleblock}
-	
-\end{frame}
-
-\begin{frame}\frametitle{}
-	\vspace{-0.5cm}
-	\includegraphics[height=.9\textheight]{\imagedir/doe/DOE-trade-off-table-MOOC-half-fractions.png}
-	
-	\vspace{10pt}
-	Notice where all the half fractions lie in the table. Do you observe the recurring pattern?
-\end{frame}
-
-\begin{frame}\frametitle{\includegraphics[width=0.3\textwidth]{\imagedir/doe/examples/advice-logo.png}\,\, the utility of half-fractions}
-	
-	\vspace{24pt}
-	Four factors: requires 16 runs for a full factorial. Why not start with a half fraction?
-	
-	\vspace{24pt}
-	\begin{itemize}
-		\item	Start with 8 runs
-		\item	Then come back and do the other 8 later on
-	\end{itemize}
-	
-	\vspace{24pt}
-	{\color{myOrange} Note that quarter, or even $\tfrac{1}{8}^\text{th}$ fractions can be used in this way}
-	
-\end{frame}
-
-\begin{frame}\frametitle{Demonstration on an example we can visualize: a 3-factor system}
-	\begin{columns}
-		\column{0.6\textwidth}
-			\begin{center}
-				\includegraphics[width=.9\textwidth]{\imagedir/doe/half-fraction-in-3-factors-MOOC-no-labels.png}
-			\end{center}
-			
-		\column{0.55\textwidth}
-		
-			{\color{blue}Start with a half fraction $^\ast$}
-			\begin{tabulary}{\linewidth}{cccl}\hline 
-				\textsf{\relax Experiment } & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C = AB} \\
-				\hline 
-				\textbf{1} & \(-\) & \(-\) & \(+\) \\
-				\textbf{2} & \(+\) & \(-\) & \(-\) \\
-				\textbf{3} & \(-\) & \(+\) & \(-\) \\
-				\textbf{4} & \(+\) & \(+\) & \(+\) \\  \hline
-			\end{tabulary}
-			
-			{\color{myOrange}These are the 4 runs with the open circles.}
-
-			\small
-			\vspace{0.5cm}
-			
-			{\color{blue}\emph{Later on} ... come back and complete the complementary half-fraction.$^\ast$}
-			
-			\begin{tabulary}{\linewidth}{cccl}\hline 
-				\textsf{\relax Experiment } & \textbf{\relax A } & \textbf{\relax B } & \textbf{\relax C = $-$AB } \\
-				\hline 
-				\textbf{5} & \(-\) & \(-\) & \(-\) \\
-				\textbf{6} & \(+\) & \(-\) & \(+\) \\
-				\textbf{7} & \(-\) & \(+\) & \(+\) \\
-				\textbf{8} & \(+\) & \(+\) & \(-\) \\ \hline
-			\end{tabulary}
-			
-			{\color{myOrange}These are the 4 runs with the closed circles.}
-			
-			\vspace{6pt}
-			{\color{blue}$^\ast$\scriptsize {Always randomize within the group of 4!}}
-\	\end{columns}
-\end{frame}
-
-\begin{frame}\frametitle{}
-	\vspace{-0.5cm}
-	\includegraphics[height=.9\textheight]{\imagedir/doe/DOE-trade-off-table-MOOC-half-fractions.png}
-	
-	\vspace{10pt}
-	We will see how entries in this table are good building blocks. Consider how you might use it for your experiments.
 \end{frame}
 
