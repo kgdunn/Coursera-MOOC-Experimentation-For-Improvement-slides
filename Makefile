@@ -3,7 +3,7 @@
 #* http://stackoverflow.com/questions/4058840/makefile-that-distincts-between-windows-and-unix-like-systems
 
 .PHONY: all clean
-CLASSES = 1A 1B 1C 1D 2A 2B 2C 2D 3A 3B 3C 3D 4A 4B 4C 4D 4E 4F 4G 4H 5A 5B 5C 6A 6B 6C 6D 00
+CLASSES = 1A 1B 1C 1D 2A 2B 2C 2D 3A 3B 3C 3D 4A 4B 4C 4D 4E 4F 4G 4H 5A 5B 5C 5D 5E 5F 5G 6
 MAIN = CourseraMOOC
 
 ifdef SystemRoot
@@ -14,7 +14,7 @@ else
 	SUBDIR = classes/
 endif
 
-.DEFAULT_GOAL := 5B
+.DEFAULT_GOAL := 5D
 all: clean
 	$(foreach FILE, $(CLASSES), $(MAKE) $(FILE);)
 
