@@ -14,7 +14,7 @@ else
 	SUBDIR = classes/
 endif
 
-.DEFAULT_GOAL := 5F
+.DEFAULT_GOAL := 5G
 all: clean
 	$(foreach FILE, $(CLASSES), $(MAKE) $(FILE);)
 
