@@ -14,7 +14,7 @@ else
 	SUBDIR = classes/
 endif
 
-.DEFAULT_GOAL := 4H
+.DEFAULT_GOAL := 1B
 all: clean
 	$(foreach FILE, $(CLASSES), $(MAKE) $(FILE);)
 
@@ -22,7 +22,8 @@ $(CLASSES): %:
     # Runs PDF latex on the main file, sending in jobname that is used in 
     # $(MAIN).tex to \input{} the correct class file
 	pdflatex --shell-escape --jobname=$(SUBDIR)CourseraMOOC-class-$* $(MAIN).tex;
-	open $(SUBDIR)CourseraMOOC-class-$*.pdf
+	mv $(SUBDIR)CourseraMOOC-class-$*.pdf $(SUBDIR)$*.pdf
+	open $(SUBDIR)$*.pdf
 	#open $(SUBDIR)2014-TrojanUV-$*.pdf
 
 clean:  
