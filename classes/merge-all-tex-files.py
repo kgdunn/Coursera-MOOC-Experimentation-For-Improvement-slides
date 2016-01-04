@@ -28,7 +28,7 @@ all_files = [
 '/Users/kevindunn/Dropbox/Coursera/Media/All-course-slides/classes/CourseraMOOC-class-5G.tex',
 '/Users/kevindunn/Dropbox/Coursera/Media/All-course-slides/classes/CourseraMOOC-class-6.tex']
 
-output = '/Users/kevindunn/Dropbox/Coursera/Media/All-course-slides/classes/CoursearMOOC-class-all.tex'
+output = '/Users/kevindunn/Dropbox/Coursera/Media/All-course-slides/classes/CourseraMOOC-class-all.tex'
 
 out = file(output, 'wt')
 
