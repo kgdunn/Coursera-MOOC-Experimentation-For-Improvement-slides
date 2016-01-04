@@ -1,5 +1,5 @@
 
-\begin{frame}\frametitle{Let's use an example throughout the class today}
+\begin{frame}\frametitle{Back to our example}
 	\begin{columns}[T]
 		\column{0.45\textwidth}
 		
@@ -46,10 +46,6 @@
 		\textbf{4} & \_\_\_\_\_\_\_\_  & \_\_\_\_\_\_\_\_ &   \\ &  &  & \\
 		\textbf{5} & \_\_\_\_\_\_\_\_  & \_\_\_\_\_\_\_\_ &   \\ &  &  & \\
 	\end{tabulary}	
-\end{frame}
-
-\begin{frame}\frametitle{How \textbf{NOT} to run the experiments}
-	Watch the video ``5C'' at http://yint.org/video-5C
 \end{frame}
 
 \begin{frame}\frametitle{How many experiments should I run?}
@@ -135,20 +131,20 @@
 	\end{columns}
 \end{frame}
 
-\begin{frame}\frametitle{Let's try a different set of data now: with interactions}
-	\begin{columns}[T]
-		\column{0.7\textwidth}
-			\centerline{\includegraphics[width=\textwidth]{\imagedir/doe/cube-plot-2-factors-interactions.png}}
-		\column{0.4\textwidth}
-			\begin{tabulary}{\linewidth}{c|c|c|c}
-				Expt & \textbf{\relax A} & \textbf{\relax B} & \textbf{\relax $y$} \\ \hline &  &  & \\
-				1 &{\color{blue}$-1$} & {\color{blue}$-1$}& {\color{myOrange}\textbf{50}}  \\ &  &  & \\
-				2 &{\color{blue}$+1$} & {\color{blue}$-1$}& {\color{myOrange}\textbf{60}}  \\ &  &  & \\
-				3 &{\color{blue}$-1$} & {\color{blue}$+1$}& {\color{myOrange}\textbf{60}}  \\ &  &  & \\
-				4 &{\color{blue}$+1$} & {\color{blue}$+1$}& {\color{myOrange}\textbf{85}}  \\ &  &  & \\
-				5 &{\color{blue}$0$ } & {\color{blue}$0$ }& {\color{myOrange}\textbf{70}}  \\ &  &  & \\
-			\end{tabulary}
-	\end{columns}
+\begin{frame}\frametitle{Let's try a different system now}
+	% \begin{columns}[T]
+% 		\column{0.7\textwidth}
+% 			\centerline{\includegraphics[width=\textwidth]{\imagedir/doe/cube-plot-2-factors-interactions.png}}
+% 		\column{0.4\textwidth}
+% 			\begin{tabulary}{\linewidth}{c|c|c|c}
+% 				Expt & \textbf{\relax A} & \textbf{\relax B} & \textbf{\relax $y$} \\ \hline &  &  & \\
+% 				1 &{\color{blue}$-1$} & {\color{blue}$-1$}& {\color{myOrange}\textbf{50}}  \\ &  &  & \\
+% 				2 &{\color{blue}$+1$} & {\color{blue}$-1$}& {\color{myOrange}\textbf{60}}  \\ &  &  & \\
+% 				3 &{\color{blue}$-1$} & {\color{blue}$+1$}& {\color{myOrange}\textbf{60}}  \\ &  &  & \\
+% 				4 &{\color{blue}$+1$} & {\color{blue}$+1$}& {\color{myOrange}\textbf{85}}  \\ &  &  & \\
+% 				5 &{\color{blue}$0$ } & {\color{blue}$0$ }& {\color{myOrange}\textbf{70}}  \\ &  &  & \\
+% 			\end{tabulary}
+% 	\end{columns}
 \end{frame}
 
 \begin{frame}\frametitle{What if I have 3 or more factors? Can I solve this mathematically?}
@@ -156,7 +152,7 @@
 	We don't have time in today's class for some of the details. We will cover this in \texttt{CHE 4C3}.
 	
 	\vspace{12pt}
-	But you don't have to wait; watch videos at \href{http://yint.org/videos}{http://yint.org/videos}
+	But you don't have to wait for \texttt{CHE 4C3}; watch videos at \href{http://yint.org/experiments}{http://yint.org/experiments}
 	\begin{itemize}
 		\item	video 2A
 		\item	video 2B
@@ -172,7 +168,16 @@
 	
 \end{frame}
 
+\begin{frame}\frametitle{How \textbf{NOT} to run the experiments}
+	(Re)watch  video ``5C'' from the Coursera course at \href{http://yint.org/media/5C.mp4}{http://yint.org/media/5C.mp4}
+\end{frame}
+
+
 \begin{frame}\frametitle{R code used to solve the problems in these slides}
+	Enter the code at \href{http://yint.org/Rweb}{http://yint.org/Rweb}
+	
+	\vspace{12pt}
+	
 	\texttt{A <- c(-1,  +1,  -1,  +1,   0)}\\
 	\texttt{B <- c(-1,  -1,  +1,  +1,   0)}\\
 	\texttt{y <- c(50, 70, 60, 80, 65)}\\
