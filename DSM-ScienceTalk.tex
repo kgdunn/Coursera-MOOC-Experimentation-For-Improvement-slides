@@ -1,3 +1,4 @@
+%\documentclass[11pt,aspectratio=169,mathserif]{beamer}
 \documentclass[handout,11pt,aspectratio=169,mathserif]{beamer}
 
 \input{preamble.tex}
@@ -15,173 +16,268 @@
 }
 
 \begin{document}
-	
+
 \begin{frame} \titlepage \end{frame}
 
 \begin{frame}\frametitle{Copyright, sharing, and attribution notice}
 
-	{\footnotesize This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 Unported License. To view a copy of this license, 
+	{\footnotesize This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 Unported License. To view a copy of this license,
 	please visit \href{http://creativecommons.org/licenses/by-sa/3.0/}{http://creativecommons.org/licenses/by-sa/4.0/}}
-	
+
 	\vspace{0.0cm}
 	\begin{flushright}
 		\includegraphics[width=0.2\textwidth]{\imagedir/common/creative-commons-by-sa.png}
-	\end{flushright}	
+	\end{flushright}
 	\vspace{-0.4cm}
 	\begin{exampleblock}{}
 		{\small This license allows you: }
 		\begin{itemize}
 			\item	{\color{myGreen}{\textbf{to share}}} - to copy, distribute and transmit the work, including print it
 			\item	{\color{myOrange}{\textbf{to adapt}}} - but you must distribute the new result under the same or similar license to this one
-			\item	{\color{myRed}{\textbf{commercialize}}} - you \underline{\emph{are allowed}} to use this work for commercial purposes 
+			\item	{\color{myRed}{\textbf{commercialize}}} - you \underline{\emph{are allowed}} to use this work for commercial purposes
 			\item	{\color{blue}{\textbf{attribution}}} - but you must attribute the work as follows:
 			\begin{itemize}
 				\item	``Portions of this work are the copyright of Kevin Dunn'', \emph{or}
 				\item	``This work is the copyright of Kevin Dunn'' \\{\tiny (when used without modification)}
-			\end{itemize} 
+			\end{itemize}
 		\end{itemize}
 	\end{exampleblock}
 \end{frame}
 
 
-\begin{frame}\frametitle{Some important terminology we will use all the time}
+\begin{frame}\frametitle{Achievable objectives when improving a process -- based on data}
 	
+	\begin{columns}[t]
+		\column{0.6\textwidth}
+		\Large
+			\begin{enumerate}
+				\item	learn more about, and increase your understanding  \pause
+				\item	troubleshoot a problem  \pause
+				\item	make predictions  \pause
+				\item	try to optimize the process  \pause
+				\item	monitor the system to ensure performance gains are retained  \pause
+			\end{enumerate}
+	
+		\column{0.4\textwidth}
+			\onslide+<5->{
+				\includegraphics[width=\textwidth]{\imagedir/examples/reactor-design-example/response-surface.png}
+			}
+			\onslide+<6->{
+				\includegraphics[width=\textwidth]{\imagedir/monitoring/Kappa-phaseII-testing.png}
+			}
+			
+	\end{columns}
+	
+	\vspace{-1cm}
+
+	\vspace{1cm}
+	\onslide+<8->{
+		\hfill \includegraphics[width=0.3\textwidth]{\imagedir/doe/examples/advice-logo.png}
+		\,\,{\color{blue}Always have a clear objective in mind}
+	}
+\end{frame}
+
+
+
+\begin{frame}\frametitle{The 5 goals for any data analysis work}
+
+	\textbf{{\color{purple} 1. Understand}}
+	\begin{itemize}
+		\item	our process or system better
+	\end{itemize}
+
+	\vspace{12pt}
+	\textbf{{\color{purple} 2. Troubleshoot}}
+	\begin{itemize}
+		\item	a problem
+		\item	develop or improve a method
+	\end{itemize}
+
+	\vspace{12pt}
+	\textbf{{\color{purple} 3. Predict}}
+	\begin{itemize}
+		\item	what our system will do under new conditions
+	\end{itemize}
+
+	\vspace{12pt}
+	\textbf{{\color{purple} 4. Optimize}}
+	\begin{itemize}
+		\item	make the system perform better, safer, cheaper, faster
+	\end{itemize}
+
+	\vspace{12pt}
+	\textbf{{\color{purple} 5. Monitor}}
+		\begin{itemize}
+			\item	ensure we keep the gains we have made
+		\end{itemize}
+
+\end{frame}
+
+\begin{frame}\frametitle{Some important terminology we will use all the time}
+
 	\begin{columns}[T]
 		\column{0.75\textwidth}
 			\textbf{{\color{purple} Outcome}}
 				\begin{itemize}
 					\item	What we measure after the experiment is finished  \pause
-					\item	It is the aspect you are interested in improving.\pause
-			 
+					\item	It is the aspect you are interested in improving  \pause
+					\item	also called the \emph{Response}
+
 				\end{itemize}
 		\column{0.3\textwidth}
-		
-			\centerline{\includegraphics[width=\textwidth]{\imagedir/doe/measure-4904403417_93baa750a6-flickr.jpg}}
 
+			\centerline{\includegraphics[width=\textwidth]{\imagedir/doe/measure-4904403417_93baa750a6-flickr.jpg}}
 	\end{columns}
-	
-			
+
 	\vspace{24pt}
 	\textbf{{\color{purple} Factors}}
 		\begin{itemize}
 			\item	Things which you actively change to influence the outcome.
 			\item	We typically change 2, 3, 4, or many more factors. \pause
-			\item	Don't fixate on changing 1 factor at a time.
+			\item	Don't fixate on changing 1 factor at a time. {\color{myOrange}  $\longleftarrow$	\emph{Common misconception!}}
 		\end{itemize}
 \end{frame}
 
 \begin{frame}\frametitle{}
-	
+
 	\begin{columns}[c]
 		\column{0.5\textwidth}
-			\centerline{\includegraphics[width=0.8\textwidth]{../1B/Supporting-material/plant.png}}
-		
+			\centerline{\includegraphics[width=0.8\textwidth]{../1B/Supporting-material/plant.jpg}}
+
 		\column{0.5\textwidth}
 			Various outcomes are possible in your experiment:
-			
+
 			\begin{itemize}
 				\item	height of the plant
 				\item	average length of leaves
 				\item	the number of flowers
 			\end{itemize}
-			
+
 			\vspace{12pt}
 			These are examples of numeric measurements (quantitative).
 
 	\end{columns}
 \end{frame}
 
-\begin{frame}\frametitle{}
-	
-	\begin{columns}[c]
-		\column{0.5\textwidth}
-			\centerline{\includegraphics[width=0.8\textwidth]{../1B/Supporting-material/plant.png}}
-		
-		\column{0.5\textwidth}
-			%Different outcomes are possible:
-			
-			\begin{itemize}
-				\item	colour of the flower
-			\end{itemize}
-			
-			\vspace{12pt}
-			This is a qualitative measurement.
-			
-			(We use qualitative outcomes infrequently)
-
-	\end{columns}
-\end{frame}
 
 \begin{frame}\frametitle{}
-	
-	\textbf{{\color{purple} Outcome}} \onslide+<5->{ = \textbf{{\color{purple} Response}}}
+
+	\textbf{{\color{purple} Outcome}} = \textbf{{\color{purple} Response}}
 		\begin{itemize}
-			\item	What we measure after the experiment is finished  
+			\item	What we measure after the experiment is finished
 			\item	It is the aspect you are interested in improving.
 		\end{itemize}
-	
+
 	\vspace{12pt}
 	\pause
-	
+
 	\textbf{{\color{purple} Objective}}
-	
-	
+
+
 		\qquad combine the {\color{purple} outcome} with ``a desire to \emph{adjust} the outcome''
 	\vspace{24pt}
 	\pause
-	
+
 	{\textbf{{Various examples of ``objectives''}}}
-	
+
 		\begin{itemize}
 			\item	maximize $(\uparrow)$ the profit
 			\item	maximize $(\uparrow)$ the height of the plant
 			\item	minimize $(\downarrow)$ pollution
 			\item	minimize $(\downarrow)$ energy used to produce a product
-		\end{itemize} 	
-		
+		\end{itemize}
+
 	\pause
 		\vspace{12pt}
 		But sometimes the objective is ``the same as before'' $(=)$
 \end{frame}
 
 \begin{frame}\frametitle{}
+
+	\textbf{{\color{purple} Factors}}  = \textbf{{\color{purple} Variables}}
 	
-	\textbf{{\color{purple} Factors}} \onslide+<6->{ = \textbf{{\color{purple} Variables}}}
-	\pause
-		
+
 		\begin{columns}[T]
 			\column{0.33\textwidth}
-				\onslide+<2->{\centerline{\includegraphics[width=\textwidth]{../1B/Supporting-material/water.png}}}
-				
-				
+				\centerline{\includegraphics[width=\textwidth]{../1B/Supporting-material/water.png}}
+
+
 			\column{0.33\textwidth}
-				\onslide+<3->{\centerline{\includegraphics[width=\textwidth]{../1B/Supporting-material/fertilizer.png}}}
-				
-				
+				\centerline{\includegraphics[width=\textwidth]{../1B/Supporting-material/fertilizer.png}}
+
+
 			\column{0.33\textwidth}
-				\onslide+<4->{\centerline{\includegraphics[width=\textwidth]{../1B/Supporting-material/soil.png}}}
-			
+				\centerline{\includegraphics[width=\textwidth]{../1B/Supporting-material/soil.png}}
+
 		\end{columns}
-		
-		
+
+
 	\vspace{24pt}
+
 	
-	\onslide+<5->{
-		\textbf{{\color{purple} Types of factors}}
-	
-	
-		\qquad \emph{numeric} factors (quantitative) can be measured and adjusted to different levels
-		
-			\qquad \qquad 
-		\vspace{12pt}
-	
-		\qquad \emph{categorical} factors (qualitative) are simply selected for their characteristic
-	}
-	
-	
+	\textbf{{\color{purple} Types of factors}}
+
+	\vspace{12pt}
+	\qquad \emph{numeric} factors (quantitative) can be measured and adjusted to different levels
+
+	\qquad \qquad
+	\vspace{12pt}
+
+	\qquad \emph{categorical} factors (qualitative) are simply selected for their characteristic
+
+
+
 \end{frame}
+
+
+\begin{frame}\frametitle{A systematic approach } 
+	\Large
+	 \begin{enumerate}
+	 	\item	What's my outcome? \pause
+	 	\item	What's my objective? \pause
+	 	\item	Which factors? \pause
+		\item	At what levels?\pause
+	 	\item	Plan the experiment \pause
+	 	\item	Implement the experiment\pause
+	 	\item	Analyze the results\pause
+		\item	Repeat (almost always required) [25\% rule]
+	 \end{enumerate}
+	 
+ 	 \vspace{12pt}
+	 \small
+	 {\color{purple}  \href{http://yint.org/template}{Template for you to use}}
+\end{frame}
+
+
+\begin{frame}\frametitle{}
+	%\vspace{-10pt}
+	\centerline{\includegraphics[width=1.2\textwidth]{\imagedir/doe/DOE-trade-off-table.png}}
+\end{frame}
+
+
+\begin{itemize}
+	
+	\item   Collapsability sequence
+	\item 	Interaction: what is?
+	\item 	Tradeoff: 4 factors and 5 expts. But with 8 expts you can docs lot more
+	\item 	Randomization is important
+	\item 	Interaction plots
+	\item 	Contour plot concept
+	\item 	Disturbance and covariates
+	\item 	Slide 283 for fraction factorial
+	\item 	Rsm example walk through, incl slide 521. All models useful
+	\item 	Cost approach incl slide 491
+	\item 	When things go wrong you have fallback if you had those extra experiments
+	
+	\item	Rsm slide 529on interaction
+	\item 	Rsm slide 543
+	
+	
+
+
+\end{itemize}
+
 
 
 
 \end{document}
-
