@@ -1,5 +1,5 @@
-%\documentclass[11pt,aspectratio=169,mathserif]{beamer}
-\documentclass[handout,11pt,aspectratio=169,mathserif]{beamer}
+\documentclass[11pt,aspectratio=169,mathserif]{beamer}
+%\documentclass[handout,11pt,aspectratio=169,mathserif]{beamer}
 
 \input{preamble.tex}
 
@@ -8,8 +8,8 @@
 \title[]{\LARGE Experimentation for Improvement}
 \subtitle[]{\vspace{0.5cm} \includegraphics[width=0.5\textwidth]{\imagedir/teaching/logos/Coursera-MOOC-logo-2014.png} \vspace{-1.5cm} }\author[]{}
 \institute[]{}
-\date[]{\copyright~ Kevin Dunn, \today \\ \vspace{0cm}
-{{\footnotesize {\tt } \href{http://learnche.org/}{http://learnche.org/}\\} \vspace{0.5cm}}
+\date[]{Kevin Dunn, \today \\ \vspace{0cm}
+{{\footnotesize {\tt } \href{https://learnche.org/}{https://learnche.org/}\\} \vspace{0.5cm}}
 
 {\LARGE \color{blue}{Design and Analysis of Experiments - An Overview}}
 
@@ -22,7 +22,7 @@
 \begin{frame}\frametitle{Copyright, sharing, and attribution notice}
 
 	{\footnotesize This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 Unported License. To view a copy of this license,
-	please visit \href{http://creativecommons.org/licenses/by-sa/3.0/}{http://creativecommons.org/licenses/by-sa/4.0/}}
+	please visit \href{https://creativecommons.org/licenses/by-sa/4.0/}{https://creativecommons.org/licenses/by-sa/4.0/}}
 
 	\vspace{0.0cm}
 	\begin{flushright}
@@ -44,69 +44,55 @@
 	\end{exampleblock}
 \end{frame}
 
-\begin{frame}\frametitle{Achievable objectives when improving a process -- based on data}
-	
+\begin{frame}\frametitle{The 5 goals for any data analysis work}
+
 	\begin{columns}[t]
 		\column{0.6\textwidth}
-		\Large
-			\begin{enumerate}
-				\item	learn more about, and increase your understanding  \pause
-				\item	troubleshoot a problem  \pause
-				\item	make predictions  \pause
-				\item	try to optimize the process  \pause
-				\item	monitor the system to ensure performance gains are retained  \pause
-			\end{enumerate}
-	
+		
+			\vspace{-12pt}
+			\textbf{{\color{purple} 1. Understand}}
+			\begin{itemize}
+				\item	our process or system better\pause
+			\end{itemize}
+
+			%\vspace{4pt}
+			\textbf{{\color{purple} 2. Troubleshoot}}
+			\begin{itemize}
+				\item	a problem
+				\item	develop or improve a method\pause
+			\end{itemize}
+
+			%\vspace{4pt}
+			\textbf{{\color{purple} 3. Predict}}
+			\begin{itemize}
+				\item	what our system will do under new conditions\pause
+			\end{itemize}
+
+			%\vspace{4pt}
+			\textbf{{\color{purple} 4. Optimize}}
+			\begin{itemize}
+				\item	make the system perform better, safer, cheaper, faster\pause
+			\end{itemize}
+
+			%\vspace{pt}
+			\textbf{{\color{purple} 5. Monitor}}
+			\begin{itemize}
+				\item	ensure we keep the gains we have made\pause
+			\end{itemize}
+			
 		\column{0.4\textwidth}
-			\onslide+<5->{
+			\onslide+<3->{
 				\includegraphics[width=\textwidth]{\imagedir/examples/reactor-design-example/response-surface.png}
 			}
-			\onslide+<6->{
+			\onslide+<5->{
 				\includegraphics[width=\textwidth]{\imagedir/monitoring/Kappa-phaseII-testing.png}
 			}
 			
 	\end{columns}
 	
-	\vspace{-1cm}
-
-	\vspace{1cm}
-	\onslide+<8->{
-		\hfill \includegraphics[width=0.3\textwidth]{\imagedir/doe/examples/advice-logo.png}
-		\,\,{\color{blue}Always have a clear objective in mind}
+	\onslide+<6->{
+		\hfill \includegraphics[width=0.3\textwidth]{\imagedir/doe/examples/advice-logo.png} {\color{blue}Always have a clear objective in mind}
 	}
-\end{frame}
-
-\begin{frame}\frametitle{The 5 goals for any data analysis work}
-
-	\textbf{{\color{purple} 1. Understand}}
-	\begin{itemize}
-		\item	our process or system better
-	\end{itemize}
-
-	\vspace{12pt}
-	\textbf{{\color{purple} 2. Troubleshoot}}
-	\begin{itemize}
-		\item	a problem
-		\item	develop or improve a method
-	\end{itemize}
-
-	\vspace{12pt}
-	\textbf{{\color{purple} 3. Predict}}
-	\begin{itemize}
-		\item	what our system will do under new conditions
-	\end{itemize}
-
-	\vspace{12pt}
-	\textbf{{\color{purple} 4. Optimize}}
-	\begin{itemize}
-		\item	make the system perform better, safer, cheaper, faster
-	\end{itemize}
-
-	\vspace{12pt}
-	\textbf{{\color{purple} 5. Monitor}}
-		\begin{itemize}
-			\item	ensure we keep the gains we have made
-		\end{itemize}
 
 \end{frame}
 
@@ -130,7 +116,7 @@
 	\textbf{{\color{purple} Factors}}
 		\begin{itemize}
 			\item	Things which you actively change to influence the outcome.
-			\item	We typically change 2, 3, 4, or many more factors. \pause
+			\item	We typically change 2, 3, 4, or many more factors in a set of experiments. \pause
 			\item	Don't fixate on changing 1 factor at a time. {\color{myOrange}  $\longleftarrow$	\emph{Common misconception!}}
 		\end{itemize}
 \end{frame}
@@ -225,22 +211,31 @@
 
 \end{frame}
 
-\begin{frame}\frametitle{A systematic approach } 
-	\Large
-	 \begin{enumerate}
-	 	\item	What's my outcome? \pause
-	 	\item	What's my objective? \pause
-	 	\item	Which factors? \pause
-		\item	At what levels?\pause
-	 	\item	Plan the experiment \pause
-	 	\item	Implement the experiment\pause
-	 	\item	Analyze the results\pause
-		\item	Repeat (almost always required) [25\% rule]
-	 \end{enumerate}
-	 
- 	 \vspace{12pt}
-	 \small
-	 {\color{purple}  \href{http://yint.org/template}{Template for you to use}}
+\begin{frame}\frametitle{A systematic approach} 
+	
+	\begin{columns}[T]
+		\column{0.6\textwidth}
+			\Large
+			\begin{enumerate}
+			\item	What's my outcome? 
+			\item	What's my objective? \pause
+			\item	Which factors? 
+			\item	At what levels?\pause
+			\item	Plan the experiment \pause
+			\item	Implement the experiments \pause
+			\item	Analyze the results\pause
+			\item	Repeat the process \newline (almost always required) [25\% rule]
+			\end{enumerate}
+			
+		\column{0.5\textwidth}
+			\onslide+<3->{
+				\includegraphics[width=.9\textwidth]{\imagedir/doe/screenshot-of-DOE-template.png}
+				
+				\vspace{8pt}
+				\small
+				{\color{purple}  \href{https://yint.org/template}{Planning template for you to use}}
+			}
+	\end{columns}
 \end{frame}
 
 % Sequence: from baseline to interactions
@@ -262,6 +257,39 @@
 \begin{frame}\frametitle{}
 	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/ofat-vs-full-factorial-3rd-factor.png}}
 \end{frame}
+
+% Interactions
+{\usebackgroundtemplate{\vbox to \paperheight{\vfil\hbox to \paperwidth{\hfil  
+    \includegraphics[width=0.95\paperwidth,trim=0 1.69cm 0 1.69cm, clip]
+	{../2C/Slides/01Screen Shot 2014-07-15 at 11.35.02 .png}  \hfil}\vfil}}
+\begin{frame}\frametitle{}
+\end{frame}}
+
+\begin{frame}\frametitle{Understanding interactions in the water-soap example}
+	\begin{center}
+		\includegraphics[width=\textwidth]{\imagedir/doe/examples/hand-washing-flickr-7008312299_2fcf07309c_k.jpg}
+	\end{center}
+	\vspace{-4cm}
+	\see{\href{https://secure.flickr.com/photos/usdagov/7008312299/}{Flickr}}
+\end{frame}
+
+\begin{frame}\frametitle{Understanding interactions in the water-soap example}
+	\begin{itemize}
+		\item	\textbf{Using soap} works better with warm water (instead of cold water)
+
+			\makebox[14cm][c]{We say: ``the effect of warm water enhances the effect of soap''}
+		
+		\vspace{24pt}
+		\pause
+		\item	\textbf{Warm water} works better with soap (instead of no soap)
+			\makebox[14cm][c]{We say: ``the effect of soap is enhanced by using warm water''}
+			
+	\end{itemize}
+	\pause
+	\vspace{24pt}
+	This interaction works in our favour.
+\end{frame}
+
 
 % DOE tradeoff table
 \begin{frame}\frametitle{}
