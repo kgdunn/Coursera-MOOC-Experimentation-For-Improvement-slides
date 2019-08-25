@@ -186,20 +186,31 @@
 
 % Sequence: from baseline to interactions
 \begin{frame}\frametitle{}
-	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/ofat-vs-full-factorial-base.png}}
-	Add interaction plots next to these
+	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/intplot-ofat-vs-full-factorial-base.png}}
 \end{frame}
 \begin{frame}\frametitle{}
-	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/ofat-vs-full-factorial-no-effect.png}}
+	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/ofat-vs-full-factorial-base-colours.png}}
 \end{frame}
 \begin{frame}\frametitle{}
-	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/ofat-vs-full-factorial-some-effect.png}}
+	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/ofat-vs-full-factorial-base-colours-results.png}}
 \end{frame}
 \begin{frame}\frametitle{}
-	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/ofat-vs-full-factorial-simple-effect.png}}
+	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/intplotA-ofat-vs-full-factorial-base-colours-results.png}}
 \end{frame}
 \begin{frame}\frametitle{}
-	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/ofat-vs-full-factorial-interaction-effect.png}}
+	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/intplotB-ofat-vs-full-factorial-base-colours-results.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/intplotA-ofat-vs-full-factorial-base-colours-full-results.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/intplotB-ofat-vs-full-factorial-base-colours-full-results.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/intplotA-ofat-vs-full-factorial-base-colours-full-results.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/intplotA-ofat-vs-full-factorial-base-colours-interactions-results.png}}
 \end{frame}
 
 % Interactions
@@ -243,10 +254,10 @@
 
 % 3-factor full system
 \begin{frame}\frametitle{}
-	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/ofat-vs-full-factorial-3rd-factor.png}}
+	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/ofat-vs-full-factorial-3rd-factor-colours.png}}
 \end{frame}
 \begin{frame}\frametitle{}
-	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/ofat-vs-full-factorial-3-factors-full-factorial.png}}
+	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/ofat-vs-full-factorial-3-factors-full-factorial-colours.png}}
 \end{frame}
 \begin{frame}\frametitle{}
 	
@@ -452,6 +463,29 @@
 \end{frame}
 
 % RSM sequence
+\begin{frame}\frametitle{Case study: manufacturing of a mass produced product}
+	\begin{columns}[c]
+		\column{0.4\textwidth}
+				\centerline{\includegraphics[height=.7\textheight]{../5E/Supporting materials/flickr-bitchbuzz-6510472979_bf2db00108_o-beer-bottles.jpg}}
+				\see{Flickr: 6510472979}
+		\column{0.60\textwidth}
+			Two factors are available to vary:
+			\begin{itemize}
+				\item	\textbf{T}hroughput: number of parts per hour
+				\item	\textbf{P}rice: selling price per part produced
+			\end{itemize}
+			
+			\vspace{1cm}
+			\pause
+			The outcome variable $y$ = profit [\$ per hour]
+			
+			\begin{itemize}
+				\item	profit = (all income) $-$ (all expenses) \pause
+				\item	both factors affect the profit
+				\item	profit is easily calculated 
+			\end{itemize}
+	\end{columns}
+\end{frame}
 \begin{frame}\frametitle{}
 	\centerline{\includegraphics[height=\textheight]{../5E/Supporting materials/RSM-02.png}}
 \end{frame}
@@ -493,6 +527,14 @@
 	\centerline{\includegraphics[height=\textheight]{../5E/Supporting materials/RSM-54.png}}
 \end{frame}
 
+\begin{frame}\frametitle{Resources}
+	\begin{itemize}
+		\item	Free online course: \href{http://yint.org/expt}{yint.org/expt}
+		\item	Free online textbook: \href{https://learnche.org/pid/design-analysis-experiments/index}{https://learnche.org/pid} (chapter 5)
+		\item	Speak to me about internal training at DSM
+	\end{itemize}
+\end{frame}
+
 \iffalse
 \begin{itemize}
 	\item   Collapsability sequence
@@ -509,7 +551,6 @@
 	\item 	Cost approach incl slide 491
 	\item 	When things go wrong you have fallback if you had those extra experiments
 \end{itemize}
-
 \fi
 
 \end{document}
