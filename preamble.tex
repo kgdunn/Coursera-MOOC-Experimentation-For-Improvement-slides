@@ -14,10 +14,9 @@
 \usepackage{hyperref}
 \usepackage[normalem]{ulem}  	% For strikeout text: \sout{text goes here}
 \usepackage{datetime} 			% For better date/time display
-\usepackage{comment}  			% To block out parts of the notes
+\usepackage{comment}  			% To block out parts of the notes: \iffalse ....  \fi
 \usepackage[multidot]{grffile} 	% Handles file names with spaces and dots in them
 \usepackage{cancel}				% To cancel terms in an equation
-%\usepackage{rotating}			% Rotated text
 \usepackage{etoolbox}			% For selective compiling: figure sources might be on different machines
 \usepackage{tabulary}			% Better package for tables?
 \usepackage{url}		
@@ -65,6 +64,9 @@
 		\end{minipage}
 	\end{center}
 }
+
+
+\definecolor{brickred}{rgb}{0.71, 0.2, 0.11}
 \definecolor{todoGreen}{rgb}{0.0, 0.9, 0.0}
 \definecolor{myGreen}{rgb}{0.,0.4,0.}
 \definecolor{myOrange}{rgb}{1.,0.5,0.}

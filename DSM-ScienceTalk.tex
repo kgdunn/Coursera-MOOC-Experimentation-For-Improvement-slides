@@ -10,15 +10,12 @@
 \institute[]{}
 \date[]{Kevin Dunn, \today \\ \vspace{0cm}
 {{\footnotesize {\tt } \href{https://learnche.org/}{https://learnche.org/}\\} \vspace{0.5cm}}
-
 {\LARGE \color{blue}{Design and Analysis of Experiments - An Overview}}
-
 }
 
 \begin{document}
 
 \begin{frame} \titlepage \end{frame}
-
 \begin{frame}\frametitle{Copyright, sharing, and attribution notice}
 
 	{\footnotesize This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 Unported License. To view a copy of this license,
@@ -43,7 +40,6 @@
 		\end{itemize}
 	\end{exampleblock}
 \end{frame}
-
 \begin{frame}\frametitle{The 5 goals for any data analysis work}
 
 	\begin{columns}[t]
@@ -95,7 +91,6 @@
 	}
 
 \end{frame}
-
 \begin{frame}\frametitle{Some important terminology we will use all the time}
 
 	\begin{columns}[T]
@@ -120,7 +115,6 @@
 			\item	Don't fixate on changing 1 factor at a time. {\color{myOrange}  $\longleftarrow$	\emph{Common misconception!}}
 		\end{itemize}
 \end{frame}
-
 \begin{frame}\frametitle{}
 
 	\begin{columns}[c]
@@ -141,7 +135,6 @@
 
 	\end{columns}
 \end{frame}
-
 \begin{frame}\frametitle{}
 
 	\textbf{{\color{purple} Outcome}} = \textbf{{\color{purple} Response}}
@@ -173,7 +166,6 @@
 		\vspace{12pt}
 		But sometimes the objective is ``the same as before'' $(=)$
 \end{frame}
-
 \begin{frame}\frametitle{}
 
 	\textbf{{\color{purple} Factors}}  = \textbf{{\color{purple} Variables}}
@@ -210,7 +202,6 @@
 
 
 \end{frame}
-
 \begin{frame}\frametitle{A systematic approach} 
 	
 	\begin{columns}[T]
@@ -241,6 +232,7 @@
 % Sequence: from baseline to interactions
 \begin{frame}\frametitle{}
 	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/ofat-vs-full-factorial-base.png}}
+	Add interaction plots next to these
 \end{frame}
 \begin{frame}\frametitle{}
 	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/ofat-vs-full-factorial-no-effect.png}}
@@ -254,51 +246,168 @@
 \begin{frame}\frametitle{}
 	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/ofat-vs-full-factorial-interaction-effect.png}}
 \end{frame}
-\begin{frame}\frametitle{}
-	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/ofat-vs-full-factorial-3rd-factor.png}}
-\end{frame}
 
 % Interactions
-{\usebackgroundtemplate{\vbox to \paperheight{\vfil\hbox to \paperwidth{\hfil  
-    \includegraphics[width=0.95\paperwidth,trim=0 1.69cm 0 1.69cm, clip]
-	{../2C/Slides/01Screen Shot 2014-07-15 at 11.35.02 .png}  \hfil}\vfil}}
-\begin{frame}\frametitle{}
-\end{frame}}
-
-\begin{frame}\frametitle{Understanding interactions in the water-soap example}
+\begin{frame}\frametitle{Understanding interactions: water and soap example}
 	\begin{center}
 		\includegraphics[width=\textwidth]{\imagedir/doe/examples/hand-washing-flickr-7008312299_2fcf07309c_k.jpg}
 	\end{center}
 	\vspace{-4cm}
 	\see{\href{https://secure.flickr.com/photos/usdagov/7008312299/}{Flickr}}
 \end{frame}
-
-\begin{frame}\frametitle{Understanding interactions in the water-soap example}
+\begin{frame}\frametitle{Understanding interactions: water and soap example}
+	
+	\large
 	\begin{itemize}
 		\item	\textbf{Using soap} works better with warm water (instead of cold water)
 
-			\makebox[14cm][c]{We say: ``the effect of warm water enhances the effect of soap''}
+			\makebox[14cm][c]{We say: ``{\color{OliveGreen}\emph{the effect of warm water enhances the effect of soap}}''}
 		
 		\vspace{24pt}
-		\pause
 		\item	\textbf{Warm water} works better with soap (instead of no soap)
-			\makebox[14cm][c]{We say: ``the effect of soap is enhanced by using warm water''}
+			\makebox[14cm][c]{We say: ``{\color{OliveGreen}\emph{the effect of soap is enhanced by using warm water}}''}
 			
 	\end{itemize}
-	\pause
+
 	\vspace{24pt}
-	This interaction works in our favour.
+	This interaction works in our favour in this example.
 \end{frame}
+\begin{frame}\frametitle{The advantages of the factorial designs}
+	\begin{itemize}
+		\item	redundancy [e.g. an experiment fails, measurement outlier]
+		
+		\item	information about interactions
+		
+		\item	clear signal which factors truly have an effect 
+		
+		\item	quantify the effect of each factor
+		
+		\item 	each factor's effect is quantified independent of the other
+	\end{itemize}
+\end{frame}
+
 
 % 3-factor full system
 \begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/ofat-vs-full-factorial-3rd-factor.png}}
+\end{frame}
+\begin{frame}\frametitle{}
 	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/ofat-vs-full-factorial-3-factors-full-factorial.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	
+	\Large{Total number of experiments = } $\scalebox{6}{${\color{myBlue} 2}^{\color{brickred} k}$} $
+	
+	\Huge
+	
+	\vspace{24pt}
+	{\color{brickred}{$k$} = number of factors}
+	
+	{\color{myBlue}{$2$} = number of levels for all factors}
+	
+
 \end{frame}
 
 % DOE tradeoff table
 \begin{frame}\frametitle{}
 	%\vspace{-10pt}
-	\centerline{\includegraphics[width=1.2\textwidth]{\imagedir/doe/DOE-trade-off-table.png}}
+	\centerline{\includegraphics[width=1.2\textwidth]{\imagedir/doe/DOE-trade-off-table-main-focus.png}}
+\end{frame}
+
+% Example of using the tradeoff table
+\begin{frame}\frametitle{Cell-culture example: long duration runs; and many factors are possible}
+	\newcommand{\white}{\color{white}}
+	\begin{columns}[c]
+		\column{0.5\textwidth} 
+			\begin{enumerate}
+				\item	\textbf{T}: the temperature profile
+				\item	\textbf{D}: dissolved oxygen
+				\item	\textbf{A}: agitation rate
+				\item	\textbf{P}: pH
+				\item	\textbf{S}: substrate type (A or B)
+				%\onslide+<2->{
+				%\item	\textbf{W}: water type (distilled or tap water)
+				%\item	\textbf{M}: mixer type (axial or radial)
+				%}
+			\end{enumerate}
+		
+		\column{0.5\textwidth}
+			%{\color{blue} \small Industrial scale: {\color{white}y}}   
+			
+			\vspace{0.2cm}
+			
+			\centerline{\includegraphics[height=.7\textwidth]{../4F/Supporting material/flickr-493740898_b98113ae44_o-cell-culture-mod.png}}
+			\see{\href{https://secure.flickr.com/photos/londonmatt/493740898}{Flickr: londonmatt}}
+	\end{columns}
+
+	\vfill
+	At 10 days per cell culture, it would take $\approx$ 1 year for all  ${\color{myBlue} 2}^{\color{brickred} 5} = 32$.
+	
+	Budget = 3 months, or 9 experiments.
+		
+\end{frame}
+\begin{frame}\frametitle{Cell-culture example: long duration runs; and many factors are possible}
+	\begin{columns}[c]
+		\column{0.5\textwidth}
+			\begin{enumerate}
+				\item	\textbf{T}: the temperature profile
+				\item	\textbf{D}: dissolved oxygen
+				\item	$\cancel{\text{\textbf{A}: agitation rate}}$
+				\item	$\cancel{\text{\textbf{P}: pH}}$
+				\item	\textbf{S}: substrate type (A or B)
+				%\onslide+<2->{
+				%\item	\textbf{W}: water type (distilled or tap water)
+				%\item	\textbf{M}: mixer type (axial or radial)
+				%}
+			\end{enumerate}
+		
+		\column{0.5\textwidth}
+			%{\color{blue} \small Laboratory equipment to control the culture:} 
+			
+			\vspace{0.2cm}
+			
+			\centerline{\includegraphics[height=.7\textwidth]{../4F/Supporting material/flickr-3815183191_98c6296080_b-cell-culture-instrumentation}}
+			\see{\href{https://secure.flickr.com/photos/mjanicki/3815183191}{Flickr: mjanicki}}
+	\end{columns}
+
+	\vfill
+	{\color{red} Don't do this:} remove factors in order to get a full factorial.
+	
+\end{frame}
+
+% DOE tradeoff table
+\begin{frame}\frametitle{}
+	%\vspace{-10pt}
+	\centerline{\includegraphics[width=1.2\textwidth]{\imagedir/doe/DOE-trade-off-table-main-focus.png}}
+\end{frame}
+
+\begin{frame}\frametitle{Cell-culture example: long duration runs; and many factors are possible}
+	\begin{columns}[c]
+		\column{0.5\textwidth}
+			\begin{enumerate}
+				\item	\textbf{T}: the temperature profile
+				\item	\textbf{D}: dissolved oxygen
+				\item	\textbf{A}: agitation rate
+				\item	\textbf{P}: pH
+				\item	\textbf{S}: substrate type (A or B)
+				\item	\textbf{W}: water type (distilled or tap water)
+				\item	\textbf{M}: mixer type (axial or radial)
+		
+			\end{enumerate}
+		
+		\column{0.5\textwidth}
+			
+			
+			\vspace{0.2cm}
+			
+			\centerline{\includegraphics[height=.7\textwidth]{../4F/Supporting material/Mixing_-_flusso_assiale_e_radiale-wikipedia.jpg}}
+			
+			{\color{blue} \small Different types of mixers (impellers)} \see{\href{https://en.wikipedia.org/wiki/File:Mixing_-_flusso_assiale_e_radiale.jpg}{Wikipedia}}
+	\end{columns}
+
+	\vfill
+	3 months available: {\color{myOrange} that corresponds to 9 experiments}.
+	
 \end{frame}
 
 % Grocery shelft OFAT example
@@ -348,29 +457,6 @@
 \begin{frame}\frametitle{}
 	\centerline{\includegraphics[height=\textheight]{../5C/Supporting material/COST-contours-shopping-11.png}}
 \end{frame}
-
-\begin{frame}\frametitle{The COST approach: {\color{myGreen}``Change One Single Thing'' at a time}}
-	\begin{columns}[b]
-		\column{0.6\textwidth}
-			\begin{exampleblock}{}
-				\begin{itemize}
-					\item	leads you into a false belief that you have reached the optimum \pause
-					\item	{\color{myOrange}COST works in a lab: to prove a conclusive cause-effect relationship}
-					\item	interactions and other unusual surface shapes makes COST inefficient \pause
-					
-				\end{itemize}
-			\end{exampleblock}
-		
-		\column{0.40\textwidth}
-			\centerline{\includegraphics[width=1.1\textwidth]{../5C/Supporting material/COST-contours-shopping-12.png}}
-	\end{columns}
-	
-	\pause
-	\vspace{0.5cm}
-	{\color{blue} Recall, RSM {\small (response surface methods)} is used \textbf{after} screening for known causal factors}
-
-\end{frame}
-
 \begin{frame}\frametitle{Interpreting what contour plots are}
 	\begin{columns}[b]
 		\column{0.5\textwidth}
@@ -383,7 +469,32 @@
 
 			\see{\href{https://www.google.com/maps/preview?f=q&hl=en&geocode=&q=Mt.+Fuji&ie=UTF8&t=p&ll=35.366656,138.733292&spn=0.099668,0.207367&z=13&iwloc=addr;}{Google Maps link}}
 	\end{columns}
+\end{frame}
+\begin{frame}\frametitle{The COST approach: {\color{myGreen}``Change One Single Thing'' at a time}}
+	\begin{columns}[b]
+		\column{0.6\textwidth}
+			\begin{exampleblock}{}
+				\begin{itemize}
+					\item	\onslide+<1->{leads you into a false belief that you have reached the optimum }
+					\item	\onslide+<2->{is order-dependent (it is a lottery\emph{!})}
+					\item	\onslide+<3->{{\color{myOrange}COST works in a lab: to prove a conclusive cause-effect relationship}}
+					\item	\onslide+<4->{interactions and other unusual surface shapes makes COST inefficient }
+					\item	\onslide+<5->{does not scale to more factors: 3, 4 or more dimensions}
+					
+				\end{itemize}
+			\end{exampleblock}
+		
+		\column{0.40\textwidth}
+			
+				\centerline{\includegraphics<1>[width=1.1\textwidth]{../5C/Supporting material/COST-contours-shopping-12.png}}
+				\centerline{\includegraphics<2->[width=.9\textwidth]{../5G/Supporting materials/COST-contours-shopping-extend-20.png}}
+				\centerline{\includegraphics<2->[width=.9\textwidth]{../5G/Supporting materials/COST-contours-shopping-reorder-09.png}}
+	\end{columns}
 	
+	%\pause
+	%\vspace{0.5cm}
+	%{\color{blue} Recall, RSM {\small (response surface methods)} is used \textbf{after} screening for known causal factors}
+
 \end{frame}
 
 % RSM sequence
@@ -411,19 +522,16 @@
 \begin{frame}\frametitle{}
 	\centerline{\includegraphics[height=\textheight]{../5E/Supporting materials/RSM-35.png}}
 \end{frame}
-
 \begin{frame}\frametitle{Improving the model's prediction ability by adding quadratic terms}
 	Add specially placed points:
 	
 	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/lack-of-fit-illustration-nonlinear-extra-points.png}}
 \end{frame}
-
 \begin{frame}\frametitle{Improving the model's prediction ability by adding quadratic terms}
 	And fit a quadratic model now:
 	
 	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/lack-of-fit-illustration-nonlinear-extra-points-quadratic.png}}
 \end{frame}
-
 \begin{frame}\frametitle{}
 	\centerline{\includegraphics[height=\textheight]{../5E/Supporting materials/RSM-43.png}}
 \end{frame}
@@ -431,30 +539,24 @@
 	\centerline{\includegraphics[height=\textheight]{../5E/Supporting materials/RSM-54.png}}
 \end{frame}
 
-
-
+\iffalse
 \begin{itemize}
-	
-	\item   Collapsability sequence
-	\item 	Interaction: what is?
+	%\item   Collapsability sequence
+	%\item 	Interaction: what is?
 	\item 	Tradeoff: 4 factors and 5 expts. But with 8 expts you can docs lot more
 	  - tradeoff: uncertainty from materials, people, or equipment.
+	  \item   blocking: in the tradeoff table
 	\item 	Randomization is important
 	\item 	Interaction plots
-	\item 	Contour plot concept
+	%\item 	Contour plot concept
 	\item 	Disturbance and covariates
-	\item   blocking: in the tradeoff table
+	
 	\item 	Slide 283 for fraction factorial
 	\item 	Rsm example walk through, incl slide 521. All models useful
 	\item 	Cost approach incl slide 491
 	\item 	When things go wrong you have fallback if you had those extra experiments
-
-	
-
-
 \end{itemize}
 
-
-
+\fi
 
 \end{document}
