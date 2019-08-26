@@ -10,3 +10,4 @@ hg_version.txt
 .*\.log
 .*\.vrb
 slides/*
+images/*
