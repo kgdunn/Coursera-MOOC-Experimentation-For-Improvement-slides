@@ -1,0 +1,563 @@
+\documentclass[11pt,aspectratio=169,mathserif]{beamer}
+%\documentclass[handout,11pt,aspectratio=169,mathserif]{beamer}
+
+% Changing and testing settings takes time. For busy engineers and designers, this is where preconfigured material profiles become a big time-saving feature in Ultimaker Cura.
+
+
+
+\input{preamble.tex}
+
+\newdateformat{mydate}{\THEYEAR} % \twodigit{\THEDAY}-\twodigit{\THEMONTH}-\THEYEAR
+\mydate
+\title[]{\LARGE Experimentation for Improvement}
+\subtitle[]{\vspace{0.5cm} \includegraphics[width=0.5\textwidth]{\imagedir/teaching/logos/Coursera-MOOC-logo-2014.png} \vspace{-1.5cm} }\author[]{}
+\institute[]{}
+\date[]{Kevin Dunn, \today \\ \vspace{0cm}
+{{\footnotesize {\tt } \href{https://learnche.org/}{https://learnche.org/}\\} \vspace{0.5cm}}
+{\LARGE \color{blue}{Design and Analysis of Experiments - An Overview}}
+}
+
+\begin{document}
+
+\begin{frame} \titlepage \end{frame}
+\begin{frame}\frametitle{Copyright, sharing, and attribution notice}
+
+	{\footnotesize This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 Unported License. To view a copy of this license,
+	please visit \href{https://creativecommons.org/licenses/by-sa/4.0/}{https://creativecommons.org/licenses/by-sa/4.0/}}
+
+	\vspace{0.0cm}
+	\begin{flushright}
+		\includegraphics[width=0.2\textwidth]{\imagedir/common/creative-commons-by-sa.png}
+	\end{flushright}
+	\vspace{-0.4cm}
+	\begin{exampleblock}{}
+		{\small This license allows you: }
+		\begin{itemize}
+			\item	{\color{myGreen}{\textbf{to share}}} - to copy, distribute and transmit the work, including print it
+			\item	{\color{myOrange}{\textbf{to adapt}}} - but you must distribute the new result under the same or similar license to this one
+			\item	{\color{myRed}{\textbf{commercialize}}} - you \underline{\emph{are allowed}} to use this work for commercial purposes
+			\item	{\color{blue}{\textbf{attribution}}} - but you must attribute the work as follows:
+			\begin{itemize}
+				\item	``Portions of this work are the copyright of Kevin Dunn'', \emph{or}
+				\item	``This work is the copyright of Kevin Dunn'' \\{\tiny (when used without modification)}
+			\end{itemize}
+		\end{itemize}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}\frametitle{Some important terminology}
+
+	\begin{columns}[T]
+		\column{0.75\textwidth}
+			\textbf{{\color{purple} Outcome}}
+				\begin{itemize}
+					\item	What we measure after the experiment is finished  \pause
+					\item	It is the aspect you are interested in improving  
+					\item	also called the \emph{Response}
+
+				\end{itemize}
+			
+			\pause
+			\vspace{12pt}	
+			\textbf{{\color{purple} Objective}}
+			
+				\vspace{1pt}	
+				\qquad combine the {\color{purple} outcome} with ``a desire to \emph{adjust} the outcome''
+				
+				
+			\pause
+			\vspace{12pt}
+			
+			{\textbf{{Various examples of ``{\color{purple} objectives}''}}}
+
+				\begin{itemize}
+					\item	maximize $(\uparrow)$ the profit
+					\item	maximize $(\uparrow)$ the height of the plant
+					\item	minimize $(\downarrow)$ pollution
+					\item	minimize $(\downarrow)$ energy used to produce a product
+				\end{itemize}
+			
+			
+		\column{0.3\textwidth}
+			\centerline{\includegraphics[width=0.8\textwidth]{../1B/Supporting-material/plant.jpg}}
+			%\centerline{\includegraphics[width=\textwidth]{\imagedir/doe/measure-4904403417_93baa750a6-flickr.jpg}}
+	\end{columns}
+
+
+\end{frame}
+\begin{frame}\frametitle{Some important terminology}
+	\vspace{12pt}
+	\textbf{{\color{purple} Factors = Variables}}
+		\begin{itemize}
+			\item	Things which you actively change to influence the outcome.
+			\item	We typically change 2, 3, 4, or many more factors in a set of experiments. \pause
+			\item	Don't fixate on changing 1 factor at a time. {\color{myOrange}  $\longleftarrow$	\emph{Common misconception!}}
+		\end{itemize}
+	
+	\begin{columns}[T]
+		\column{0.33\textwidth}
+			\centerline{\includegraphics[width=\textwidth]{../1B/Supporting-material/water.png}}
+			
+			\centerline{Numeric}
+
+
+		\column{0.33\textwidth}
+			\centerline{\includegraphics[width=\textwidth]{../1B/Supporting-material/fertilizer.png}}
+			
+			\centerline{Categorical}
+
+
+		\column{0.33\textwidth}	
+			\centerline{\includegraphics[width=\textwidth]{../1B/Supporting-material/soil.png}}
+	\end{columns}
+	
+	\begin{itemize}
+		\item	\emph{numeric} factors (quantitative) can be measured and adjusted to different levels
+		\item	\emph{categorical} factors (qualitative) are simply selected for their characteristic
+	\end{itemize}	
+\end{frame}
+\begin{frame}\frametitle{A systematic approach} 
+	\begin{columns}[T]
+		\column{0.6\textwidth}
+			\Large
+			\begin{enumerate}
+			\item	What's my outcome? 
+			\item	What's my objective? \pause
+			\item	Which factors? 
+			\item	At what levels?\pause
+			\item	Plan the experiment {\small (\href{https://yint.org/template}{template})}\pause
+			\item	Implement the experiments \pause
+			\item	Analyze the results\pause
+			\item	Repeat the process \newline (almost always required) [25\% rule]
+			\end{enumerate}
+			
+		\column{0.5\textwidth}
+			\onslide+<3->{
+				\includegraphics[width=.8\textwidth]{\imagedir/doe/screenshot-of-DOE-template.png}
+			}
+	\end{columns}
+\end{frame}
+
+% Sequence: from baseline to interactions
+\begin{frame}\frametitle{Basic concept of Designed Experiments}
+	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/intplot-ofat-vs-full-factorial-base.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/ofat-vs-full-factorial-base-colours.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/ofat-vs-full-factorial-base-colours-results.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/intplotA-ofat-vs-full-factorial-base-colours-results.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/intplotB-ofat-vs-full-factorial-base-colours-results.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/ofat-vs-full-factorial-2-factors-full-factorial-colours.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/intplotA-ofat-vs-full-factorial-base-colours-full-results.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/intplotB-ofat-vs-full-factorial-base-colours-full-results.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/intplotA-ofat-vs-full-factorial-base-colours-full-results.png}}
+\end{frame}
+
+% 3-factor full system
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/ofat-vs-full-factorial-3rd-factor-colours.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/ofat-vs-full-factorial-3-factors-full-factorial-colours.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	
+	\Large{Total number of experiments = } $\scalebox{6}{${\color{myBlue} 2}^{\color{brickred} k}$} $
+	
+	\Huge
+	
+	\vspace{24pt}
+	{\color{brickred}{$k$} = number of factors}
+	
+	{\color{myBlue}{$2$} = number of levels for all factors}
+\end{frame}
+
+
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/intplotA-ofat-vs-full-factorial-base-colours-interactions-results.png}}
+\end{frame}
+
+% Interactions
+\begin{frame}\frametitle{Understanding interactions: water and soap example}
+	\begin{center}
+		\includegraphics[width=\textwidth]{\imagedir/doe/examples/hand-washing-flickr-7008312299_2fcf07309c_k.jpg}
+	\end{center}
+	\vspace{-4cm}
+	\see{\href{https://secure.flickr.com/photos/usdagov/7008312299/}{Flickr}}
+\end{frame}
+\begin{frame}\frametitle{Understanding interactions: water and soap example}
+	
+	\large
+	\begin{itemize}
+		\item	\textbf{Using soap} works better with warm water (instead of cold water)
+
+			\makebox[14cm][c]{We say: ``{\color{OliveGreen}\emph{the effect of warm water enhances the effect of soap}}''}
+		
+		\vspace{24pt}
+		\item	\textbf{Warm water} works better with soap (instead of no soap)
+			\makebox[14cm][c]{We say: ``{\color{OliveGreen}\emph{the effect of soap is enhanced by using warm water}}''}
+			
+	\end{itemize}
+
+	\vspace{24pt}
+	This interaction works in our favour in this example.
+\end{frame}
+\begin{frame}\frametitle{The advantages of the factorial designs}
+	\begin{itemize}
+		\item	redundancy [e.g. an experiment fails, measurement outlier]
+		
+		\item	information about interactions
+		
+		\item	clear signal which factors truly have an effect 
+		
+		\item	quantify the effect of each factor
+		
+		\item 	each factor's effect is quantified independent of the other
+	\end{itemize}
+\end{frame}
+
+
+
+% DOE tradeoff table
+\begin{frame}\frametitle{}
+	%\vspace{-10pt}
+	\centerline{\includegraphics[width=1.2\textwidth]{\imagedir/doe/DOE-trade-off-table-main-focus.png}}
+\end{frame}
+
+% Example of using the tradeoff table
+\begin{frame}\frametitle{Cell-culture example: long duration runs; and many factors are possible}
+	\newcommand{\white}{\color{white}}
+	\begin{columns}[c]
+		\column{0.5\textwidth} 
+			\begin{enumerate}
+				\item	\textbf{T}: the temperature profile
+				\item	\textbf{D}: dissolved oxygen
+				\item	\textbf{A}: agitation rate
+				\item	\textbf{P}: pH
+				\item	\textbf{S}: substrate type (A or B)
+				%\onslide+<2->{
+				%\item	\textbf{W}: water type (distilled or tap water)
+				%\item	\textbf{M}: mixer type (axial or radial)
+				%}
+			\end{enumerate}
+		
+		\column{0.5\textwidth}
+			%{\color{blue} \small Industrial scale: {\color{white}y}}   
+			
+			\vspace{0.2cm}
+			
+			\centerline{\includegraphics[height=.7\textwidth]{../4F/Supporting material/flickr-493740898_b98113ae44_o-cell-culture-mod.png}}
+			\see{\href{https://secure.flickr.com/photos/londonmatt/493740898}{Flickr: londonmatt}}
+	\end{columns}
+
+	\vfill
+	At 10 days per cell culture, it would take $\approx$ 1 year for all  ${\color{myBlue} 2}^{\color{brickred} 5} = 32$.
+	
+	Budget = 3 months, {\color{myOrange} that corresponds to 9 experiments}.
+		
+\end{frame}
+\begin{frame}\frametitle{Cell-culture example: long duration runs; and many factors are possible}
+	\begin{columns}[c]
+		\column{0.5\textwidth}
+			\begin{enumerate}
+				\item	\textbf{T}: the temperature profile
+				\item	\textbf{D}: dissolved oxygen
+				\item	$\cancel{\text{\textbf{A}: agitation rate}}$
+				\item	$\cancel{\text{\textbf{P}: pH}}$
+				\item	\textbf{S}: substrate type (A or B)
+				%\onslide+<2->{
+				%\item	\textbf{W}: water type (distilled or tap water)
+				%\item	\textbf{M}: mixer type (axial or radial)
+				%}
+			\end{enumerate}
+		
+		\column{0.5\textwidth}
+			%{\color{blue} \small Laboratory equipment to control the culture:} 
+			
+			\vspace{0.2cm}
+			
+			\centerline{\includegraphics[height=.7\textwidth]{../4F/Supporting material/flickr-3815183191_98c6296080_b-cell-culture-instrumentation.png}}
+			\see{\href{https://secure.flickr.com/photos/mjanicki/3815183191}{Flickr: mjanicki}}
+	\end{columns}
+
+	\vfill
+	{\color{red} Don't do this:} remove factors in order to get a full factorial.
+	
+\end{frame}
+
+% DOE tradeoff table
+\begin{frame}\frametitle{}
+	%\vspace{-10pt}
+	\centerline{\includegraphics[width=1.2\textwidth]{\imagedir/doe/DOE-trade-off-table-main-focus.png}}
+\end{frame}
+
+\begin{frame}\frametitle{Cell-culture example: long duration runs; and many factors are possible}
+	\begin{columns}[c]
+		\column{0.5\textwidth}
+			\begin{enumerate}
+				\item	\textbf{T}: the temperature profile
+				\item	\textbf{D}: dissolved oxygen
+				\item	\textbf{A}: agitation rate
+				\item	\textbf{P}: pH
+				\item	\textbf{S}: substrate type (A or B)
+				\item	\textbf{W}: water type (distilled or tap water)
+				\item	\textbf{M}: mixer type (axial or radial)
+		
+			\end{enumerate}
+		
+		\column{0.5\textwidth}
+			
+			
+			\vspace{0.2cm}
+			
+			\centerline{\includegraphics[height=.7\textwidth]{../4F/Supporting material/Mixing_-_flusso_assiale_e_radiale-wikipedia.jpg}}
+			
+			{\color{blue} \small Different types of mixers (impellers)} \see{\href{https://en.wikipedia.org/wiki/File:Mixing_-_flusso_assiale_e_radiale.jpg}{Wikipedia}}
+	\end{columns}
+\end{frame}
+
+% Grocery shelft OFAT example
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=.8\textheight]{../5C/Supporting material/flickr-quinnanya-2186957732_12f67e557b_o-grocery-shelf.jpg}}
+	\see{\href{https://secure.flickr.com/photos/quinnanya/2186957732}{Flickr: quinnanya}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../5C/Supporting material/COST-contours-shopping-01a.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../5C/Supporting material/COST-contours-shopping-01b.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../5C/Supporting material/COST-contours-shopping-02a.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../5C/Supporting material/COST-contours-shopping-02b.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../5C/Supporting material/COST-contours-shopping-03.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../5C/Supporting material/COST-contours-shopping-04.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../5C/Supporting material/COST-contours-shopping-05.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../5C/Supporting material/COST-contours-shopping-06a.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../5C/Supporting material/COST-contours-shopping-06b.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../5C/Supporting material/COST-contours-shopping-07.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../5C/Supporting material/COST-contours-shopping-08.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../5C/Supporting material/COST-contours-shopping-09.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../5C/Supporting material/COST-contours-shopping-10.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../5C/Supporting material/COST-contours-shopping-11.png}}
+\end{frame}
+\begin{frame}\frametitle{Interpreting what contour plots are}
+	\begin{columns}[b]
+		\column{0.5\textwidth}
+			\centerline{\includegraphics[width=1.1\textwidth]{../5D/Supporting material/wikipedia-20121125213159!FujiSunriseKawaguchiko2025WP.jpg}}
+			
+			\see{Wikipedia: \href{https://commons.wikimedia.org/wiki/File:FujiSunriseKawaguchiko2025WP.jpg}{Wikipedia}}
+		
+		\column{0.5\textwidth}
+			\centerline{\includegraphics[width=1.102\textwidth]{../5D/Supporting material/Google-Map-Screenshot-wide.png}}
+
+			\see{\href{https://www.google.com/maps/preview?f=q&hl=en&geocode=&q=Mt.+Fuji&ie=UTF8&t=p&ll=35.366656,138.733292&spn=0.099668,0.207367&z=13&iwloc=addr;}{Google Maps link}}
+	\end{columns}
+\end{frame}
+\begin{frame}\frametitle{The COST approach: {\color{myGreen}``Change One Single Thing'' at a time}}
+	\begin{columns}[T]
+		\column{0.6\textwidth}
+			\begin{exampleblock}{}
+				\begin{itemize}
+					\item	\onslide+<1->{leads you into a false belief that you have reached the optimum }
+					\item	\onslide+<2->{is order-dependent (it is a lottery\emph{!})}
+					\item	\onslide+<3->{{\color{myOrange}COST works in a lab: to prove a conclusive cause-effect relationship}}
+					\item	\onslide+<4->{interactions and other unusual surface shapes makes COST inefficient }
+					\item	\onslide+<5->{does not scale to more factors: 3, 4 or more dimensions}
+					
+				\end{itemize}
+			\end{exampleblock}
+		
+		\column{0.40\textwidth}
+			
+				\centerline{\includegraphics<1>[width=1.1\textwidth]{../5C/Supporting material/COST-contours-shopping-12.png}}
+				\centerline{\includegraphics<2->[width=.9\textwidth]{../5G/Supporting materials/COST-contours-shopping-extend-20.png}}
+				\centerline{\includegraphics<2->[width=.9\textwidth]{../5G/Supporting materials/COST-contours-shopping-reorder-09.png}}
+	\end{columns}
+	
+	%\pause
+	%\vspace{0.5cm}
+	%{\color{blue} Recall, RSM {\small (response surface methods)} is used \textbf{after} screening for known causal factors}
+
+\end{frame}
+
+% RSM sequence
+\begin{frame}\frametitle{Case study: manufacturing of a mass produced product}
+	\begin{columns}[c]
+		\column{0.4\textwidth}
+				\centerline{\includegraphics[height=.7\textheight]{../5E/Supporting materials/flickr-bitchbuzz-6510472979_bf2db00108_o-beer-bottles.jpg}}
+				\see{Flickr: 6510472979}
+		\column{0.60\textwidth}
+			Two factors are available to vary:
+			\begin{itemize}
+				\item	\textbf{T}hroughput: number of parts per hour
+				\item	\textbf{P}rice: selling price per part produced
+			\end{itemize}
+			
+			\vspace{1cm}
+			\pause
+			The outcome variable $y$ = profit [\$ per hour]
+			
+			\begin{itemize}
+				\item	profit = (all income) $-$ (all expenses) \pause
+				\item	both factors affect the profit
+				\item	profit is easily calculated 
+			\end{itemize}
+	\end{columns}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../5E/Supporting materials/RSM-02.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../5E/Supporting materials/RSM-08.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../5E/Supporting materials/RSM-07.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../5E/Supporting materials/RSM-09.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../5E/Supporting materials/RSM-15.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../5E/Supporting materials/RSM-22.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../5E/Supporting materials/RSM-31.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../5E/Supporting materials/RSM-35.png}}
+\end{frame}
+\begin{frame}\frametitle{Improving the model's prediction ability by adding quadratic terms}
+	Add specially placed points:
+	
+	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/lack-of-fit-illustration-nonlinear-extra-points.png}}
+\end{frame}
+\begin{frame}\frametitle{Improving the model's prediction ability by adding quadratic terms}
+	And fit a quadratic model now:
+	
+	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/lack-of-fit-illustration-nonlinear-extra-points-quadratic.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../5E/Supporting materials/RSM-43.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=\textheight]{../5E/Supporting materials/RSM-54.png}}
+\end{frame}
+
+\begin{frame}\frametitle{The 5 goals for any data analysis work}
+
+	\begin{columns}[t]
+		\column{0.6\textwidth}
+		
+			\vspace{-12pt}
+			\textbf{{\color{purple} 1. Understand}}
+			\begin{itemize}
+				\item	our process or system better\pause
+			\end{itemize}
+
+			%\vspace{4pt}
+			\textbf{{\color{purple} 2. Troubleshoot}}
+			\begin{itemize}
+				\item	a problem
+				\item	develop or improve a method\pause
+			\end{itemize}
+
+			%\vspace{4pt}
+			\textbf{{\color{purple} 3. Predict}}
+			\begin{itemize}
+				\item	what our system will do under new conditions\pause
+			\end{itemize}
+
+			%\vspace{4pt}
+			\textbf{{\color{purple} 4. Optimize}}
+			\begin{itemize}
+				\item	make the system perform better, safer, cheaper, faster\pause
+			\end{itemize}
+
+			%\vspace{pt}
+			\textbf{{\color{purple} 5. Monitor}}
+			\begin{itemize}
+				\item	ensure we keep the gains we have made\pause
+			\end{itemize}
+			
+		\column{0.4\textwidth}
+			\onslide+<3->{
+				\includegraphics[width=\textwidth]{\imagedir/examples/reactor-design-example/response-surface.png}
+			}
+			\onslide+<5->{
+				\includegraphics[width=\textwidth]{\imagedir/monitoring/Kappa-phaseII-testing.png}
+			}
+			
+	\end{columns}
+	
+	\onslide+<6->{
+		\hfill \includegraphics[width=0.3\textwidth]{\imagedir/doe/examples/advice-logo.png} {\color{blue}Always have a clear objective in mind}
+	}
+
+\end{frame}
+
+\begin{frame}\frametitle{Resources}
+	\begin{itemize}
+		\item	Free online course: \href{http://yint.org/expt}{yint.org/expt}
+		\item	Free online textbook: \href{https://learnche.org/pid/design-analysis-experiments/index}{https://learnche.org/pid} (chapter 5)
+		\item	Speak to me about internal training at DSM
+	\end{itemize}
+\end{frame}
+
+\iffalse
+\begin{itemize}
+	\item   Collapsability sequence
+	\item 	Interaction: what is?
+	\item 	Tradeoff: 4 factors and 5 expts. But with 8 expts you can docs lot more
+	  - tradeoff: uncertainty from materials, people, or equipment.
+	  \item   blocking: in the tradeoff table
+	\item 	Randomization is important
+	\item 	Interaction plots
+	\item 	Contour plot concept
+	\item 	Disturbance and covariates	
+	\item 	Slide 283 for fraction factorial
+	\item 	Rsm example walk through, incl slide 521. All models useful
+	\item 	Cost approach incl slide 491
+	\item 	When things go wrong you have fallback if you had those extra experiments
+\end{itemize}
+\fi
+
+\end{document}
