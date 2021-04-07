@@ -42,6 +42,9 @@ clean:
 	$(RM) *.gls
 	$(RM) *.snm
 	$(RM) *.vrb
+	$(RM) *.fls
+	$(RM) *.fdb_latexmk
+	$(RM) *.synctex.gz
 	$(RM) $(SUBDIR)*.log
 	$(RM) $(SUBDIR)*.aux
 	$(RM) $(SUBDIR)*.out
@@ -56,3 +59,5 @@ clean:
 	$(RM) $(SUBDIR)*.gls
 	$(RM) $(SUBDIR)*.snm
 	$(RM) $(SUBDIR)*.vrb
+	$(RM) __latexindent_temp.tex
+
