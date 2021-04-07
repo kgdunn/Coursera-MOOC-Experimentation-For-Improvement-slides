@@ -25,7 +25,13 @@
 \settoggle{unixmac}{true}
 \iftoggle{unixmac}
 {
-	\newcommand{\imagedir}{/Users/kevindunn/Dropbox/figures-master}
+	\newcommand{\imagedir}{/Users/kevindunn/Dropbox/Personal/repos/figures}
+}{
+	\newcommand{\imagedir}{C:/Figures}
+}
+\iftoggle{unixmac}
+{
+	\newcommand{\courseradir}{/Users/kevindunn/Dropbox/Career/Coursera/Media}
 }{
 	\newcommand{\imagedir}{C:/Figures}
 }
