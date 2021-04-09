@@ -1,0 +1,12 @@
+.vscode/settings.json
+**/*.aux
+**/*.log
+**/*.nav
+**/*.out
+**/*.pdf
+**/*.snm
+**/*.toc
+**/*.fls
+**/*.synctex.gz
+**/*.fdb_latexmk
+**/__latex*
