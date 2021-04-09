@@ -5,41 +5,40 @@
 
 \newdateformat{mydate}{\THEYEAR} % \twodigit{\THEDAY}-\twodigit{\THEMONTH}-\THEYEAR
 \mydate
-\title[]{\LARGE Experimentation for Improvement}
+\title[]{\LARGE \color{blue}{Design and Analysis of Experiments - An Overview}}
 \subtitle[]{\vspace{0.5cm} \includegraphics[width=0.5\textwidth]{\imagedir/teaching/logos/Coursera-MOOC-logo-2014.png} \vspace{-1.5cm} }\author[]{}
 \institute[]{}
-\date[]{Kevin Dunn, \today \\ \vspace{0cm}
+\date[]{Kevin Dunn and Arnold Wilbers, 21 April \today \\ \vspace{1cm}
 %{{\footnotesize {\tt } \href{https://learnche.org/}{https://learnche.org/}\\} \vspace{0.5cm}}
-{\LARGE \color{blue}{Design and Analysis of Experiments - An Overview}}
 }
 
 \begin{document}
 
 \begin{frame} \titlepage \end{frame}
-\begin{frame}\frametitle{Copyright, sharing, and attribution notice}
+% \begin{frame}\frametitle{Copyright, sharing, and attribution notice}
 
-	{\footnotesize This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 Unported License. To view a copy of this license,
-	please visit \href{https://creativecommons.org/licenses/by-sa/4.0/}{https://creativecommons.org/licenses/by-sa/4.0/}}
+% 	{\footnotesize This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 Unported License. To view a copy of this license,
+% 	please visit \href{https://creativecommons.org/licenses/by-sa/4.0/}{https://creativecommons.org/licenses/by-sa/4.0/}}
 
-	\vspace{0.0cm}
-	\begin{flushright}
-		\includegraphics[width=0.2\textwidth]{\imagedir/common/creative-commons-by-sa.png}
-	\end{flushright}
-	\vspace{-0.4cm}
-	\begin{exampleblock}{}
-		{\small This license allows you: }
-		\begin{itemize}
-			\item	{\color{myGreen}{\textbf{to share}}} - to copy, distribute and transmit the work, including print it
-			\item	{\color{myOrange}{\textbf{to adapt}}} - but you must distribute the new result under the same or similar license to this one
-			\item	{\color{myRed}{\textbf{commercialize}}} - you \underline{\emph{are allowed}} to use this work for commercial purposes
-			\item	{\color{blue}{\textbf{attribution}}} - but you must attribute the work as follows:
-			\begin{itemize}
-				\item	``Portions of this work are the copyright of Kevin Dunn'', \emph{or}
-				\item	``This work is the copyright of Kevin Dunn'' \\{\tiny (when used without modification)}
-			\end{itemize}
-		\end{itemize}
-	\end{exampleblock}
-\end{frame}
+% 	\vspace{0.0cm}
+% 	\begin{flushright}
+% 		\includegraphics[width=0.2\textwidth]{\imagedir/common/creative-commons-by-sa.png}
+% 	\end{flushright}
+% 	\vspace{-0.4cm}
+% 	\begin{exampleblock}{}
+% 		{\small This license allows you: }
+% 		\begin{itemize}
+% 			\item	{\color{myGreen}{\textbf{to share}}} - to copy, distribute and transmit the work, including print it
+% 			\item	{\color{myOrange}{\textbf{to adapt}}} - but you must distribute the new result under the same or similar license to this one
+% 			\item	{\color{myRed}{\textbf{commercialize}}} - you \underline{\emph{are allowed}} to use this work for commercial purposes
+% 			\item	{\color{blue}{\textbf{attribution}}} - but you must attribute the work as follows:
+% 			\begin{itemize}
+% 				\item	``Portions of this work are the copyright of Kevin Dunn'', \emph{or}
+% 				\item	``This work is the copyright of Kevin Dunn'' \\{\tiny (when used without modification)}
+% 			\end{itemize}
+% 		\end{itemize}
+% 	\end{exampleblock}
+% \end{frame}
 
 \begin{frame}\frametitle{Some important terminology}
 
@@ -121,7 +120,7 @@
 			\item	What's my objective? \pause
 			\item	Which factors? 
 			\item	At what levels?\pause
-			\item	Plan the experiment {\small (\href{https://yint.org/template}{template})}\pause
+			\item	Plan the experiment {\small (\href{https://yint.org/template}{link to template})}\pause
 			\item	Implement the experiments \pause
 			\item	Analyze the results\pause
 			\item	Repeat the process \newline (almost always required) [25\% rule]
@@ -159,9 +158,39 @@
 \begin{frame}\frametitle{}
 	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/intplotB-ofat-vs-full-factorial-base-colours-full-results.png}}
 \end{frame}
-%\begin{frame}\frametitle{}
-%	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/intplotA-ofat-vs-full-factorial-base-colours-full-results.png}}
-%\end{frame}
+
+% Heavy interaction example
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/interaction-plot-2-factors-OFAT-baseline-01.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/interaction-plot-2-factors-OFAT-baseline-02.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/interaction-plot-2-factors-OFAT-baseline-03.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/interaction-plot-2-factors-OFAT-baseline-04.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/interaction-plot-2-factors-OFAT-baseline-05.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/interaction-plot-2-factors-OFAT-baseline-06.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/interaction-plot-2-factors-OFAT-baseline-07.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/interaction-plot-2-factors-OFAT-baseline-08.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/interaction-plot-2-factors-OFAT-baseline-09.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/interaction-plot-2-factors-OFAT-baseline-10.png}}
+\end{frame}
+
 
 % 3-factor full system
 \begin{frame}\frametitle{}
@@ -184,7 +213,7 @@
 
 
 \begin{frame}\frametitle{}
-	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/intplotA-ofat-vs-full-factorial-base-colours-interactions-results.png}}
+	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/interaction-plot-2-factors-OFAT-baseline-10.png}}
 \end{frame}
 
 % Interactions
@@ -496,7 +525,6 @@
 			\textbf{{\color{purple} 2. Troubleshoot}}
 			\begin{itemize}
 				\item	a problem
-				\item	develop or improve a method\pause
 			\end{itemize}
 
 			%\vspace{4pt}
@@ -526,9 +554,9 @@
 			}
 			
 	\end{columns}
-	
+	\vspace{-20pt}
 	\onslide+<6->{
-		\hfill \includegraphics[width=0.3\textwidth]{\imagedir/doe/examples/advice-logo.png} {\color{blue}Always have a clear objective in mind}
+		\includegraphics[width=0.3\textwidth]{\imagedir/doe/examples/advice-logo.png} {\color{blue}Always have a clear objective in mind}
 	}
 
 \end{frame}
