@@ -14,23 +14,27 @@
 \begin{document}
 
 
-\begin{frame}\frametitle{ }
+\begin{frame}\frametitle{\LARGE Design and Analysis of Experiments - An Overview }
 	
-	{\LARGE \color{blue}{Design and Analysis of Experiments - An Overview}}
-	\vspace{0.5cm} 
+	
+	\vspace{0.25cm} 
 
 	\centerline{\includegraphics[width=0.5\textwidth]{\imagedir/teaching/logos/Coursera-MOOC-logo-2014.png}}
 
-	\vspace{0.75cm}
+	\vspace{0.5cm}
 
 	\textbf{Your presenters: Kevin Dunn and Arno Wilbers, 21 April \today} \\ 
 
-	\vspace{0.75cm}
-	Required for this presentation:
-	\begin{itemize}
-		\item	your interaction 
-		\item	a sheet of paper, and a pen [\emph{please fetch these while we wait to get started}]
-	\end{itemize}	
+	\vspace{0.5cm}	
+	\begin{exampleblock}{}
+		Required for this presentation:
+		\begin{itemize}
+			\item	your interaction 
+			\item	a sheet of paper, and a pen [\emph{please fetch these while we wait to get started}]
+		\end{itemize}
+	\end{exampleblock}
+
+		
 \end{frame}
 
 
@@ -49,14 +53,14 @@
 		\begin{columns}[T]
 			\column{0.5\textwidth}
 				\centerline{Numeric  \newline	 \includegraphics[width=0.5\textwidth]{\courseradir/1B/Supporting-material/water.png}}
-				\onslide+<3->{
+				\onslide+<2->{
 					\vspace{0.25cm}
 					\centerline{\includegraphics[height=1cm]{\imagedir/doe/screenshots/numeric-factor.png}}			
 				}
 				
 			\column{0.5\textwidth}
 				\centerline{Categorical \newline \includegraphics[width=0.5\textwidth]{\courseradir/1B/Supporting-material/fertilizer.png}}			
-				\onslide+<3->{
+				\onslide+<2->{
 					\vspace{0.25cm}
 					\centerline{\includegraphics[height=1cm]{\imagedir/doe/screenshots/categorical-factor.png}}			
 				}				
@@ -186,31 +190,6 @@
 	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/interaction-plot-2-factors-OFAT-baseline-10.png}}
 \end{frame}
 
-
-% 3-factor full system
-\begin{frame}\frametitle{}
-	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/ofat-vs-full-factorial-3rd-factor-colours.png}}
-\end{frame}
-\begin{frame}\frametitle{}
-	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/ofat-vs-full-factorial-3-factors-full-factorial-colours.png}}
-\end{frame}
-\begin{frame}\frametitle{}
-	
-	\Large{Total number of experiments = } $\scalebox{6}{${\color{myBlue} 2}^{\color{brickred} k}$} $
-	
-	\Huge
-	
-	\vspace{24pt}
-	{\color{brickred}{$k$} = number of factors}
-	
-	{\color{myBlue}{$2$} = number of levels for all factors}
-\end{frame}
-
-
-\begin{frame}\frametitle{}
-	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/interaction-plot-2-factors-OFAT-baseline-10.png}}
-\end{frame}
-
 % Interactions
 \begin{frame}\frametitle{Understanding interactions: water and soap example}
 	\begin{center}
@@ -236,27 +215,47 @@
 	\vspace{24pt}
 	This interaction works in our favour in this example.
 \end{frame}
-\begin{frame}\frametitle{The advantages of the factorial designs}
-	\begin{itemize}
-		\item	redundancy [e.g. an experiment fails, measurement outlier]
-		
-		\item	information about interactions
-		
-		\item	clear signal which factors truly have an effect 
-		
-		\item	quantify the effect of each factor
-		
-		\item 	each factor's effect is quantified independent of the other
-	\end{itemize}
+
+% 3-factor full system
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/ofat-vs-full-factorial-3rd-factor-colours.png}}
 \end{frame}
-
-
+\begin{frame}\frametitle{}
+	\centerline{\includegraphics[height=.8\textheight]{\imagedir/doe/ofat-vs-full-factorial-3-factors-full-factorial-colours.png}}
+\end{frame}
+\begin{frame}\frametitle{}
+	
+	\Large{Total number of experiments = } $\scalebox{6}{${\color{myBlue} 2}^{\color{brickred} k}$} $
+	
+	\Huge
+	
+	\vspace{24pt}
+	{\color{brickred}{$k$} = number of factors}
+	
+	{\color{myBlue}{$2$} = number of levels for all factors}
+\end{frame}
 
 % DOE tradeoff table
 \begin{frame}\frametitle{}
 	%\vspace{-10pt}
 	\centerline{\includegraphics[width=1.2\textwidth]{\imagedir/doe/DOE-trade-off-table-main-focus.png}}
 \end{frame}
+
+\begin{frame}\frametitle{The advantages of the factorial designs}
+	\begin{itemize}
+
+		\item	gain information about interactions
+		
+		\item	includes redundancy [e.g. an experiment fails, measurement outlier]
+				
+		\item	gives clear signal as to which factors truly have an effect 
+		
+		\item	quantifies the effect of each factor
+		
+		\item 	determine effects independent of the other factors
+	\end{itemize}
+\end{frame}
+
 
 % Example of using the tradeoff table
 \begin{frame}\frametitle{Cell-culture example: long duration runs; and many factors are possible}
@@ -285,9 +284,9 @@
 	\end{columns}
 
 	\vfill
-	At 10 days per cell culture, it would take $\approx$ 1 year for all  ${\color{myBlue} 2}^{\color{brickred} 5} = 32$.
+	At 5 days per cell culture, it would take $\approx \tfrac{1}{2}$ year for all  ${\color{myBlue} 2}^{\color{brickred} 5} = 32$ experiments.
 	
-	Budget = 3 months, {\color{myOrange} that corresponds to 9 experiments}.
+	Budget = 3 months, {\color{myOrange} that corresponds to 18 experiments}.
 		
 \end{frame}
 \begin{frame}\frametitle{Cell-culture example: long duration runs; and many factors are possible}
@@ -355,39 +354,39 @@
 	\centerline{\includegraphics[height=.8\textheight]{\courseradir/5C/Supporting material/flickr-quinnanya-2186957732_12f67e557b_o-grocery-shelf.jpg}}
 	\see{\href{https://secure.flickr.com/photos/quinnanya/2186957732}{Flickr: quinnanya}}
 \end{frame}
-\begin{frame}\frametitle{}
-	\centerline{\includegraphics[height=\textheight]{\courseradir/5C/Supporting material/COST-contours-shopping-01a.png}}
-\end{frame}
+% \begin{frame}\frametitle{}
+% 	\centerline{\includegraphics[height=\textheight]{\courseradir/5C/Supporting material/COST-contours-shopping-01a.png}}
+% \end{frame}
 \begin{frame}\frametitle{}
 	\centerline{\includegraphics[height=\textheight]{\courseradir/5C/Supporting material/COST-contours-shopping-01b.png}}
 \end{frame}
-\begin{frame}\frametitle{}
-	\centerline{\includegraphics[height=\textheight]{\courseradir/5C/Supporting material/COST-contours-shopping-02a.png}}
-\end{frame}
+% \begin{frame}\frametitle{}
+% 	\centerline{\includegraphics[height=\textheight]{\courseradir/5C/Supporting material/COST-contours-shopping-02a.png}}
+% \end{frame}
 \begin{frame}\frametitle{}
 	\centerline{\includegraphics[height=\textheight]{\courseradir/5C/Supporting material/COST-contours-shopping-02b.png}}
 \end{frame}
-\begin{frame}\frametitle{}
-	\centerline{\includegraphics[height=\textheight]{\courseradir/5C/Supporting material/COST-contours-shopping-03.png}}
-\end{frame}
-\begin{frame}\frametitle{}
-	\centerline{\includegraphics[height=\textheight]{\courseradir/5C/Supporting material/COST-contours-shopping-04.png}}
-\end{frame}
+% \begin{frame}\frametitle{}
+% 	\centerline{\includegraphics[height=\textheight]{\courseradir/5C/Supporting material/COST-contours-shopping-03.png}}
+% \end{frame}
+% \begin{frame}\frametitle{}
+% 	\centerline{\includegraphics[height=\textheight]{\courseradir/5C/Supporting material/COST-contours-shopping-04.png}}
+% \end{frame}
 \begin{frame}\frametitle{}
 	\centerline{\includegraphics[height=\textheight]{\courseradir/5C/Supporting material/COST-contours-shopping-05.png}}
 \end{frame}
-\begin{frame}\frametitle{}
-	\centerline{\includegraphics[height=\textheight]{\courseradir/5C/Supporting material/COST-contours-shopping-06a.png}}
-\end{frame}
-\begin{frame}\frametitle{}
-	\centerline{\includegraphics[height=\textheight]{\courseradir/5C/Supporting material/COST-contours-shopping-06b.png}}
-\end{frame}
-\begin{frame}\frametitle{}
-	\centerline{\includegraphics[height=\textheight]{\courseradir/5C/Supporting material/COST-contours-shopping-07.png}}
-\end{frame}
-\begin{frame}\frametitle{}
-	\centerline{\includegraphics[height=\textheight]{\courseradir/5C/Supporting material/COST-contours-shopping-08.png}}
-\end{frame}
+% \begin{frame}\frametitle{}
+% 	\centerline{\includegraphics[height=\textheight]{\courseradir/5C/Supporting material/COST-contours-shopping-06a.png}}
+% \end{frame}
+% \begin{frame}\frametitle{}
+% 	\centerline{\includegraphics[height=\textheight]{\courseradir/5C/Supporting material/COST-contours-shopping-06b.png}}
+% \end{frame}
+% \begin{frame}\frametitle{}
+% 	\centerline{\includegraphics[height=\textheight]{\courseradir/5C/Supporting material/COST-contours-shopping-07.png}}
+% \end{frame}
+% \begin{frame}\frametitle{}
+% 	\centerline{\includegraphics[height=\textheight]{\courseradir/5C/Supporting material/COST-contours-shopping-08.png}}
+% \end{frame}
 \begin{frame}\frametitle{}
 	\centerline{\includegraphics[height=\textheight]{\courseradir/5C/Supporting material/COST-contours-shopping-09.png}}
 \end{frame}
@@ -461,9 +460,9 @@
 			\end{itemize}
 	\end{columns}
 \end{frame}
-\begin{frame}\frametitle{}
-	\centerline{\includegraphics[height=\textheight]{\courseradir/5E/Supporting materials/RSM-02.png}}
-\end{frame}
+% \begin{frame}\frametitle{}
+% 	\centerline{\includegraphics[height=\textheight]{\courseradir/5E/Supporting materials/RSM-02.png}}
+% \end{frame}
 \begin{frame}\frametitle{}
 	\centerline{\includegraphics[height=\textheight]{\courseradir/5E/Supporting materials/RSM-05.png}}
 \end{frame}
