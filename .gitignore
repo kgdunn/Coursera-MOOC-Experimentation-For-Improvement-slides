@@ -8,5 +8,7 @@
 **/*.toc
 **/*.fls
 **/*.synctex.gz
+**/*.synctex(busy)
 **/*.fdb_latexmk
 **/__latex*
+
